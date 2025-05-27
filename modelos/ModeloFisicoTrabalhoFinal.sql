@@ -102,40 +102,41 @@ CREATE TABLE Evento (
 );
 
 CREATE TABLE Participacao (
-    IdTime integer,
+    Participacao integer PRIMARY KEY,
+	IdTime integer,
     IdTemporada integer
 );
 
 CREATE TABLE EquipeArbitragem (
+	EquipeArbitragem integer PRIMARY KEY,
     IdPartida integer,
     IdArbitro integer,
-    IdFuncaoArbitro integer,
-    PRIMARY KEY (IdArbitro, IdPartida)
+    IdFuncaoArbitro integer
 );
 
 CREATE TABLE ContratoTecnico (
-    IdTecnico integer,
+    Numero integer PRIMARY KEY,
+	IdTecnico integer,
     IdTime integer,
     DataAssinatura date,
     DataRescisao date,
-    MultaRescisoria numeric(14,2),
-    Numero integer PRIMARY KEY
+    MultaRescisoria numeric(14,2)
 );
 
 CREATE TABLE ContratoJogador (
-    IdJogador integer,
+    Numero varchar(50) PRIMARY KEY,
+	IdJogador integer,
     IdTime integer,
     DataRescisao date,
     DataAssinatura date,
-    MultaRescisoria numeric(14,2),
-    Numero varchar(50) PRIMARY KEY
+    MultaRescisoria numeric(14,2)    
 );
 
 CREATE TABLE Escalacao (
-    IdPartida integer,
+    Escalacao integer PRIMARY KEY,
+	IdPartida integer,
     IdJogador integer,
-    IdPosicao integer,
-    PRIMARY KEY (IdJogador, IdPartida)
+    IdPosicao integer    
 );
  
 ALTER TABLE Campeonato ADD CONSTRAINT FK_Campeonato_Federacao
