@@ -19,8 +19,7 @@ from django.urls import path
 from main.views import home, leagues, teams, players, matches
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home, name='home'),
+    path('', admin.site.urls),    
     path('home/', home, name='home'),
     path('leagues/', leagues, name='leagues'),
     path('teams/', teams, name='teams'),
