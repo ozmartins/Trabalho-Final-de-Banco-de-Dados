@@ -1,43 +1,68 @@
+DROP TABLE Cidade;
+DROP TABLE Estadio;
+DROP TABLE FuncaoArbitro;
+DROP TABLE Posicao;
+DROP TABLE ContratoTecnico;
+DROP TABLE ContratoJogador;
+DROP TABLE Escalacao;
+DROP TABLE EquipeArbitragem;
+DROP TABLE Participacao;
+DROP TABLE Tecnico;
+DROP TABLE Arbitro;
+DROP TABLE Federacao;
+DROP TABLE Partida;
+DROP TABLE Rodada;
+DROP TABLE Temporada;
+DROP TABLE Time;
+DROP TABLE Jogador;
+DROP TABLE Nacionalidade;
+DROP TABLE Evento;
+
+
+
+
+DROP TABLE Campeonato;
+
 CREATE TABLE Campeonato (
-    IdCampeonato integer PRIMARY KEY,
+    IdCampeonato serial PRIMARY KEY,
     Nome varchar(100),
     Premiacao numeric(14,2),
     IdFederacao integer
 );
 
 CREATE TABLE Federacao (
-    IdFederacao integer PRIMARY KEY,
+    IdFederacao serial PRIMARY KEY,
     Nome varchar(100),
     UF varchar(2)
 );
 
 CREATE TABLE Arbitro (
-    IdArbitro integer PRIMARY KEY,
+    IdArbitro serial PRIMARY KEY,
     Nome varchar(100),
     DataNascimento date,
     IdFederacao integer
 );
 
 CREATE TABLE Cidade (
-    IdCidade integer PRIMARY KEY,
+    IdCidade serial PRIMARY KEY,
     Nome varchar(100),
     UF varchar(2)
 );
 
 CREATE TABLE Estadio (
-    IdEstadio integer PRIMARY KEY,
+    IdEstadio serial PRIMARY KEY,
     Nome varchar(100),
     Capacidade integer,
     IdCidade integer
 );
 
 CREATE TABLE FuncaoArbitro (
-    IdFuncaoArbitro integer PRIMARY KEY,
+    IdFuncaoArbitro serial PRIMARY KEY,
     Descricao varchar(100)
 );
 
 CREATE TABLE Temporada (
-    IdTemporada integer PRIMARY KEY,
+    IdTemporada serial PRIMARY KEY,
     QuantidadeRodadas integer,
     DataInicio date,
     DataFim date,
@@ -46,13 +71,13 @@ CREATE TABLE Temporada (
 );
 
 CREATE TABLE Rodada (
-    IdRodada integer PRIMARY KEY,
+    IdRodada serial PRIMARY KEY,
     NumeroRodada integer,
     IdTemporada integer
 );
 
 CREATE TABLE Partida (
-    IdPartida integer PRIMARY KEY,
+    IdPartida serial PRIMARY KEY,
     DataHora timestamp,
     Publico integer,
     Renda numeric(14,2),
@@ -63,13 +88,13 @@ CREATE TABLE Partida (
 );
 
 CREATE TABLE Time (
-    IdTime integer PRIMARY KEY,
+    IdTime serial PRIMARY KEY,
     Nome varchar(100),
     IdCidade integer
 );
 
 CREATE TABLE Jogador (
-    IdJogador integer PRIMARY KEY,
+    IdJogador serial PRIMARY KEY,
     Nome varchar(100),
     DataNascimento date,
     IdNacionalidade integer,
@@ -77,24 +102,24 @@ CREATE TABLE Jogador (
 );
 
 CREATE TABLE Tecnico (
-    Id integer PRIMARY KEY,
+    Id serial PRIMARY KEY,
     Nome varchar(100),
     DataNascimento date,
     IdNacionalidade integer
 );
 
 CREATE TABLE Nacionalidade (
-    IdNacionalidade integer PRIMARY KEY,
+    IdNacionalidade serial PRIMARY KEY,
     Descricao varchar(100)
 );
 
 CREATE TABLE Posicao (
-    IdPosicao integer PRIMARY KEY,
+    IdPosicao serial PRIMARY KEY,
     Descricao varchar(100)
 );
 
 CREATE TABLE Evento (
-    IdEvento integer PRIMARY KEY,
+    IdEvento serial PRIMARY KEY,
     TipoEvento integer,
     Minuto integer,
     IdPartida integer,
@@ -102,20 +127,20 @@ CREATE TABLE Evento (
 );
 
 CREATE TABLE Participacao (
-    Participacao integer PRIMARY KEY,
+    Participacao serial PRIMARY KEY,
 	IdTime integer,
     IdTemporada integer
 );
 
 CREATE TABLE EquipeArbitragem (
-	EquipeArbitragem integer PRIMARY KEY,
+	EquipeArbitragem serial PRIMARY KEY,
     IdPartida integer,
     IdArbitro integer,
     IdFuncaoArbitro integer
 );
 
 CREATE TABLE ContratoTecnico (
-    Numero integer PRIMARY KEY,
+    Numero serial PRIMARY KEY,
 	IdTecnico integer,
     IdTime integer,
     DataAssinatura date,
@@ -133,7 +158,7 @@ CREATE TABLE ContratoJogador (
 );
 
 CREATE TABLE Escalacao (
-    Escalacao integer PRIMARY KEY,
+    Escalacao serial PRIMARY KEY,
 	IdPartida integer,
     IdJogador integer,
     IdPosicao integer    
