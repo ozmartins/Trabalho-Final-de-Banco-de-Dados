@@ -1,5 +1,3 @@
-/* ModeloLogicolTrabalhoFinal: */
-
 CREATE TABLE Campeonato (
     IdCampeonato integer PRIMARY KEY,
     Nome varchar(100),
@@ -67,7 +65,7 @@ CREATE TABLE Partida (
 CREATE TABLE Time (
     IdTime integer PRIMARY KEY,
     Nome varchar(100),
-    IdCida de integer
+    IdCidade integer
 );
 
 CREATE TABLE Jogador (
@@ -140,106 +138,107 @@ CREATE TABLE Escalacao (
     PRIMARY KEY (IdJogador, IdPartida)
 );
  
-ALTER TABLE Campeonato ADD CONSTRAINT FK_Campeonato_2
+ALTER TABLE Campeonato ADD CONSTRAINT FK_Campeonato_Federacao
     FOREIGN KEY (IdFederacao)
     REFERENCES Federacao (IdFederacao)
     ON DELETE SET NULL;
  
-ALTER TABLE Arbitro ADD CONSTRAINT FK_Arbitro_2
+ALTER TABLE Arbitro ADD CONSTRAINT FK_Arbitro_Federacao
     FOREIGN KEY (IdFederacao)
     REFERENCES Federacao (IdFederacao)
     ON DELETE CASCADE;
  
-ALTER TABLE Estadio ADD CONSTRAINT FK_Estadio_2
+ALTER TABLE Estadio ADD CONSTRAINT FK_Estadio_Cidade
     FOREIGN KEY (IdCidade)
     REFERENCES Cidade (IdCidade)
     ON DELETE CASCADE;
  
-ALTER TABLE Temporada ADD CONSTRAINT FK_Temporada_2
+ALTER TABLE Temporada ADD CONSTRAINT FK_Temporada_Campeonato
     FOREIGN KEY (IdCampeonato)
     REFERENCES Campeonato (IdCampeonato)
     ON DELETE CASCADE;
  
-ALTER TABLE Rodada ADD CONSTRAINT FK_Rodada_2
+ALTER TABLE Rodada ADD CONSTRAINT FK_Rodada_Temporada
     FOREIGN KEY (IdTemporada)
     REFERENCES Temporada (IdTemporada)
     ON DELETE CASCADE;
  
-ALTER TABLE Partida ADD CONSTRAINT FK_Partida_2
+ALTER TABLE Partida ADD CONSTRAINT FK_Partida_Rodada
     FOREIGN KEY (IdRodada)
     REFERENCES Rodada (IdRodada)
     ON DELETE CASCADE;
  
-ALTER TABLE Partida ADD CONSTRAINT FK_Partida_3
+ALTER TABLE Partida ADD CONSTRAINT FK_Partida_Estadio
     FOREIGN KEY (IdEstadio)
     REFERENCES Estadio (IdEstadio)
     ON DELETE CASCADE;
  
-ALTER TABLE Partida ADD CONSTRAINT FK_Partida_4
-    FOREIGN KEY (IdTimeMandante, IdTimeVisitante)
-    REFERENCES Time (IdTime, IdTime)
+ALTER TABLE Partida ADD CONSTRAINT FK_Partida_TimeMandante
+    FOREIGN KEY (IdTimeMandante)
+    REFERENCES Time (IdTime)
+    ON DELETE CASCADE;
+
+ALTER TABLE Partida ADD CONSTRAINT FK_Partida_TimeVisitante
+    FOREIGN KEY (IdTimeVisitante)
+    REFERENCES Time (IdTime)
     ON DELETE CASCADE;
  
-ALTER TABLE Time ADD CONSTRAINT FK_Time_2
-    FOREIGN KEY (IdCida de)
+ALTER TABLE Time ADD CONSTRAINT FK_Time_Cidade
+    FOREIGN KEY (IdCidade)
     REFERENCES Cidade (IdCidade)
     ON DELETE CASCADE;
  
-ALTER TABLE Jogador ADD CONSTRAINT FK_Jogador_2
+ALTER TABLE Jogador ADD CONSTRAINT FK_Jogador_Nacionalidade
     FOREIGN KEY (IdNacionalidade)
     REFERENCES Nacionalidade (IdNacionalidade)
     ON DELETE CASCADE;
  
-ALTER TABLE Jogador ADD CONSTRAINT FK_Jogador_3
+ALTER TABLE Jogador ADD CONSTRAINT FK_Jogador_Posicao
     FOREIGN KEY (IdPosicao)
     REFERENCES Posicao (IdPosicao)
     ON DELETE CASCADE;
  
-ALTER TABLE Tecnico ADD CONSTRAINT FK_Tecnico_2
+ALTER TABLE Tecnico ADD CONSTRAINT FK_Tecnico_Nacionalidade
     FOREIGN KEY (IdNacionalidade)
     REFERENCES Nacionalidade (IdNacionalidade)
     ON DELETE CASCADE;
  
-ALTER TABLE Evento ADD CONSTRAINT FK_Evento_2
+ALTER TABLE Evento ADD CONSTRAINT FK_Evento_Partida
     FOREIGN KEY (IdPartida)
     REFERENCES Partida (IdPartida)
     ON DELETE CASCADE;
  
-ALTER TABLE Evento ADD CONSTRAINT FK_Evento_3
+ALTER TABLE Evento ADD CONSTRAINT FK_Evento_Jogador
     FOREIGN KEY (IdJogador)
     REFERENCES Jogador (IdJogador)
     ON DELETE CASCADE;
  
-ALTER TABLE Participacao ADD CONSTRAINT FK_Participacao_1
+ALTER TABLE Participacao ADD CONSTRAINT FK_Participacao_Time
     FOREIGN KEY (IdTime)
     REFERENCES Time (IdTime)
     ON DELETE RESTRICT;
  
-ALTER TABLE Participacao ADD CONSTRAINT FK_Participacao_2
+ALTER TABLE Participacao ADD CONSTRAINT FK_Participacao_Temporada
     FOREIGN KEY (IdTemporada)
     REFERENCES Temporada (IdTemporada)
     ON DELETE SET NULL;
  
-ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_1
+ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_Partida
     FOREIGN KEY (IdPartida)
     REFERENCES Partida (IdPartida)
     ON DELETE NO ACTION;
  
-ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_2
+ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_Arbitro
     FOREIGN KEY (IdArbitro)
     REFERENCES Arbitro (IdArbitro)
     ON DELETE NO ACTION;
  
-ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_3
+ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_FuncaoArbitro
     FOREIGN KEY (IdFuncaoArbitro)
     REFERENCES FuncaoArbitro (IdFuncaoArbitro)
     ON DELETE RESTRICT;
  
-ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_4
-    FOREIGN KEY (IdFuncaoArbitro???)
-    REFERENCES ??? (???);
- 
-ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_2
+ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_Tecnico
     FOREIGN KEY (IdTecnico)
     REFERENCES Tecnico (Id)
     ON DELETE SET NULL;
@@ -249,27 +248,27 @@ ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_3
     REFERENCES Time (IdTime)
     ON DELETE SET NULL;
  
-ALTER TABLE ContratoJogador ADD CONSTRAINT FK_ContratoJogador_2
+ALTER TABLE ContratoJogador ADD CONSTRAINT FK_ContratoJogador_Jogador
     FOREIGN KEY (IdJogador)
     REFERENCES Jogador (IdJogador)
     ON DELETE SET NULL;
  
-ALTER TABLE ContratoJogador ADD CONSTRAINT FK_ContratoJogador_3
+ALTER TABLE ContratoJogador ADD CONSTRAINT FK_ContratoJogador_Time
     FOREIGN KEY (IdTime)
     REFERENCES Time (IdTime)
     ON DELETE SET NULL;
  
-ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_1
+ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_Partida
     FOREIGN KEY (IdPartida)
     REFERENCES Partida (IdPartida)
     ON DELETE NO ACTION;
  
-ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_2
+ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_Jogador
     FOREIGN KEY (IdJogador)
     REFERENCES Jogador (IdJogador)
     ON DELETE NO ACTION;
  
-ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_3
+ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_Posicao
     FOREIGN KEY (IdPosicao)
     REFERENCES Posicao (IdPosicao)
     ON DELETE NO ACTION;
