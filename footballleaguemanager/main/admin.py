@@ -1,4 +1,23 @@
 from django.contrib import admin
-#from .models import League
+from .models import *
 
-#admin.site.register(League)
+admin.site.register(Arbitro)
+admin.site.register(Campeonato)
+admin.site.register(Cidade)
+admin.site.register(ContratoJogador)
+admin.site.register(ContratoTecnico)
+admin.site.register(EquipeArbitragem)
+admin.site.register(Escalacao)
+admin.site.register(Estadio)
+admin.site.register(Evento)
+admin.site.register(Federacao)
+admin.site.register(FuncaoArbitro)
+admin.site.register(Jogador)
+admin.site.register(Nacionalidade)
+admin.site.register(Participacao)
+admin.site.register(Partida)
+admin.site.register(Posicao)
+admin.site.register(Rodada)
+admin.site.register(Tecnico)
+admin.site.register(Temporada)
+admin.site.register(Time)
