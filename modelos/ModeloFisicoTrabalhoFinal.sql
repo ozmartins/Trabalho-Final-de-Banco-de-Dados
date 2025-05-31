@@ -98,7 +98,7 @@ CREATE TABLE Jogador (
 );
 
 CREATE TABLE Tecnico (
-    Id serial PRIMARY KEY,
+    IdTecnico serial PRIMARY KEY,
     Nome varchar(100),
     DataNascimento date,
     IdNacionalidade integer
@@ -123,13 +123,13 @@ CREATE TABLE Evento (
 );
 
 CREATE TABLE Participacao (
-    Participacao serial PRIMARY KEY,
+    IdParticipacao serial PRIMARY KEY,
 	IdTime integer,
     IdTemporada integer
 );
 
 CREATE TABLE EquipeArbitragem (
-	EquipeArbitragem serial PRIMARY KEY,
+	IdEquipeArbitragem serial PRIMARY KEY,
     IdPartida integer,
     IdArbitro integer,
     IdFuncaoArbitro integer
@@ -154,7 +154,7 @@ CREATE TABLE ContratoJogador (
 );
 
 CREATE TABLE Escalacao (
-    Escalacao serial PRIMARY KEY,
+    IdEscalacao serial PRIMARY KEY,
 	IdPartida integer,
     IdJogador integer,
     IdPosicao integer    
@@ -262,7 +262,7 @@ ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_FuncaoArbitro
  
 ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_Tecnico
     FOREIGN KEY (IdTecnico)
-    REFERENCES Tecnico (Id)
+    REFERENCES Tecnico (IdTecnico)
     ON DELETE SET NULL;
  
 ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_3

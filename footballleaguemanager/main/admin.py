@@ -5,9 +5,24 @@ admin.site.site_header = "Cadastros do sistema"
 admin.site.site_title = "Cadastros do sistema"
 admin.site.index_title = "Bem-vindo ao módulo de cadastros"
 
-admin.site.register(Arbitro)
-admin.site.register(Campeonato)
-admin.site.register(Cidade)
+@admin.register(Arbitro)
+class ArbitroAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'datanascimento', 'idfederacao')
+    search_fields = ('nome',)
+    list_filter = ('idfederacao',)    
+
+@admin.register(Campeonato)
+class CampeonatoAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'premiacao', 'idfederacao')
+    search_fields = ('nome',)
+    list_filter = ('idfederacao',)
+
+@admin.register(Cidade)
+class CidadeAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'uf')
+    search_fields = ('nome',)
+    list_filter = ('uf',)
+
 admin.site.register(ContratoJogador)
 admin.site.register(ContratoTecnico)
 admin.site.register(EquipeArbitragem)

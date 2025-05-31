@@ -10,5 +10,7 @@
 	[X]Se conecte a um Banco de Dados (PostgreSQL ou MySQL).
 	[X]Realize inserções, atualizações, exclusões e consultas no Banco de Dados. Devem existir opções para cada uma destas operações em cada tabela do modelo considerando as dependências entre as mesmas.
 	[ ]Execute as consultas definidas no item 6. Deve existir uma forma de realizar cada consulta que apresentará como retorno o resultado do SQL executado no Banco de Dados, tanto na forma tabular quando graficamente.
-	[ ]Tenha um módulo principal que permita demonstrar todas as operações acima descritas no item (b), ou seja, inserções, atualizações e exclusões para tuplas em cada uma das tabelas. E, também, as consultas do item (c). Ou seja, um menu de opções.
+	[X]Tenha um módulo principal que permita demonstrar todas as operações acima descritas no item (b), ou seja, inserções, atualizações e exclusões para tuplas em cada uma das tabelas. E, também, as consultas do item (c). Ou seja, um menu de opções.
+	[X]Tenha uma opção que, a partir de um banco de dados vazio, realize a criação das tabelas e a carga com valores pré-definidos constantes no próprio código ou em arquivos externos. É também necessária uma opção que permita eliminar todas as tabelas do banco de dados.
+	[ ]Por fim, tenha uma opção que demonstre a integração da aplicação com conceitos de IA Generativa, por exemplo, utilizando-se de embeddings ou Large Language Models (LLMs) para auxiliar em alguma tarefa no domínio da aplicação, seja operacional ou voltada à tomada de decisão
 	

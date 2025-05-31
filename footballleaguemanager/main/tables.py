@@ -80,7 +80,7 @@ def create_all_tables(cur):
     )""")
 
     cur.execute("""CREATE TABLE Tecnico (
-        Id serial PRIMARY KEY,
+        IdTecnico serial PRIMARY KEY,
         Nome varchar(100),
         DataNascimento date,
         IdNacionalidade integer
@@ -105,13 +105,13 @@ def create_all_tables(cur):
     )""")
 
     cur.execute("""CREATE TABLE Participacao (
-        Participacao serial PRIMARY KEY,
+        IdParticipacao serial PRIMARY KEY,
         IdTime integer,
         IdTemporada integer
     )""")
 
     cur.execute("""CREATE TABLE EquipeArbitragem (
-        EquipeArbitragem serial PRIMARY KEY,
+        IdEquipeArbitragem serial PRIMARY KEY,
         IdPartida integer,
         IdArbitro integer,
         IdFuncaoArbitro integer
@@ -136,7 +136,7 @@ def create_all_tables(cur):
     )""")
 
     cur.execute("""CREATE TABLE Escalacao (
-        Escalacao serial PRIMARY KEY,
+        IdEscalacao serial PRIMARY KEY,
         IdPartida integer,
         IdJogador integer,
         IdPosicao integer    
@@ -244,7 +244,7 @@ def create_all_tables(cur):
     
     cur.execute("""ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_Tecnico
         FOREIGN KEY (IdTecnico)
-        REFERENCES Tecnico (Id)
+        REFERENCES Tecnico (IdTecnico)
         ON DELETE SET NULL""")
     
     cur.execute("""ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_3

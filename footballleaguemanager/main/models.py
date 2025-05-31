@@ -9,10 +9,10 @@ from django.db import models
 
 
 class Arbitro(models.Model):
-    idarbitro = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    datanascimento = models.DateField(blank=True, null=True)
-    idfederacao = models.ForeignKey('Federacao', models.DO_NOTHING, db_column='idfederacao', blank=True, null=True)
+    idarbitro = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    datanascimento = models.DateField(blank=True, null=True, verbose_name="Data nascimento")
+    idfederacao = models.ForeignKey('Federacao', models.DO_NOTHING, db_column='idfederacao', blank=True, null=True, verbose_name="Federação")
 
     class Meta:
         managed = False
@@ -89,10 +89,10 @@ class AuthUserUserPermissions(models.Model):
 
 
 class Campeonato(models.Model):
-    idcampeonato = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    premiacao = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True)
-    idfederacao = models.ForeignKey('Federacao', models.DO_NOTHING, db_column='idfederacao', blank=True, null=True)
+    idcampeonato = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    premiacao = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Premiação")
+    idfederacao = models.ForeignKey('Federacao', models.DO_NOTHING, db_column='idfederacao', blank=True, null=True, verbose_name="Federação")
 
     class Meta:
         managed = False
@@ -100,9 +100,9 @@ class Campeonato(models.Model):
 
 
 class Cidade(models.Model):
-    idcidade = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    uf = models.CharField(max_length=2, blank=True, null=True)
+    idcidade = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    uf = models.CharField(max_length=2, blank=True, null=True, verbose_name="UF")
 
     class Meta:
         managed = False
@@ -110,12 +110,12 @@ class Cidade(models.Model):
 
 
 class ContratoJogador(models.Model):
-    numero = models.CharField(primary_key=True, max_length=50)
-    idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True)
-    idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True)
-    datarescisao = models.DateField(blank=True, null=True)
-    dataassinatura = models.DateField(blank=True, null=True)
-    multarescisoria = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True)
+    numero = models.CharField(primary_key=True, max_length=50, verbose_name="Número")
+    idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True, verbose_name="Jogador")
+    idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True, verbose_name="Time")
+    datarescisao = models.DateField(blank=True, null=True, verbose_name="Data rescisão")
+    dataassinatura = models.DateField(blank=True, null=True, verbose_name="Data assinatura")
+    multarescisoria = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Multa rescisória")
 
     class Meta:
         managed = False
@@ -123,12 +123,12 @@ class ContratoJogador(models.Model):
 
 
 class ContratoTecnico(models.Model):
-    numero = models.AutoField(primary_key=True)
-    idtecnico = models.ForeignKey('Tecnico', models.DO_NOTHING, db_column='idtecnico', blank=True, null=True)
-    idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True)
-    dataassinatura = models.DateField(blank=True, null=True)
-    datarescisao = models.DateField(blank=True, null=True)
-    multarescisoria = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True)
+    numero = models.AutoField(primary_key=True, verbose_name="Número")
+    idtecnico = models.ForeignKey('Tecnico', models.DO_NOTHING, db_column='idtecnico', blank=True, null=True, verbose_name="Técnico")
+    idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True, verbose_name="Time")
+    dataassinatura = models.DateField(blank=True, null=True, verbose_name="Data assinatura")
+    datarescisao = models.DateField(blank=True, null=True, verbose_name="Data rescisão")
+    multarescisoria = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Multa rescisória")
 
     class Meta:
         managed = False
@@ -181,10 +181,10 @@ class DjangoSession(models.Model):
 
 
 class EquipeArbitragem(models.Model):
-    equipearbitragem = models.AutoField(primary_key=True)
-    idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True)
-    idarbitro = models.ForeignKey(Arbitro, models.DO_NOTHING, db_column='idarbitro', blank=True, null=True)
-    idfuncaoarbitro = models.ForeignKey('Funcaoarbitro', models.DO_NOTHING, db_column='idfuncaoarbitro', blank=True, null=True)
+    idequipearbitragem = models.AutoField(primary_key=True, verbose_name="Código")
+    idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True, verbose_name="Partida")
+    idarbitro = models.ForeignKey(Arbitro, models.DO_NOTHING, db_column='idarbitro', blank=True, null=True, verbose_name="Árbitro")
+    idfuncaoarbitro = models.ForeignKey('Funcaoarbitro', models.DO_NOTHING, db_column='idfuncaoarbitro', blank=True, null=True, verbose_name="Função árbitro")
 
     class Meta:
         managed = False
@@ -192,10 +192,10 @@ class EquipeArbitragem(models.Model):
 
 
 class Escalacao(models.Model):
-    escalacao = models.AutoField(primary_key=True)
-    idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True)
-    idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True)
-    idposicao = models.ForeignKey('Posicao', models.DO_NOTHING, db_column='idposicao', blank=True, null=True)
+    idescalacao = models.AutoField(primary_key=True, verbose_name="Código")
+    idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True, verbose_name="Partida")
+    idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True, verbose_name="Jogador")
+    idposicao = models.ForeignKey('Posicao', models.DO_NOTHING, db_column='idposicao', blank=True, null=True, verbose_name="Posição")
 
     class Meta:
         managed = False
@@ -203,10 +203,10 @@ class Escalacao(models.Model):
 
 
 class Estadio(models.Model):
-    idestadio = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    capacidade = models.IntegerField(blank=True, null=True)
-    idcidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='idcidade', blank=True, null=True)
+    idestadio = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    capacidade = models.IntegerField(blank=True, null=True, verbose_name="Capacidade")
+    idcidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='idcidade', blank=True, null=True, verbose_name="Cidade")
 
     class Meta:
         managed = False
@@ -214,11 +214,11 @@ class Estadio(models.Model):
 
 
 class Evento(models.Model):
-    idevento = models.AutoField(primary_key=True)
-    tipoevento = models.IntegerField(blank=True, null=True)
-    minuto = models.IntegerField(blank=True, null=True)
-    idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True)
-    idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True)
+    idevento = models.AutoField(primary_key=True, verbose_name="Código")
+    tipoevento = models.IntegerField(blank=True, null=True, verbose_name="Tipo")
+    minuto = models.IntegerField(blank=True, null=True, verbose_name="Minuto")
+    idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True, verbose_name="Partida")
+    idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True, verbose_name="Jogador")
 
     class Meta:
         managed = False
@@ -226,9 +226,9 @@ class Evento(models.Model):
 
 
 class Federacao(models.Model):
-    idfederacao = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    uf = models.CharField(max_length=2, blank=True, null=True)
+    idfederacao = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    uf = models.CharField(max_length=2, blank=True, null=True, verbose_name="UF")
 
     class Meta:
         managed = False
@@ -236,8 +236,8 @@ class Federacao(models.Model):
 
 
 class FuncaoArbitro(models.Model):
-    idfuncaoarbitro = models.AutoField(primary_key=True)
-    descricao = models.CharField(max_length=100, blank=True, null=True)
+    idfuncaoarbitro = models.AutoField(primary_key=True, verbose_name="Código")
+    descricao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Descrição")
 
     class Meta:
         managed = False
@@ -245,11 +245,11 @@ class FuncaoArbitro(models.Model):
 
 
 class Jogador(models.Model):
-    idjogador = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    datanascimento = models.DateField(blank=True, null=True)
-    idnacionalidade = models.ForeignKey('Nacionalidade', models.DO_NOTHING, db_column='idnacionalidade', blank=True, null=True)
-    idposicao = models.ForeignKey('Posicao', models.DO_NOTHING, db_column='idposicao', blank=True, null=True)
+    idjogador = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    datanascimento = models.DateField(blank=True, null=True, verbose_name="Data nascimento")
+    idnacionalidade = models.ForeignKey('Nacionalidade', models.DO_NOTHING, db_column='idnacionalidade', blank=True, null=True, verbose_name="Nacionalidade")
+    idposicao = models.ForeignKey('Posicao', models.DO_NOTHING, db_column='idposicao', blank=True, null=True, verbose_name="Posição")
 
     class Meta:
         managed = False
@@ -257,8 +257,8 @@ class Jogador(models.Model):
 
 
 class Nacionalidade(models.Model):
-    idnacionalidade = models.AutoField(primary_key=True)
-    descricao = models.CharField(max_length=100, blank=True, null=True)
+    idnacionalidade = models.AutoField(primary_key=True, verbose_name="Código")
+    descricao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Descrição")
 
     class Meta:
         managed = False
@@ -266,9 +266,9 @@ class Nacionalidade(models.Model):
 
 
 class Participacao(models.Model):
-    participacao = models.AutoField(primary_key=True)
-    idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True)
-    idtemporada = models.ForeignKey('Temporada', models.DO_NOTHING, db_column='idtemporada', blank=True, null=True)
+    idparticipacao = models.AutoField(primary_key=True, verbose_name="Código")
+    idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True, verbose_name="Time")
+    idtemporada = models.ForeignKey('Temporada', models.DO_NOTHING, db_column='idtemporada', blank=True, null=True, verbose_name="Temporada")
 
     class Meta:
         managed = False
@@ -276,14 +276,14 @@ class Participacao(models.Model):
 
 
 class Partida(models.Model):
-    idpartida = models.AutoField(primary_key=True)
-    datahora = models.DateTimeField(blank=True, null=True)
-    publico = models.IntegerField(blank=True, null=True)
-    renda = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True)
-    idrodada = models.ForeignKey('Rodada', models.DO_NOTHING, db_column='idrodada', blank=True, null=True)
-    idestadio = models.ForeignKey(Estadio, models.DO_NOTHING, db_column='idestadio', blank=True, null=True)
-    idtimemandante = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtimemandante', blank=True, null=True)
-    idtimevisitante = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtimevisitante', related_name='partida_idtimevisitante_set', blank=True, null=True)
+    idpartida = models.AutoField(primary_key=True, verbose_name="Código")
+    datahora = models.DateTimeField(blank=True, null=True, verbose_name="Data/hora")
+    publico = models.IntegerField(blank=True, null=True, verbose_name="Público")
+    renda = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Renda")
+    idrodada = models.ForeignKey('Rodada', models.DO_NOTHING, db_column='idrodada', blank=True, null=True, verbose_name="Rodada")
+    idestadio = models.ForeignKey(Estadio, models.DO_NOTHING, db_column='idestadio', blank=True, null=True, verbose_name="Estádio")
+    idtimemandante = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtimemandante', blank=True, null=True, verbose_name="Mandante")
+    idtimevisitante = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtimevisitante', related_name='partida_idtimevisitante_set', blank=True, null=True, verbose_name="Visitante")
 
     class Meta:
         managed = False
@@ -291,8 +291,8 @@ class Partida(models.Model):
 
 
 class Posicao(models.Model):
-    idposicao = models.AutoField(primary_key=True)
-    descricao = models.CharField(max_length=100, blank=True, null=True)
+    idposicao = models.AutoField(primary_key=True, verbose_name="Código")
+    descricao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Descrição")
 
     class Meta:
         managed = False
@@ -300,9 +300,9 @@ class Posicao(models.Model):
 
 
 class Rodada(models.Model):
-    idrodada = models.AutoField(primary_key=True)
-    numerorodada = models.IntegerField(blank=True, null=True)
-    idtemporada = models.ForeignKey('Temporada', models.DO_NOTHING, db_column='idtemporada', blank=True, null=True)
+    idrodada = models.AutoField(primary_key=True, verbose_name="Código")
+    numerorodada = models.IntegerField(blank=True, null=True, verbose_name="Nº rodada")
+    idtemporada = models.ForeignKey('Temporada', models.DO_NOTHING, db_column='idtemporada', blank=True, null=True, verbose_name="Temporada")
 
     class Meta:
         managed = False
@@ -310,9 +310,10 @@ class Rodada(models.Model):
 
 
 class Tecnico(models.Model):
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    datanascimento = models.DateField(blank=True, null=True)
-    idnacionalidade = models.ForeignKey(Nacionalidade, models.DO_NOTHING, db_column='idnacionalidade', blank=True, null=True)
+    idtecnico = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    datanascimento = models.DateField(blank=True, null=True, verbose_name="Data nascimento")
+    idnacionalidade = models.ForeignKey(Nacionalidade, models.DO_NOTHING, db_column='idnacionalidade', blank=True, null=True, verbose_name="Nacionalidade")
 
     class Meta:
         managed = False
@@ -320,12 +321,12 @@ class Tecnico(models.Model):
 
 
 class Temporada(models.Model):
-    idtemporada = models.AutoField(primary_key=True)
-    quantidaderodadas = models.IntegerField(blank=True, null=True)
-    datainicio = models.DateField(blank=True, null=True)
-    datafim = models.DateField(blank=True, null=True)
-    ano = models.IntegerField(blank=True, null=True)
-    idcampeonato = models.ForeignKey(Campeonato, models.DO_NOTHING, db_column='idcampeonato', blank=True, null=True)
+    idtemporada = models.AutoField(primary_key=True, verbose_name="Código")
+    quantidaderodadas = models.IntegerField(blank=True, null=True, verbose_name="Quantidade rodadas")
+    datainicio = models.DateField(blank=True, null=True, verbose_name="Data início")
+    datafim = models.DateField(blank=True, null=True, verbose_name="Data fim")
+    ano = models.IntegerField(blank=True, null=True, verbose_name="Ano")
+    idcampeonato = models.ForeignKey(Campeonato, models.DO_NOTHING, db_column='idcampeonato', blank=True, null=True, verbose_name="Campeonato")
 
     class Meta:
         managed = False
@@ -333,9 +334,9 @@ class Temporada(models.Model):
 
 
 class Time(models.Model):
-    idtime = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, blank=True, null=True)
-    idcidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='idcidade', blank=True, null=True)
+    idtime = models.AutoField(primary_key=True, verbose_name="Código")
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    idcidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='idcidade', blank=True, null=True, verbose_name="Cidade")
 
     class Meta:
         managed = False
