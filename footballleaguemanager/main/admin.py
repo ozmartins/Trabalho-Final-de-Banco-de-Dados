@@ -1,6 +1,10 @@
 from django.contrib import admin
 from .models import *
 
+admin.site.site_header = "Cadastros do sistema"
+admin.site.site_title = "Cadastros do sistema"
+admin.site.index_title = "Bem-vindo ao módulo de cadastros"
+
 admin.site.register(Arbitro)
 admin.site.register(Campeonato)
 admin.site.register(Cidade)

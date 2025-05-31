@@ -6,7 +6,28 @@ from .tables import create_all_tables, drop_all_tables, insert_example_data
 import psycopg2
 
 
-def index(request):    
+def index(request):
+    try:
+        conn = psycopg2.connect(
+            dbname=settings.DATABASES['default']['NAME'],
+            user=settings.DATABASES['default']['USER'],
+            password=settings.DATABASES['default']['PASSWORD'],
+            host='localhost',
+            port='5432'
+        )
+            
+        cur = conn.cursor()
+        cur.execute("SELECT to_regclass('public.campeonato');")
+        resultado = cur.fetchone()
+
+        if resultado[0] is not None:
+            request.session['tables_created'] = 1
+        else:
+            request.session['tables_created'] = 0
+            return redirect('bd')
+    except Exception as e:
+        messages.error(request, f'Erro ao conectar no banco: {e}')
+        return redirect('bd')
     return render(request, 'index.html')
 
 

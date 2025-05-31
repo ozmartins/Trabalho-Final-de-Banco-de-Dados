@@ -51,7 +51,9 @@
 <body>
     <div class="navbar">
         <a href="/">Início</a>
+        {% if request.session.tables_created == 1 %}
         <a href="/admin">Cadastros</a>
+        {% endif %}
         <a href="/bd">Banco de dados</a>
     </div>
 
