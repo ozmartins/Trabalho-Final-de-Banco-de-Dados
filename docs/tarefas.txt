@@ -1,15 +1,10 @@
-[ ]Descrição do objetivo geral do sistema.
-[ ]Uma descrição mais detalhada do sistema.
-[X]Inclusão da modelagem conceitual.
-[X]Inclusão da modelagem lógica.
-[X]Inclusão do script DDL.
 [ ]Elaboração e apresentação de 3 consultas que sumarizem as informações do banco de dados envolvendo no mínimo 3 tabelas.
 [ ]O resultado de cada uma das consultas deve possuir um gráfico associado.
 [ ]Deve-se ainda prover uma descrição do objetivo de cada consulta, assim como uma pequena amostra do resultado, ou seja, um conjunto de linhas recuperadas a partir da consulta.
-[ ]Desenvolvimento de uma aplicação que:
-	[X]Se conecte a um Banco de Dados (PostgreSQL ou MySQL).
-	[X]Realize inserções, atualizações, exclusões e consultas no Banco de Dados. Devem existir opções para cada uma destas operações em cada tabela do modelo considerando as dependências entre as mesmas.
-	[ ]Execute as consultas definidas no item 6. Deve existir uma forma de realizar cada consulta que apresentará como retorno o resultado do SQL executado no Banco de Dados, tanto na forma tabular quando graficamente.
-	[X]Tenha um módulo principal que permita demonstrar todas as operações acima descritas no item (b), ou seja, inserções, atualizações e exclusões para tuplas em cada uma das tabelas. E, também, as consultas do item (c). Ou seja, um menu de opções.
-	[X]Tenha uma opção que, a partir de um banco de dados vazio, realize a criação das tabelas e a carga com valores pré-definidos constantes no próprio código ou em arquivos externos. É também necessária uma opção que permita eliminar todas as tabelas do banco de dados.
+
+[ ]Desenvolvimento de uma aplicação que:	
+	[ ]Execute as consultas definidas no item 6. Deve existir uma forma de realizar cada consulta que apresentará como retorno o resultado do SQL executado no Banco de Dados, tanto na forma tabular quando graficamente.	
 	[ ]Por fim, tenha uma opção que demonstre a integração da aplicação com conceitos de IA Generativa, por exemplo, utilizando-se de embeddings ou Large Language Models (LLMs) para auxiliar em alguma tarefa no domínio da aplicação, seja operacional ou voltada à tomada de decisão
+
+[ ]Descrição do objetivo geral do sistema.
+[ ]Uma descrição mais detalhada do sistema.	
