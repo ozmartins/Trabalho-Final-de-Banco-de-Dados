@@ -17,10 +17,6 @@ DROP TABLE Time;
 DROP TABLE Jogador;
 DROP TABLE Nacionalidade;
 DROP TABLE Evento;
-
-
-
-
 DROP TABLE Campeonato;
 
 CREATE TABLE Campeonato (
