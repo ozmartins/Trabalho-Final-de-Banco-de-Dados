@@ -14,9 +14,14 @@ class Arbitro(models.Model):
     datanascimento = models.DateField(blank=True, null=True, verbose_name="Data nascimento")
     idfederacao = models.ForeignKey('Federacao', models.DO_NOTHING, db_column='idfederacao', blank=True, null=True, verbose_name="Federação")
 
+    def __str__(self):
+        return f"{self.nome}"
+
     class Meta:
         managed = False
         db_table = 'arbitro'
+        verbose_name = "Árbitro"
+        verbose_name_plural = "Árbitros"
 
 
 class AuthGroup(models.Model):
@@ -24,7 +29,7 @@ class AuthGroup(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'auth_group'
+        db_table = 'auth_group'        
 
 
 class AuthGroupPermissions(models.Model):
@@ -35,7 +40,7 @@ class AuthGroupPermissions(models.Model):
     class Meta:
         managed = False
         db_table = 'auth_group_permissions'
-        unique_together = (('group', 'permission'),)
+        unique_together = (('group', 'permission'),)        
 
 
 class AuthPermission(models.Model):
@@ -46,7 +51,7 @@ class AuthPermission(models.Model):
     class Meta:
         managed = False
         db_table = 'auth_permission'
-        unique_together = (('content_type', 'codename'),)
+        unique_together = (('content_type', 'codename'),)        
 
 
 class AuthUser(models.Model):
@@ -63,7 +68,7 @@ class AuthUser(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'auth_user'
+        db_table = 'auth_user'        
 
 
 class AuthUserGroups(models.Model):
@@ -74,7 +79,7 @@ class AuthUserGroups(models.Model):
     class Meta:
         managed = False
         db_table = 'auth_user_groups'
-        unique_together = (('user', 'group'),)
+        unique_together = (('user', 'group'),)        
 
 
 class AuthUserUserPermissions(models.Model):
@@ -85,7 +90,7 @@ class AuthUserUserPermissions(models.Model):
     class Meta:
         managed = False
         db_table = 'auth_user_user_permissions'
-        unique_together = (('user', 'permission'),)
+        unique_together = (('user', 'permission'),)        
 
 
 class Campeonato(models.Model):
@@ -94,9 +99,14 @@ class Campeonato(models.Model):
     premiacao = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Premiação")
     idfederacao = models.ForeignKey('Federacao', models.DO_NOTHING, db_column='idfederacao', blank=True, null=True, verbose_name="Federação")
 
+    def __str__(self):
+        return f"{self.nome}"
+    
     class Meta:
         managed = False
         db_table = 'campeonato'
+        verbose_name = "Campeonato"
+        verbose_name_plural = "Campeonatos"
 
 
 class Cidade(models.Model):
@@ -104,9 +114,14 @@ class Cidade(models.Model):
     nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
     uf = models.CharField(max_length=2, blank=True, null=True, verbose_name="UF")
 
+    def __str__(self):
+        return f"{self.nome}"
+    
     class Meta:
         managed = False
         db_table = 'cidade'
+        verbose_name = "Cidade"
+        verbose_name_plural = "Cidades"
 
 
 class ContratoJogador(models.Model):
@@ -117,9 +132,14 @@ class ContratoJogador(models.Model):
     dataassinatura = models.DateField(blank=True, null=True, verbose_name="Data assinatura")
     multarescisoria = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Multa rescisória")
 
+    def __str__(self):
+        return f"{self.numero}"
+        
     class Meta:
         managed = False
         db_table = 'contratojogador'
+        verbose_name = "Contrato - Jogador"
+        verbose_name_plural = "Contratos - Jogadores"
 
 
 class ContratoTecnico(models.Model):
@@ -130,9 +150,14 @@ class ContratoTecnico(models.Model):
     datarescisao = models.DateField(blank=True, null=True, verbose_name="Data rescisão")
     multarescisoria = models.DecimalField(max_digits=14, decimal_places=2, blank=True, null=True, verbose_name="Multa rescisória")
 
+    def __str__(self):
+        return f"{self.numero}"    
+
     class Meta:
         managed = False
         db_table = 'contratotecnico'
+        verbose_name = "Contrato - Técnico"
+        verbose_name_plural = "Contratos - Técnicos"
 
 
 class DjangoAdminLog(models.Model):
@@ -147,6 +172,8 @@ class DjangoAdminLog(models.Model):
     class Meta:
         managed = False
         db_table = 'django_admin_log'
+        verbose_name = "Árbitro"
+        verbose_name_plural = "Árbitros"
 
 
 class DjangoContentType(models.Model):
@@ -157,6 +184,8 @@ class DjangoContentType(models.Model):
         managed = False
         db_table = 'django_content_type'
         unique_together = (('app_label', 'model'),)
+        verbose_name = "Árbitro"
+        verbose_name_plural = "Árbitros"
 
 
 class DjangoMigrations(models.Model):
@@ -168,6 +197,8 @@ class DjangoMigrations(models.Model):
     class Meta:
         managed = False
         db_table = 'django_migrations'
+        verbose_name = "Árbitro"
+        verbose_name_plural = "Árbitros"
 
 
 class DjangoSession(models.Model):
@@ -178,6 +209,8 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
+        verbose_name = "Árbitro"
+        verbose_name_plural = "Árbitros"
 
 
 class EquipeArbitragem(models.Model):
@@ -186,9 +219,14 @@ class EquipeArbitragem(models.Model):
     idarbitro = models.ForeignKey(Arbitro, models.DO_NOTHING, db_column='idarbitro', blank=True, null=True, verbose_name="Árbitro")
     idfuncaoarbitro = models.ForeignKey('Funcaoarbitro', models.DO_NOTHING, db_column='idfuncaoarbitro', blank=True, null=True, verbose_name="Função árbitro")
 
+    def __str__(self):
+        return f"{self.idarbitro} - {self.idfuncaoarbitro}"
+
     class Meta:
         managed = False
         db_table = 'equipearbitragem'
+        verbose_name = "Equipe Arbitragem"
+        verbose_name_plural = "Equipes Arbitragens"
 
 
 class Escalacao(models.Model):
@@ -197,9 +235,14 @@ class Escalacao(models.Model):
     idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True, verbose_name="Jogador")
     idposicao = models.ForeignKey('Posicao', models.DO_NOTHING, db_column='idposicao', blank=True, null=True, verbose_name="Posição")
 
+    def __str__(self):
+        return f"{self.idpartida} - {self.idjogador} - {self.idposicao}"
+
     class Meta:
         managed = False
         db_table = 'escalacao'
+        verbose_name = "Escalação"
+        verbose_name_plural = "Escalações"
 
 
 class Estadio(models.Model):
@@ -208,9 +251,14 @@ class Estadio(models.Model):
     capacidade = models.IntegerField(blank=True, null=True, verbose_name="Capacidade")
     idcidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='idcidade', blank=True, null=True, verbose_name="Cidade")
 
+    def __str__(self):
+        return f"{self.nome}"
+
     class Meta:
         managed = False
         db_table = 'estadio'
+        verbose_name = "Estádio"
+        verbose_name_plural = "Estádios"
 
 
 class Evento(models.Model):
@@ -220,9 +268,14 @@ class Evento(models.Model):
     idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True, verbose_name="Partida")
     idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True, verbose_name="Jogador")
 
+    def __str__(self):
+        return f"{self.tipoevento} - {self.minuto}"
+
     class Meta:
         managed = False
         db_table = 'evento'
+        verbose_name = "Evento"
+        verbose_name_plural = "Eventos"
 
 
 class Federacao(models.Model):
@@ -230,18 +283,28 @@ class Federacao(models.Model):
     nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
     uf = models.CharField(max_length=2, blank=True, null=True, verbose_name="UF")
 
+    def __str__(self):
+        return f"{self.nome} - {self.uf}"
+
     class Meta:
         managed = False
         db_table = 'federacao'
+        verbose_name = "Federação"
+        verbose_name_plural = "Federações"
 
 
 class FuncaoArbitro(models.Model):
     idfuncaoarbitro = models.AutoField(primary_key=True, verbose_name="Código")
     descricao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Descrição")
 
+    def __str__(self):
+        return f"{self.descricao}"
+
     class Meta:
         managed = False
         db_table = 'funcaoarbitro'
+        verbose_name = "Função Árbitro"
+        verbose_name_plural = "Funções Árbitros"
 
 
 class Jogador(models.Model):
@@ -251,18 +314,28 @@ class Jogador(models.Model):
     idnacionalidade = models.ForeignKey('Nacionalidade', models.DO_NOTHING, db_column='idnacionalidade', blank=True, null=True, verbose_name="Nacionalidade")
     idposicao = models.ForeignKey('Posicao', models.DO_NOTHING, db_column='idposicao', blank=True, null=True, verbose_name="Posição")
 
+    def __str__(self):
+        return f"{self.nome}"
+
     class Meta:
         managed = False
         db_table = 'jogador'
+        verbose_name = "Jogador"
+        verbose_name_plural = "Jogadores"
 
 
 class Nacionalidade(models.Model):
     idnacionalidade = models.AutoField(primary_key=True, verbose_name="Código")
     descricao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Descrição")
 
+    def __str__(self):
+        return f"{self.descricao}"
+
     class Meta:
         managed = False
         db_table = 'nacionalidade'
+        verbose_name = "Nacionalidade"
+        verbose_name_plural = "Nacionalidades"
 
 
 class Participacao(models.Model):
@@ -270,9 +343,14 @@ class Participacao(models.Model):
     idtime = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtime', blank=True, null=True, verbose_name="Time")
     idtemporada = models.ForeignKey('Temporada', models.DO_NOTHING, db_column='idtemporada', blank=True, null=True, verbose_name="Temporada")
 
+    def __str__(self):
+        return f"{self.idtime} - {self.idtemporada}"
+
     class Meta:
         managed = False
         db_table = 'participacao'
+        verbose_name = "Participação"
+        verbose_name_plural = "Participações"
 
 
 class Partida(models.Model):
@@ -285,18 +363,28 @@ class Partida(models.Model):
     idtimemandante = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtimemandante', blank=True, null=True, verbose_name="Mandante")
     idtimevisitante = models.ForeignKey('Time', models.DO_NOTHING, db_column='idtimevisitante', related_name='partida_idtimevisitante_set', blank=True, null=True, verbose_name="Visitante")
 
+    def __str__(self):
+        return f"{self.idpartida}"
+
     class Meta:
         managed = False
         db_table = 'partida'
+        verbose_name = "Partida"
+        verbose_name_plural = "Partidas"
 
 
 class Posicao(models.Model):
     idposicao = models.AutoField(primary_key=True, verbose_name="Código")
     descricao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Descrição")
 
+    def __str__(self):
+        return f"{self.descricao}"
+
     class Meta:
         managed = False
         db_table = 'posicao'
+        verbose_name = "Posição"
+        verbose_name_plural = "Posições"
 
 
 class Rodada(models.Model):
@@ -304,9 +392,14 @@ class Rodada(models.Model):
     numerorodada = models.IntegerField(blank=True, null=True, verbose_name="Nº rodada")
     idtemporada = models.ForeignKey('Temporada', models.DO_NOTHING, db_column='idtemporada', blank=True, null=True, verbose_name="Temporada")
 
+    def __str__(self):
+        return f"{self.numerorodada} ({self.idtemporada})"
+
     class Meta:
         managed = False
         db_table = 'rodada'
+        verbose_name = "Rodada"
+        verbose_name_plural = "Rodadas"
 
 
 class Tecnico(models.Model):
@@ -315,9 +408,14 @@ class Tecnico(models.Model):
     datanascimento = models.DateField(blank=True, null=True, verbose_name="Data nascimento")
     idnacionalidade = models.ForeignKey(Nacionalidade, models.DO_NOTHING, db_column='idnacionalidade', blank=True, null=True, verbose_name="Nacionalidade")
 
+    def __str__(self):
+        return f"{self.nome}"
+
     class Meta:
         managed = False
         db_table = 'tecnico'
+        verbose_name = "Técnico"
+        verbose_name_plural = "Técnicos"
 
 
 class Temporada(models.Model):
@@ -328,9 +426,14 @@ class Temporada(models.Model):
     ano = models.IntegerField(blank=True, null=True, verbose_name="Ano")
     idcampeonato = models.ForeignKey(Campeonato, models.DO_NOTHING, db_column='idcampeonato', blank=True, null=True, verbose_name="Campeonato")
 
+    def __str__(self):
+        return f"{self.ano}"
+
     class Meta:
         managed = False
         db_table = 'temporada'
+        verbose_name = "Temporada"
+        verbose_name_plural = "Temporadas"
 
 
 class Time(models.Model):
@@ -338,6 +441,11 @@ class Time(models.Model):
     nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
     idcidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='idcidade', blank=True, null=True, verbose_name="Cidade")
 
+    def __str__(self):
+        return f"{self.nome}"
+
     class Meta:
         managed = False
         db_table = 'time'
+        verbose_name = "Time"
+        verbose_name_plural = "Times"
