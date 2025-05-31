@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'footballleaguemanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'footballleaguemanager',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',

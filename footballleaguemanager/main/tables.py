@@ -1,4 +1,6 @@
 def create_all_tables(cur):
+    cur.execute("CREATE SCHEMA IF NOT EXISTS footballleaguemanager")
+
     cur.execute("""CREATE TABLE Campeonato (
         IdCampeonato serial PRIMARY KEY,
         Nome varchar(100),

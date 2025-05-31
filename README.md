@@ -7,6 +7,11 @@ Acesse o diretório ```footballleaguemanager\main``` e execute a seguinte linha 
 python manage.py migrate
 ```
 
+### Criação do super usuário do Django
+``` bash
+python manage.py createsuperuser
+```
+
 ### Executando a aplicação
 Acesse o diretório ```footballleaguemanager\main``` e execute a seguinte linha de código
 ``` bash
