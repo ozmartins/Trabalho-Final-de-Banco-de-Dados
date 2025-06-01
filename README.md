@@ -1,3 +1,9 @@
+### Instalação das dependências
+Acesse o diretório raiz e execute a seguinte linha de código
+``` bash
+pip install -r requirements.txt
+```
+
 ### Conexão com o banco de dados
 Abra o arquivo ```settings.py```, localize a variável ```DATABASES``` e configure a conexão com seu banco de dados.
 
