@@ -23,3 +23,5 @@ Acesse o diretório ```footballleaguemanager\main``` e execute a seguinte linha 
 ``` bash
 python manage.py runserver
 ```
+**Importante!**
+Antes de executar a aplicação, certifique-se de que a instância do seu banco postgresql esteja rodando.
