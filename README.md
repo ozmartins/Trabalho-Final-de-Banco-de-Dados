@@ -17,5 +17,3 @@ Acesse o diretório ```footballleaguemanager\main``` e execute a seguinte linha 
 ``` bash
 python manage.py runserver
 ```
-
-Teste
