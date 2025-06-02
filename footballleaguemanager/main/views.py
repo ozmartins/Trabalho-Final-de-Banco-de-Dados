@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.conf import settings
-from .tables import create_all_tables, drop_all_tables, insert_example_data
+from .tables import create_all_tables, drop_all_tables
+from .cbf_data import insert_data_from_cbf_json
 import psycopg2
 
 
@@ -75,7 +76,7 @@ def bd(request):
         if 'criar_tabelas' in request.POST:            
             try:
                 create_all_tables(cur)
-                #insert_example_data(cur)
+                insert_data_from_cbf_json(cur)
                 cur.close()
                 conn.close()
                 messages.success(request, 'Tabelas criadas com sucesso!')

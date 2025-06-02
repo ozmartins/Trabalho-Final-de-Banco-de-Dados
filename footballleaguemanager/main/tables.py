@@ -113,13 +113,6 @@ def create_table_nationality(cur):
                 Descricao varchar(100)
                 )""")
 
-def create_table_nationality(cur):
-    cur.execute("""
-                CREATE TABLE Posicao (
-                IdPosicao serial PRIMARY KEY,
-                Descricao varchar(100)
-                )""")
-
 def create_table_event(cur):
     cur.execute("""
                 CREATE TABLE Evento (
@@ -176,6 +169,13 @@ def create_table_lineup(cur):
                 IdPartida integer,
                 IdJogador integer,
                 IdPosicao integer
+                )""")
+    
+def create_table_position(cur):
+    cur.execute("""
+                CREATE TABLE Posicao (
+                IdPosicao  serial PRIMARY KEY,
+                Descricao varchar(100)
                 )""")
 
 def create_constraints(cur):    
@@ -381,34 +381,34 @@ def create_all_tables(cur):
     create_table_team(cur)
     create_table_player(cur)
     create_table_coach(cur)
-    create_table_nationality(cur)
-    create_table_nationality(cur)
+    create_table_nationality(cur)    
     create_table_event(cur)
     create_table_participation(cur)
     create_table_referee_team(cur)
     create_table_coach_contract(cur)
     create_table_player_contract(cur)
     create_table_lineup(cur)
-    create_constraints(cur)
+    create_table_position(cur)
+    create_constraints(cur)    
 
 def drop_all_tables(cur):
-    cur.execute("DROP TABLE Cidade CASCADE")
-    cur.execute("DROP TABLE Estadio CASCADE")
-    cur.execute("DROP TABLE FuncaoArbitro CASCADE")
-    cur.execute("DROP TABLE Posicao CASCADE")
-    cur.execute("DROP TABLE ContratoTecnico CASCADE")
-    cur.execute("DROP TABLE ContratoJogador CASCADE")
-    cur.execute("DROP TABLE Escalacao CASCADE")
-    cur.execute("DROP TABLE EquipeArbitragem CASCADE")
-    cur.execute("DROP TABLE Participacao CASCADE")
-    cur.execute("DROP TABLE Tecnico CASCADE")
-    cur.execute("DROP TABLE Arbitro CASCADE")
-    cur.execute("DROP TABLE Federacao CASCADE")
-    cur.execute("DROP TABLE Partida CASCADE")
-    cur.execute("DROP TABLE Rodada CASCADE")
-    cur.execute("DROP TABLE Temporada CASCADE")
-    cur.execute("DROP TABLE Time CASCADE")
-    cur.execute("DROP TABLE Jogador CASCADE")
-    cur.execute("DROP TABLE Nacionalidade CASCADE")
-    cur.execute("DROP TABLE Evento CASCADE")
-    cur.execute("DROP TABLE Campeonato CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Cidade CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Estadio CASCADE")
+    cur.execute("DROP TABLE IF EXISTS FuncaoArbitro CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Posicao CASCADE")
+    cur.execute("DROP TABLE IF EXISTS ContratoTecnico CASCADE")
+    cur.execute("DROP TABLE IF EXISTS ContratoJogador CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Escalacao CASCADE")
+    cur.execute("DROP TABLE IF EXISTS EquipeArbitragem CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Participacao CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Tecnico CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Arbitro CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Federacao CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Partida CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Rodada CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Temporada CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Time CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Jogador CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Nacionalidade CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Evento CASCADE")
+    cur.execute("DROP TABLE IF EXISTS Campeonato CASCADE")
