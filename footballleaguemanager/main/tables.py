@@ -1,6 +1,4 @@
 def create_all_tables(cur):
-    cur.execute("CREATE SCHEMA IF NOT EXISTS footballleaguemanager")
-
     cur.execute("""
                 CREATE TABLE Campeonato (
                 IdCampeonato serial PRIMARY KEY,
@@ -374,26 +372,27 @@ def drop_all_tables(cur):
 
 def insert_example_data(cur):
     cur.execute("""
-                INSERT INTO Nacionalidade (Descricao) VALUES
-                ('Argentina'),
-                ('Uruguai'),
-                ('Colômbia'),
-                ('Paraguai'),
-                ('Equador'),
-                ('Chile'),
-                ('Venezuela'),
-                ('França'),
-                ('Portugal'),
-                ('República Democrática do Congo'),
-                ('Angola'),
-                ('Peru'),
-                ('Senegal'),
-                ('Irlanda do Norte'),
-                ('Suíça'),
-                ('Costa Rica'),
-                ('Espanha'),
-                ('Bulgária'),
-                ('Nicarágua')
+                INSERT INTO Nacionalidade (IdNacionalidade, Descricao) VALUES
+                (01, 'Brasileira'),
+                (02, 'Argentina'),
+                (03, 'Uruguaia'),
+                (04, 'Colômbiana'),
+                (05, 'Paraguaia'),
+                (06, 'Equatoriana'),
+                (07, 'Chilena'),
+                (08, 'Venezuelana'),
+                (09, 'Francesa'),
+                (10, 'Portuguesa'),
+                (11, 'Congolesa'),
+                (12, 'Angolana'),
+                (13, 'Peruana'),
+                (14, 'Senegalesa'),
+                (15, 'Irlandesa'),
+                (16, 'Suíça'),
+                (17, 'Costa Riquenha'),
+                (18, 'Espanhola'),
+                (19, 'Bulgara'),
+                (20, 'Nicaraguenha')
                 """)
 
     cur.execute("""
@@ -403,43 +402,39 @@ def insert_example_data(cur):
                 ('Lateral Esquerdo'),
                 ('Zagueiro'),
                 ('Volante'),
-                ('Meia Central'),
-                ('Meia Ofensivo'),
-                ('Ponta Direita'),
-                ('Ponta Esquerda'),
-                ('Atacante'),
-                ('Segundo Atacante'),
-                ('Centro Avante')
+                ('Meia'),
+                ('Atacante')
                 """)
 
     cur.execute("""
                 INSERT INTO Federacao (Nome, UF) VALUES
-                ('Federação Acreana de Futebol', 'AC'),
-                ('Federação Alagoana de Futebol', 'AL'),
-                ('Federação Amapaense de Futebol', 'AP'),
-                ('Federação Amazonense de Futebol', 'AM'),
-                ('Federação Baiana de Futebol', 'BA'),
-                ('Federação Cearense de Futebol', 'CE'),
-                ('Federação Brasiliense de Futebol', 'DF'),
-                ('Federação Espírito-Santense de Futebol', 'ES'),
-                ('Federação Goiana de Futebol', 'GO'),
-                ('Federação Maranhense de Futebol', 'MA'),
-                ('Federação Mineira de Futebol', 'MG'),
-                ('Federação Matogrossense de Futebol', 'MT'),
-                ('Federação Mato-Grossense do Futebol', 'MS'),
-                ('Federação Paraense de Futebol', 'PA'),
-                ('Federação Paraibana de Futebol', 'PB'),
-                ('Federação Paranaense de Futebol', 'PR'),
-                ('Federação Pernambucana de Futebol', 'PE'),
-                ('Federação Piauiense de Futebol', 'PI'),
-                ('Federação Futebol do Rio de Janeiro', 'RJ'),
-                ('Federação Futebol do Rio Grande do Norte', 'RN'),
-                ('Federação Gaúcha de Futebol', 'RS'),
-                ('Federação Rondônia de Futebol', 'RO'),
-                ('Federação Roraimense de Futebol', 'RR'),
-                ('Federação Paulista de Futebol', 'SP'),
-                ('Federação Sergipana de Futebol', 'SE'),
-                ('Federação Tocantinense de Futebol', 'TO');
+                ('Federação Acreana de Futebol (FAF)', 'AC'),
+                ('Federação Alagoana de Futebol (FAF)', 'AL'),
+                ('Federação Amapaense de Futebol (FAF)', 'AP'),
+                ('Federação Amazonense de Futebol (FAF)', 'AM'),
+                ('Federação Bahiana de Futebol (FBF)', 'BA'),
+                ('Federação Cearense de Futebol (FCF)', 'CE'),
+                ('Federação de Futebol do Distrito Federal (FFDF)', 'DF'),
+                ('Federação Capixaba de Futebol (FCF)', 'ES'),
+                ('Federação Goiana de Futebol (FGF)', 'GO'),
+                ('Federação Maranhense de Futebol (FMF)', 'MA'),
+                ('Federação Mato-Grossense de Futebol (FMF)', 'MT'),
+                ('Federação Mato-Grossense do Sul de Futebol (FMF)', 'MS'),
+                ('Federação Mineira de Futebol (FMF)', 'MG'),
+                ('Federação do Pará de Futebol (FPF)', 'PA'),
+                ('Federação Paraibana de Futebol (FPF)', 'PB'),
+                ('Federação Paranaense de Futebol (FPR)', 'PR'),
+                ('Federação Pernambucana de Futebol (FPF)', 'PE'),
+                ('Federação Piauiense de Futebol (FPF)', 'PI'),
+                ('Federação de Futebol do Estado do Rio de Janeiro (FERJ)', 'RJ'),
+                ('Federação Norte-Rio-Grandense de Futebol (FNRF)', 'RN'),
+                ('Federação Gaúcha de Futebol (FGF)', 'RS'),
+                ('Federação Rondoniense de Futebol (FRF)', 'RO'),
+                ('Federação Roraimense de Futebol (FRF)', 'RR'),
+                ('Federação Catarinense de Futebol (FCA)', 'SC'),
+                ('Federação Paulista de Futebol (FPF)', 'SP'),
+                ('Federação Sergipana de Futebol (FSF)', 'SE'),
+                ('Federação Tocantinense de Futebol (FTF) ', 'TO')
                 """)    
 
     cur.execute("""
@@ -483,35 +478,168 @@ def insert_example_data(cur):
                 """)
 
     cur.execute("""
-                INSERT INTO Arbitro (Nome, DataNascimento, IdFederacao) VALUES
-                ('Wilton Pereira Sampaio', '1981-12-28', 17),
-                ('Anderson Daronco', '1981-04-23', 21),
-                ('Raphael Claus', '1980-11-15', 13),
-                ('Bruno Arleu de Araújo', '1972-09-06', 19),
-                ('Marcelo Aparecido de Souza', '1970-05-30', 25),
-                ('Paulo Roberto Alves Junior', '1978-06-12', 12),
-                ('Ricardo Marques Ribeiro', '1986-09-22', 13),
-                ('Sandro Meira Ricci', '1974-08-21', 9),
-                ('Rodrigo Nunes de Sá', '1985-03-18', 4),
-                ('Fabricio Vilarinho da Silva', '1986-07-25', 22),
-                ('João Batista de Arruda', '1973-01-10', 23),
-                ('Bruno Michel Godoy Bueno', '1984-11-05', 18),
-                ('Leandro Pedro Vuaden', '1971-02-09', 9),
-                ('Thiago Henrique Gomes Ribeiro', '1987-04-15', 16),
-                ('Gleidson Santos', '1988-12-02', 1),
-                ('André Luiz de Freitas Castro', '1974-06-20', 15),
-                ('Marcelo de Lima Henrique', '1971-09-07', 6),
-                ('Ricardo Gaciba', '1971-06-20', 10),
-                ('Sávio Pereira Sampaio', '1984-10-22', 14),
-                ('Wilton Pereira Sampaio', '1981-12-28', 17);
+                INSERT INTO Arbitro (nome, datanascimento, idfederacao) VALUES
+                ('Ademilton Piedade Carige','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Adriano de Carvalho','1900-01-01', (select idfederacao from federacao where uf = 'TO')),
+                ('Afro Rocha de Carvalho Filho','1900-01-01', (select idfederacao from federacao where uf = 'PB')),
+                ('Alcides Zawaski Pazetto','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Alex Ang Ribeiro','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Alex dos Santos','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Alex Gomes Stefano','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Alisson Sidnei Furtado','1900-01-01', (select idfederacao from federacao where uf = 'TO')),
+                ('Anderson Carlos Goncalves','1900-01-01', (select idfederacao from federacao where uf = 'PR')),
+                ('Anderson Daronco','1981-04-23', (select idfederacao from federacao where uf = 'RS')),
+                ('Andre da Silva Bitencourt','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('André Luiz de Freitas Castro','1974-06-20', (select idfederacao from federacao where uf = 'PB')),
+                ('Andre Luiz Skettino Policarpo Bento','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Antonio Adriano de Oliveira','1900-01-01', (select idfederacao from federacao where uf = 'MA')),
+                ('Antonio Magno Lima Cordeiro','1900-01-01', (select idfederacao from federacao where uf = 'CE')),
+                ('Antonio Pereira da Silva','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Arnaldo Jasson Araujo Santos','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Bernardo Fernandes Lemos','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Braulio da Silva Machado','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Bruno Arleu de Araújo','1972-09-06', (select idfederacao from federacao where uf = 'RJ')),
+                ('Bruno Michel Godoy Bueno','1984-11-05', (select idfederacao from federacao where uf = 'PI')),
+                ('Bruno Pereira Vasconcelos','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Bruno Raphael Pires','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Caio Max Augusto Vieira','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Claudio Jose de Oliveira Soares','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Cleriston Clay Barreto Rios','1900-01-01', (select idfederacao from federacao where uf = 'SE')),
+                ('Clovis Amaral da Silva','1900-01-01', (select idfederacao from federacao where uf = 'PE')),
+                ('Cristiano Diomar','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Daiane Muniz','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Daniel Cândido dos Santos','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Daniel de Oliveira Alves Pereira','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Daniel Luis Marques','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Daniel Nobre Bins','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Daniel Victor Costa Silva','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Diego Bruno Pereira Nascimento','1900-01-01', (select idfederacao from federacao where uf = 'AL')),
+                ('Diego Pombo Lopez','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Ednilson Corona','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Eduardo Goncalves da Cruz','1900-01-01', (select idfederacao from federacao where uf = 'MS')),
+                ('Emerson Augusto de Carvalho','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Emerson de Almeida Ferreira','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Emerson Ricardo de Almeida Andrade','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Eric Fonseca Lima','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Fabricio Porfirio de Moura','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Fabricio Vilarinho da Silva','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Fabricio Vilarinho da Silva','1986-07-25', (select idfederacao from federacao where uf = 'RO')),
+                ('Felipe Alan Costa de Oliveira','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Felipe Fernandes de Lima','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Fernando Antonio Mendes de Salles Nascimento Filho','1900-01-01', (select idfederacao from federacao where uf = 'PA')),
+                ('Flavio Gomes Barroca','1900-01-01', (select idfederacao from federacao where uf = 'RN')),
+                ('Flavio Rodrigues de Souza','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Francisco Chaves Bezerra Junior','1900-01-01', (select idfederacao from federacao where uf = 'PE')),
+                ('Frederico Soares Vilarinho','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Gabriel de Souza Ferreira','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Gilberto Rodrigues Castro Junior','1900-01-01', (select idfederacao from federacao where uf = 'PE')),
+                ('Giulliano Bozzano','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Gleidson Santos','1988-12-02', (select idfederacao from federacao where uf = 'AC')),
+                ('Guilherme Costa Markowicz','1900-01-01', (select idfederacao from federacao where uf = 'PR')),
+                ('Gustavo Ervino Bauermann','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Hilton Moutinho Rodrigues','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Ilbert Estevam da Silva','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Jefferson Ferreira de Moraes','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Jesmar Benedito Miranda de Paula','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('João Batista de Arruda','1973-01-10', (select idfederacao from federacao where uf = 'RR')),
+                ('Joao Batista dos Santos','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Johnny Barros de Oliveira','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Jonathan Benkenstein Pinheiro','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Jose Antonio Chaves Franco Filho','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Jose Mocellin','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Jose Ricardo Vasconcellos Laranjeira','1900-01-01', (select idfederacao from federacao where uf = 'AL')),
+                ('Larissa Ramos Monteiro','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Leandro Pedro Vuaden','1971-02-09', (select idfederacao from federacao where uf = 'GO')),
+                ('Lehi Sousa Silva','1900-01-01', (select idfederacao from federacao where uf = 'DF')),
+                ('Leonardo Henrique Pereira','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Levi Niche Carlomagno','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Luanderson Lima dos Santos','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Lucas Dias Almeida','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Lucas Guimaraes Rechatiko Horn','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Lucas Rodrigues de Carvalho','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Luis Carlos de Franca Costa','1900-01-01', (select idfederacao from federacao where uf = 'RN')),
+                ('Luiz Alberto Andrini Nogueira','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Luiz Claudio Regazone','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Maguielson Lima Barbosa','1900-01-01', (select idfederacao from federacao where uf = 'DF')),
+                ('Marcelo Aparecido de Souza','1970-05-30', (select idfederacao from federacao where uf = 'SE')),
+                ('Marcelo Carlos Nascimento Vianna','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Marcelo Carvalho Van Gasse','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Marcelo de Lima Henrique','1971-09-07', (select idfederacao from federacao where uf = 'CE')),
+                ('Marcio Eustaquio Sousa Santiago','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Marcio Henrique de Gois','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Marcos Andre Gomes da Penha','1900-01-01', (select idfederacao from federacao where uf = 'ES')),
+                ('Marcos Vinicio de Abreu Trindade','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Maria Victoria Benetti Vargas','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Marrubson Melo Freitas','1900-01-01', (select idfederacao from federacao where uf = 'DF')),
+                ('Matheus Delgado Candancan','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Michael Stanislau','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Michel Patrick Costa Guimaraes','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Michelangelo Martins de Almeida Junior','1900-01-01', (select idfederacao from federacao where uf = 'PE')),
+                ('Mikael Silva de Araujo','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Murilo Pereira da Silva Rodrigues da Cunha','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Nayara Pereira dos Santos','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Pablo Ramon Goncalves Pinheiro','1900-01-01', (select idfederacao from federacao where uf = 'RN')),
+                ('Paulo de Tarso Bregalda Gussen','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Paulo Henrique de Melo Salmazio','1900-01-01', (select idfederacao from federacao where uf = 'MS')),
+                ('Paulo Ricardo Machado Santos','1900-01-01', (select idfederacao from federacao where uf = 'RS')),
+                ('Paulo Roberto Alves Junior','1900-01-01', (select idfederacao from federacao where uf = 'PR')),
+                ('Paulo Roberto Alves Junior','1978-06-12', (select idfederacao from federacao where uf = 'MT')),
+                ('Pedro Fernandes Barboza Daniel','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Pericles Bassols Pegado Cortez','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Raimundo Nonato Lopo De Abreu','1900-01-01', (select idfederacao from federacao where uf = 'DF')),
+                ('Raphael Claus','1980-11-15', (select idfederacao from federacao where uf = 'MS')),
+                ('Raphael Moraes de Oliveira','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Regildenia de Holanda Moura','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Ricardo Gaciba','1971-06-20', (select idfederacao from federacao where uf = 'MA')),
+                ('Ricardo Marques Ribeiro','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Ricardo Marques Ribeiro','1986-09-22', (select idfederacao from federacao where uf = 'MS')),
+                ('Ricardo Valente Polati','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Rodolpho Toski Marques','1900-01-01', (select idfederacao from federacao where uf = 'PR')),
+                ('Rodrigo D Alonso Ferreira','1900-01-01',(select idfederacao from federacao where uf = 'SC')),
+                ('Rodrigo Figueiredo Henrique Correa','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Rodrigo Guarizo Ferreira do Amaral','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Rodrigo Jose Pereira de Lima','1900-01-01', (select idfederacao from federacao where uf = 'PE')),
+                ('Rodrigo Nunes de Sá','1985-03-18', (select idfederacao from federacao where uf = 'AM')),
+                ('Rodrigo Pereira Joia','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Rogerio Menezes Lopes','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Romulo Soares Teixeira','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Ruzell Nogueira de Araujo','1900-01-01', (select idfederacao from federacao where uf = 'GO')),
+                ('Sandro Meira Ricci','1974-08-21', (select idfederacao from federacao where uf = 'GO')),
+                ('Sávio Pereira Sampaio','1984-10-22', (select idfederacao from federacao where uf = 'PA')),
+                ('Silvia de Lima Matioski','1900-01-01', (select idfederacao from federacao where uf = 'PR')),
+                ('Silvio Mendes da Paixao Junior','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Tatiana Pacheco Lima Guedes','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Thiaggo Americano Labes','1900-01-01',(select idfederacao from federacao where uf = 'SC')),
+                ('Thiago Borba','1900-01-01',(select idfederacao from federacao where uf = 'SC')),
+                ('Thiago Duarte Peixoto','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Thiago Henrique Gomes Ribeiro','1987-04-15', (select idfederacao from federacao where uf = 'PR')),
+                ('Thiago Henrique Neto Correa Farinha','1900-01-01', (select idfederacao from federacao where uf = 'RJ')),
+                ('Vayran da Silva Rosa','1900-01-01', (select idfederacao from federacao where uf = 'SC')),
+                ('Vidal Cordeiro Lopes','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Vinicius Gomes do Amaral','1900-01-01', (select idfederacao from federacao where uf = 'MG')),
+                ('Vitor Carmona Metestaine','1900-01-01', (select idfederacao from federacao where uf = 'SP')),
+                ('Vitor Silva','1900-01-01', (select idfederacao from federacao where uf = 'BA')),
+                ('Wagner Reway','1900-01-01', (select idfederacao from federacao where uf = 'MT')),
+                ('Wilton Pereira Sampaio','1981-12-28', (select idfederacao from federacao where uf = 'PE')),
+                ('Yuri Elino Ferreira da Cruz','1900-01-01', (select idfederacao from federacao where uf = 'RJ'))
                 """)    
 
     cur.execute("""
-                INSERT INTO FuncaoArbitro (Descricao) VALUES
-                ('Árbitro Principal'),
-                ('Árbitro Assistente'),
-                ('Quarto Árbitro'),
-                ('Árbitro de vídeo')
+                INSERT INTO FuncaoArbitro (IdFuncaoArbitro, Descricao) VALUES
+                (01, 'Arbitro'),
+                (02, 'Arbitro Assistente 1'),
+                (03, 'Arbitro Assistente 2'),
+                (04, 'Quarto Arbitro'),
+                (05, 'Quality manager'),
+                (06, 'Assessor'),
+                (07, 'VAR'),
+                (08, 'AVAR'),
+                (09, 'AVAR2'),
+                (10, 'Observador de VAR'),
+                (11, 'Técnico RRA'),
+                (12, 'Operador de replay 1'),
+                (13, 'Técnico Provedora VAR 1'),
+                (14, 'Delegado Local')
                 """)
 
     cur.execute("""
@@ -779,27 +907,46 @@ def insert_example_data(cur):
 
     cur.execute("""                
                 INSERT INTO Tecnico (IdTecnico, Nome, DataNascimento, IdNacionalidade) VALUES
-                (1, 'Cuca', DATE '1963-06-07', 1),                 -- Brasil
-                (2, 'Anderson Gomes', DATE '1980-04-10', 1),       -- Brasil
-                (3, 'Gabriel Milito', DATE '1980-09-07', 2),       -- Argentina
-                (4, 'Rogério Ceni', DATE '1973-01-22', 1),         -- Brasil
-                (5, 'Artur Jorge', DATE '1971-02-16', 3),          -- Portugal
-                (6, 'Ramón Díaz', DATE '1959-08-29', 2),           -- Argentina
-                (7, 'Cláudio Tencati', DATE '1973-12-09', 1),      -- Brasil
-                (8, 'Fernando Seabra', DATE '1980-05-01', 1),      -- Brasil
-                (9, 'Luiz Fernando Iubel', DATE '1989-07-16', 1),  -- Brasil
-                (10, 'Filipe Luís', DATE '1985-08-09', 1),         -- Brasil
-                (11, 'Mano Menezes', DATE '1962-06-11', 1),        -- Brasil
-                (12, 'Juan Pablo Vojvoda', DATE '1975-07-22', 2),  -- Argentina
-                (13, 'Renato Portaluppi', DATE '1962-09-09', 1),   -- Brasil
-                (14, 'Roger Machado', DATE '1975-04-25', 1),       -- Brasil
-                (15, 'Fábio Matias', DATE '1981-11-18', 1),        -- Brasil
-                (16, 'Abel Ferreira', DATE '1978-12-22', 3),       -- Portugal
-                (17, 'Luis Zubeldía', DATE '1981-01-13', 2),       -- Argentina
-                (18, 'Rafael Paiva', DATE '1986-03-15', 1),        -- Brasil
-                (19, 'Thiago Carpini', DATE '1984-07-16', 1),      -- Brasil
-                (20, 'Fabio Carille', DATE '1989-07-16', 1)       -- Brasil
-                """)
+                (01, 'Pedro Miguel Faria Caixinha', '1970-11-15', 10),
+                (02, 'Abel Fernando Moreira Ferreira', '1978-12-22', 10),
+                (03, 'Filipe Luís Kasmirski', '1985-08-09', 1),
+                (04, 'Nicolás Ricardo Larcamón', '1945-08-11', 1),
+                (05, 'Fernando Seabra', '1977-06-19', 1),
+                (06, 'Fernando Diniz Silva', '1974-03-27', 1),
+                (07, 'Rogério Ceni', '1973-01-22', 1),
+                (08, 'Marco Aurélio de Oliveira', '1972-07-22', 1),
+                (09, 'Luiz Antônio Venker Menezes', '1962-06-11', 1),
+                (10, 'Artur Jorge', '1972-01-01', 10),
+                (11, 'Juan Pablo Vojvoda Rizzo', '1975-01-13', 2),
+                (12, 'Eduardo Germán Coudet', '1974-09-12', 2),
+                (13, 'Roger Machado Marques', '1975-04-25', 1),
+                (14, 'Thiago Carpini Barbosa', '1984-07-16', 1),
+                (15, 'Luis Francisco Zubeldía', '1981-01-13', 2),
+                (16, 'António Luís Alves Ribeiro de Oliveira', '1952-06-10', 10),
+                (17, 'Ramón Ángel Díaz', '1959-08-29', 2),
+                (18, 'Fábio Luiz Carille de Araújo', '1973-09-26', 1),
+                (19, 'Felipe Jorge Loureiro', '1977-09-02', 1),
+                (20, 'Cledson Rafael de Paiva', '1984-08-26', 1),
+                (21, 'Álvaro Adriano Teixeira Pacheco', '1971-06-25', 10),
+                (22, 'Estephano Neto', '1994-09-15', 1),
+                (23, 'Gabriel Alejandro Milito', '1980-09-07', 2),
+                (24, 'Alexi Stival (Cuca)', '1963-06-07', 1),
+                (25, 'Lucas Gonçalves da Silva', '1981-10-14', 1),
+                (26, 'Renato Portaluppi', '1962-09-09', 1),
+                (27, 'Gustavo Domingo Quinteros Desabato', '1965-02-15', 2),
+                (28, 'Jair Zaksauskas Ribeiro Ventura', '1979-03-14', 1),
+                (29, 'Fábio Henrique Matias', '1979-09-25', 1),
+                (30, 'Juan Carlos Osorio', '1961-06-08', 4),
+                (31, 'Juliano Roberto Antonello', '1979-11-19', 1),
+                (32, 'Martín Varini Dizioli', '1991-08-02', 3),
+                (33, 'Luis Óscar González', '1981-01-19', 2),
+                (34, 'Claudio Aparecido Tencati', '1973-12-05', 1),
+                (35, 'Vagner Carmo Mancini', '1966-10-24', 1),
+                (36, 'Umberto Lourenço Louzer Filho', '1979-02-24', 1),
+                (37, 'Anderson Gomes', '1971-11-02', 1),
+                (38, 'Luiz Fernando Iubel', '1989-03-13', 1),
+                (39, 'Armando Gonçalves Teixeira (Petit)', '1976-09-25', 9)                
+                """)                    
 
     cur.execute("""
                 INSERT INTO Campeonato (Nome, Premiacao, IdFederacao) VALUES
@@ -855,378 +1002,378 @@ def insert_example_data(cur):
 
     cur.execute("""                
                 INSERT INTO Partida (DataHora, Publico, Renda, IdRodada, IdEstadio, IdTimeMandante, IdTimeVisitante) VALUES
-                ('13/04/2024 18:30', 0, 0, 01, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Bahia')
-                ('13/04/2024 18:30', 0, 0, 01, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Juventude')
-                ('13/04/2024 21:00', 0, 0, 01, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('13/04/2024 21:00', 0, 0, 01, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Fortaleza')
-                ('14/04/2024 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Flamengo')
-                ('14/04/2024 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Grêmio')
-                ('14/04/2024 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('14/04/2024 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Cuiabá')
-                ('14/04/2024 17:00', 0, 0, 01, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Botafogo')
-                ('14/04/2024 18:30', 0, 0, 01, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Palmeiras')
-                ('16/04/2024 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Fluminense')
-                ('17/04/2024 19:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('17/04/2024 19:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Criciúma')
-                ('17/04/2024 19:00', 0, 0, 02, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Vasco')
-                ('17/04/2024 20:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Cruzeiro')
-                ('17/04/2024 20:00', 0, 0, 02, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Corinthians')
-                ('17/04/2024 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Internacional')
-                ('17/04/2024 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'São Paulo')
-                ('18/04/2024 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('05/06/2024 20:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Vitória')
-                ('20/04/2024 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Vasco')
-                ('20/04/2024 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Cuiabá')
-                ('20/04/2024 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Corinthians')
-                ('20/04/2024 21:00', 0, 0, 03, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Cruzeiro')
-                ('21/04/2024 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Bahia')
-                ('21/04/2024 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Flamengo')
-                ('21/04/2024 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Internacional')
-                ('21/04/2024 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Juventude')
-                ('21/04/2024 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'São Paulo')
-                ('24/07/2024 19:00', 0, 0, 03, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Fortaleza')
-                ('27/04/2024 16:00', 0, 0, 04, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Criciúma')
-                ('27/04/2024 18:30', 0, 0, 04, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('27/04/2024 20:00', 0, 0, 04, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Grêmio')
-                ('28/04/2024 11:00', 0, 0, 04, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Botafogo')
-                ('28/04/2024 16:00', 0, 0, 04, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Vitória')
-                ('28/04/2024 16:00', 0, 0, 04, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Fluminense')
-                ('28/04/2024 18:30', 0, 0, 04, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('28/04/2024 18:30', 0, 0, 04, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('28/04/2024 20:00', 0, 0, 04, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('29/04/2024 20:00', 0, 0, 04, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Palmeiras')
-                ('04/05/2024 16:00', 0, 0, 05, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('04/05/2024 18:30', 0, 0, 05, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Flamengo')
-                ('04/05/2024 20:00', 0, 0, 05, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Fortaleza')
-                ('05/05/2024 16:00', 0, 0, 05, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'São Paulo')
-                ('05/05/2024 16:00', 0, 0, 05, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Vasco')
-                ('05/05/2024 18:30', 0, 0, 05, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Bahia')
-                ('05/05/2024 18:30', 0, 0, 05, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Palmeiras')
-                ('05/06/2024 19:00', 0, 0, 05, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('28/08/2024 19h30', 0, 0, 05, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Internacional')
-                ('11/05/2024 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Corinthians')
-                ('12/05/2024 11:00', 0, 0, 06, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Vitória')
-                ('12/05/2024 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Cruzeiro')
-                ('12/05/2024 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('12/05/2024 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Botafogo')
-                ('12/05/2024 18:30', 0, 0, 06, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('13/05/2024 19:00', 0, 0, 06, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Fluminense')
-                ('09/06/2024 20:00', 0, 0, 06, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Cuiabá')
-                ('14/08/2024 19h30', 0, 0, 06, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Juventude')
-                ('01/06/2024 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('01/06/2024 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('01/06/2024 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Internacional')
-                ('01/06/2024 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Juventude')
-                ('01/06/2024 21:30', 0, 0, 07, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Botafogo')
-                ('02/06/2024 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Flamengo')
-                ('02/06/2024 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Palmeiras')
-                ('02/06/2024 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Bahia')
-                ('02/06/2024 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('02/06/2024 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Cruzeiro')
-                ('11/06/2024 19:00', 0, 0, 08, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Vitória')
-                ('11/06/2024 19:00', 0, 0, 08, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Corinthians')
-                ('11/06/2024 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Fluminense')
-                ('11/06/2024 21:30', 0, 0, 08, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('13/06/2024 19:00', 0, 0, 08, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Cuiabá')
-                ('13/06/2024 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Criciúma')
-                ('13/06/2024 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Grêmio')
-                ('13/06/2024 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'São Paulo')
-                ('13/06/2024 21:30', 0, 0, 08, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Vasco')
-                ('13/06/2024 21:30', 0, 0, 08, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Fortaleza')
-                ('15/06/2024 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Juventude')
-                ('15/06/2024 21:00', 0, 0, 09, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('16/06/2024 16:00', 0, 0, 09, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Internacional')
-                ('16/06/2024 16:00', 0, 0, 09, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Flamengo')
-                ('16/06/2024 16:00', 0, 0, 09, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'São Paulo')
-                ('16/06/2024 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Bahia')
-                ('16/06/2024 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Botafogo')
-                ('16/06/2024 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Cruzeiro')
-                ('16/06/2024 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Fortaleza')
-                ('17/06/2024 21:30', 0, 0, 09, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Palmeiras')
-                ('19/06/2024 19:00', 0, 0, 10, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('19/06/2024 19:00', 0, 0, 10, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Criciúma')
-                ('19/06/2024 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Grêmio')
-                ('19/06/2024 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Vasco')
-                ('19/06/2024 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Cuiabá')
-                ('19/06/2024 21:30', 0, 0, 10, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Corinthians')
-                ('19/06/2024 21:30', 0, 0, 10, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Fluminense')
-                ('20/06/2024 18:30', 0, 0, 10, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('20/06/2024 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Bahia')
-                ('20/06/2024 21:30', 0, 0, 10, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('22/06/2024 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Botafogo')
-                ('22/06/2024 17h30', 0, 0, 11, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Internacional')
-                ('22/06/2024 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('22/06/2024 21:30', 0, 0, 11, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'São Paulo')
-                ('23/06/2024 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Flamengo')
-                ('23/06/2024 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Corinthians')
-                ('23/06/2024 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Cruzeiro')
-                ('23/06/2024 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Juventude')
-                ('23/06/2024 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Vitória')
-                ('23/06/2024 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Fortaleza')
-                ('26/06/2024 19:00', 0, 0, 12, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('26/06/2024 19:00', 0, 0, 12, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('26/06/2024 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Cuiabá')
-                ('26/06/2024 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Flamengo')
-                ('26/06/2024 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Grêmio')
-                ('26/06/2024 21:30', 0, 0, 12, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Vasco')
-                ('26/06/2024 21:30', 0, 0, 12, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('26/06/2024 21:30', 0, 0, 12, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Palmeiras')
-                ('27/06/2024 19:00', 0, 0, 12, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Vitória')
-                ('27/06/2024 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Criciúma')
-                ('29/06/2024 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('29/06/2024 19:00', 0, 0, 13, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Botafogo')
-                ('30/06/2024 11:00', 0, 0, 13, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('30/06/2024 16:00', 0, 0, 13, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Bahia')
-                ('30/06/2024 16:00', 0, 0, 13, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Fluminense')
-                ('30/06/2024 16:00', 0, 0, 13, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Juventude')
-                ('30/06/2024 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('30/06/2024 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Cruzeiro')
-                ('30/06/2024 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Internacional')
-                ('01/07/2024 20:00', 0, 0, 13, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Corinthians')
-                ('03/07/2024 19:00', 0, 0, 14, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Botafogo')
-                ('03/07/2024 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Cruzeiro')
-                ('03/07/2024 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Fortaleza')
-                ('03/07/2024 21:30', 0, 0, 14, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('03/07/2024 21:30', 0, 0, 14, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'São Paulo')
-                ('03/07/2024 21:30', 0, 0, 14, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Flamengo')
-                ('04/07/2024 19:00', 0, 0, 14, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Palmeiras')
-                ('04/07/2024 19:00', 0, 0, 14, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Juventude')
-                ('04/07/2024 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Vitória')
-                ('04/07/2024 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Internacional')
-                ('06/07/2024 20:00', 0, 0, 15, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Cuiabá')
-                ('06/07/2024 20:00', 0, 0, 15, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('07/07/2024 16:00', 0, 0, 15, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Corinthians')
-                ('07/07/2024 16:00', 0, 0, 15, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Grêmio')
-                ('07/07/2024 16:00', 0, 0, 15, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Fluminense')
-                ('07/07/2024 18:00', 0, 0, 15, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Vasco')
-                ('07/07/2024 18:30', 0, 0, 15, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Criciúma')
-                ('07/07/2024 18:30', 0, 0, 15, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Bahia')
-                ('07/07/2024 18:30', 0, 0, 15, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('07/07/2024 20:30', 0, 0, 15, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('10/07/2024 18:30', 0, 0, 16, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Cruzeiro')
-                ('10/07/2024 19:00', 0, 0, 16, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Bahia')
-                ('10/07/2024 19:00', 0, 0, 16, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Corinthians')
-                ('11/07/2024 19h30', 0, 0, 16, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('11/07/2024 20:00', 0, 0, 16, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Fortaleza')
-                ('11/07/2024 20:00', 0, 0, 16, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Fluminense')
-                ('11/07/2024 21:30', 0, 0, 16, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'São Paulo')
-                ('11/07/2024 21:30', 0, 0, 16, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Botafogo')
-                ('05/09/2024 20:00', 0, 0, 16, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Juventude')
-                ('13/07/2024 16:00', 0, 0, 17, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('13/07/2024 16:00', 0, 0, 17, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Cuiabá')
-                ('16/07/2024 19:00', 0, 0, 17, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('16/07/2024 21:00', 0, 0, 17, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Criciúma')
-                ('17/07/2024 19:00', 0, 0, 17, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Vasco')
-                ('17/07/2024 20:00', 0, 0, 17, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Grêmio')
-                ('17/07/2024 21:30', 0, 0, 17, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Vitória')
-                ('17/07/2024 21:30', 0, 0, 17, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Palmeiras')
-                ('20/07/2024 16:00', 0, 0, 18, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Criciúma')
-                ('20/07/2024 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Internacional')
-                ('20/07/2024 21:00', 0, 0, 18, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Cruzeiro')
-                ('21/07/2024 11:00', 0, 0, 18, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Vitória')
-                ('21/07/2024 16:00', 0, 0, 18, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Vasco')
-                ('21/07/2024 16:00', 0, 0, 18, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Corinthians')
-                ('21/07/2024 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('21/07/2024 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('21/07/2024 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'São Paulo')
-                ('21/07/2024 20:00', 0, 0, 18, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Fluminense')
-                ('24/07/2024 19:00', 0, 0, 19, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Juventude')
-                ('24/07/2024 19h30', 0, 0, 19, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Botafogo')
-                ('24/07/2024 20:00', 0, 0, 19, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Flamengo')
-                ('24/07/2024 21:30', 0, 0, 19, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Palmeiras')
-                ('24/07/2024 21:30', 0, 0, 19, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Bahia')
-                ('25/07/2024 20:00', 0, 0, 19, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Grêmio')
-                ('28/08/2024 19h30', 0, 0, 19, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('27/07/2024 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Vitória')
-                ('27/07/2024 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Criciúma')
-                ('27/07/2024 20:00', 0, 0, 20, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Internacional')
-                ('27/07/2024 21:30', 0, 0, 20, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'São Paulo')
-                ('27/07/2024 21:30', 0, 0, 20, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Cruzeiro')
-                ('28/07/2024 11:00', 0, 0, 20, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Fluminense')
-                ('28/07/2024 16:00', 0, 0, 20, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('28/07/2024 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Vasco')
-                ('28/07/2024 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('28/07/2024 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Corinthians')
-                ('03/08/2024 19:00', 0, 0, 21, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('03/08/2024 20:00', 0, 0, 21, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Cuiabá')
-                ('03/08/2024 20:00', 0, 0, 21, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('03/08/2024 21:30', 0, 0, 21, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Flamengo')
-                ('04/08/2024 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Bahia')
-                ('04/08/2024 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Juventude')
-                ('04/08/2024 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Grêmio')
-                ('04/08/2024 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Botafogo')
-                ('04/08/2024 19:00', 0, 0, 21, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Palmeiras')
-                ('05/08/2024 21:00', 0, 0, 21, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Fortaleza')
-                ('10/08/2024 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Criciúma')
-                ('10/08/2024 19:00', 0, 0, 22, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Grêmio')
-                ('10/08/2024 21:30', 0, 0, 22, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('10/08/2024 21:30', 0, 0, 22, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Fluminense')
-                ('10/08/2024 21:30', 0, 0, 22, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('11/08/2024 11:00', 0, 0, 22, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Botafogo')
-                ('11/08/2024 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Vitória')
-                ('11/08/2024 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Palmeiras')
-                ('11/08/2024 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('11/08/2024 19:00', 0, 0, 22, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('17/08/2024 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Cuiabá')
-                ('17/08/2024 18:30', 0, 0, 23, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Fortaleza')
-                ('17/08/2024 18:30', 0, 0, 23, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Bahia')
-                ('17/08/2024 21:00', 0, 0, 23, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Corinthians')
-                ('18/08/2024 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'São Paulo')
-                ('18/08/2024 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Internacional')
-                ('18/08/2024 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Vasco')
-                ('18/08/2024 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Juventude')
-                ('18/08/2024 18:30', 0, 0, 23, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Flamengo')
-                ('19/08/2024 20:00', 0, 0, 23, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Cruzeiro')
-                ('24/08/2024 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Juventude')
-                ('24/08/2024 18:30', 0, 0, 24, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Cuiabá')
-                ('24/08/2024 21:00', 0, 0, 24, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Fluminense')
-                ('25/08/2024 11:00', 0, 0, 24, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Grêmio')
-                ('25/08/2024 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Botafogo')
-                ('25/08/2024 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Cruzeiro')
-                ('25/08/2024 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Corinthians')
-                ('25/08/2024 18:30', 0, 0, 24, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Vitória')
-                ('25/08/2024 20:00', 0, 0, 24, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('26/08/2024 21:00', 0, 0, 24, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('31/08/2024 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Bahia')
-                ('31/08/2024 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Criciúma')
-                ('31/08/2024 21:00', 0, 0, 25, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Fortaleza')
-                ('01/09/2024 11:00', 0, 0, 25, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('01/09/2024 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('01/09/2024 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Flamengo')
-                ('01/09/2024 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Palmeiras')
-                ('01/09/2024 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Vasco')
-                ('01/09/2024 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'São Paulo')
-                ('01/09/2024 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Internacional')
-                ('14/09/2024 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Vitória')
-                ('14/09/2024 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Fortaleza')
-                ('14/09/2024 21:00', 0, 0, 26, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Corinthians')
-                ('15/09/2024 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Criciúma')
-                ('15/09/2024 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Grêmio')
-                ('15/09/2024 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Fluminense')
-                ('15/09/2024 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'São Paulo')
-                ('15/09/2024 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('15/09/2024 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Vasco')
-                ('16/09/2024 20:00', 0, 0, 26, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Cuiabá')
-                ('21/09/2024 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Juventude')
-                ('21/09/2024 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('21/09/2024 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Botafogo')
-                ('21/09/2024 21:00', 0, 0, 27, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Bahia')
-                ('22/09/2024 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('22/09/2024 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Palmeiras')
-                ('22/09/2024 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Internacional')
-                ('22/09/2024 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Cruzeiro')
-                ('22/09/2024 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('22/09/2024 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Flamengo')
-                ('28/09/2024 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('28/09/2024 21:00', 0, 0, 28, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Grêmio')
-                ('29/09/2024 11:00', 0, 0, 28, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Vitória')
-                ('29/09/2024 16:00', 0, 0, 28, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Corinthians')
-                ('29/09/2024 16:00', 0, 0, 28, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Cuiabá')
-                ('29/09/2024 16:00', 0, 0, 28, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Fluminense')
-                ('29/09/2024 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Vasco')
-                ('29/09/2024 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Criciúma')
-                ('29/09/2024 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('29/09/2024 20:00', 0, 0, 28, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('03/10/2024 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('03/10/2024 21:30', 0, 0, 29, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Cruzeiro')
-                ('04/10/2024 21:30', 0, 0, 29, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Fortaleza')
-                ('05/10/2024 16h30', 0, 0, 29, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Vitória')
-                ('05/10/2024 16h30', 0, 0, 29, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Palmeiras')
-                ('05/10/2024 16h30', 0, 0, 29, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Botafogo')
-                ('05/10/2024 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Flamengo')
-                ('05/10/2024 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Internacional')
-                ('05/10/2024 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'São Paulo')
-                ('05/10/2024 21:00', 0, 0, 29, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Juventude')
-                ('16/10/2024 21:45', 0, 0, 30, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Vasco')
-                ('16/10/2024 21:45', 0, 0, 30, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('17/10/2024 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Fluminense')
-                ('17/10/2024 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), Atlético-PR
-                ('18/10/2024 19:00', 0, 0, 30, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Cuiabá')
-                ('18/10/2024 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Criciúma')
-                ('18/10/2024 21:30', 0, 0, 30, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Bahia')
-                ('19/10/2024 16:00', 0, 0, 30, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Grêmio')
-                ('19/10/2024 16:00', 0, 0, 30, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('20/10/2024 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Palmeiras')
-                ('26/10/2024 16h30', 0, 0, 31, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('26/10/2024 16h30', 0, 0, 31, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Fluminense')
-                ('26/10/2024 16h30', 0, 0, 31, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Fortaleza')
-                ('26/10/2024 18:30', 0, 0, 31, (select idestadio from estadio where nome = 'Ligga Arena'), Atlético-PR, (select idtime from time where nome = 'Cruzeiro')
-                ('26/10/2024 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Internacional')
-                ('26/10/2024 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Juventude')
-                ('26/10/2024 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Botafogo')
-                ('26/10/2024 21:00', 0, 0, 31, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'São Paulo')
-                ('28/10/2024 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Corinthians')
-                ('28/10/2024 21:00', 0, 0, 31, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Bahia')
-                ('01/11/2024 21:00', 0, 0, 32, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Grêmio')
-                ('02/11/2024 16:00', 0, 0, 32, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Cuiabá')
-                ('02/11/2024 18:30', 0, 0, 32, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Vitória')
-                ('02/11/2024 18:30', 0, 0, 32, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Fortaleza')
-                ('04/11/2024 20:00', 0, 0, 32, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Palmeiras')
-                ('05/11/2024 21:30', 0, 0, 32, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Criciúma')
-                ('05/11/2024 21:30', 0, 0, 32, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'São Paulo')
-                ('05/11/2024 21:30', 0, 0, 32, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Vasco')
-                ('06/11/2024 21:00', 0, 0, 32, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Flamengo')
-                ('06/11/2024 21:00', 0, 0, 32, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('08/11/2024 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Fluminense')
-                ('08/11/2024 21:30', 0, 0, 33, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Grêmio')
-                ('09/11/2024 16:30', 0, 0, 33, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Corinthians')
-                ('09/11/2024 16:30', 0, 0, 33, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Cuiabá')
-                ('09/11/2024 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Criciúma')
-                ('09/11/2024 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Vasco')
-                ('09/11/2024 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('09/11/2024 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Bahia')
-                ('09/11/2024 21:00', 0, 0, 33, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('13/11/2024 20:00', 0, 0, 33, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('20/11/2024 11:00', 0, 0, 34, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Cruzeiro')
-                ('20/11/2024 16:30', 0, 0, 34, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'São Paulo')
-                ('20/11/2024 16:30', 0, 0, 34, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('20/11/2024 16:30', 0, 0, 34, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Vitória')
-                ('20/11/2024 19:00', 0, 0, 34, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Juventude')
-                ('20/11/2024 19:00', 0, 0, 34, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Flamengo')
-                ('20/11/2024 20:00', 0, 0, 34, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Palmeiras')
-                ('20/11/2024 21:30', 0, 0, 34, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Botafogo')
-                ('21/11/2024 20:00', 0, 0, 34, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Internacional')
-                ('22/11/2024 21:30', 0, 0, 34, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Fortaleza')
-                ('23/11/2024 19:30', 0, 0, 35, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Vitória')
-                ('23/11/2024 19:30', 0, 0, 35, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Palmeiras')
-                ('23/11/2024 19:30', 0, 0, 35, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Cuiabá')
-                ('23/11/2024 21:30', 0, 0, 35, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('24/11/2024 16:00', 0, 0, 35, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('24/11/2024 16:00', 0, 0, 35, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('24/11/2024 16:00', 0, 0, 35, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Vasco')
-                ('26/11/2024 19:00', 0, 0, 35, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Criciúma')
-                ('26/11/2024 20:00', 0, 0, 35, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Flamengo')
-                ('27/11/2024 21:00', 0, 0, 35, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Grêmio')
-                ('26/11/2024 21:30', 0, 0, 36, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Juventude')
-                ('26/11/2024 21:30', 0, 0, 36, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Botafogo')
-                ('30/11/2024 19:30', 0, 0, 36, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Bahia')
-                ('30/11/2024 19:30', 0, 0, 36, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Corinthians')
-                ('30/11/2024 21:30', 0, 0, 36, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('01/12/2024 16:00', 0, 0, 36, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'São Paulo')
-                ('01/12/2024 16:00', 0, 0, 36, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Internacional')
-                ('01/12/2024 18:30', 0, 0, 36, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Fortaleza')
-                ('01/12/2024 18:30', 0, 0, 36, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Cruzeiro')
-                ('01/12/2024 18:30', 0, 0, 36, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Fluminense')
-                ('03/12/2024 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Bahia')
-                ('04/12/2024 19:00', 0, 0, 37, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Atlético Mineiro')
-                ('04/12/2024 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Grêmio')
-                ('04/12/2024 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Juventude')
-                ('04/12/2024 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Flamengo')
-                ('04/12/2024 21:30', 0, 0, 37, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Botafogo')
-                ('04/12/2024 21:30', 0, 0, 37, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Palmeiras')
-                ('04/12/2024 21:30', 0, 0, 37, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Fortaleza')
-                ('05/12/2024 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Cuiabá')
-                ('05/12/2024 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Red Bull Bragantino')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena do (select idtime from time where nome = 'Grêmio')'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Corinthians')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Atlético Paranaense')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Atlético Goianiense')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Vitória')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'São Paulo')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Fluminense')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Criciúma')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Internacional')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Vasco')
-                ('08/12/2024 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Cruzeiro')
+                ('2024-04-13 18:30', 0, 0, 01, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Bahia')),
+                ('2024-04-13 18:30', 0, 0, 01, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Juventude')),
+                ('2024-04-13 21:00', 0, 0, 01, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-04-13 21:00', 0, 0, 01, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-04-14 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-04-14 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-04-14 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-04-14 16:00', 0, 0, 01, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-04-14 17:00', 0, 0, 01, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-04-14 18:30', 0, 0, 01, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-04-16 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-04-17 19:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-04-17 19:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-04-17 19:00', 0, 0, 02, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Vasco')),
+                ('2024-04-17 20:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-04-17 20:00', 0, 0, 02, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-04-17 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Internacional')),
+                ('2024-04-17 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-04-18 21:30', 0, 0, 02, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-06-05 20:00', 0, 0, 02, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Vitória')),
+                ('2024-04-20 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Vasco')),
+                ('2024-04-20 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-04-20 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-04-20 21:00', 0, 0, 03, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-04-21 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Bahia')),
+                ('2024-04-21 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-04-21 16:00', 0, 0, 03, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Internacional')),
+                ('2024-04-21 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Juventude')),
+                ('2024-04-21 18:30', 0, 0, 03, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-07-24 19:00', 0, 0, 03, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-04-27 16:00', 0, 0, 04, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-04-27 18:30', 0, 0, 04, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-04-27 20:00', 0, 0, 04, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-04-28 11:00', 0, 0, 04, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-04-28 16:00', 0, 0, 04, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Vitória')),
+                ('2024-04-28 16:00', 0, 0, 04, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-04-28 18:30', 0, 0, 04, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-04-28 18:30', 0, 0, 04, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-04-28 20:00', 0, 0, 04, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-04-29 20:00', 0, 0, 04, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-05-04 16:00', 0, 0, 05, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-05-04 18:30', 0, 0, 05, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-05-04 20:00', 0, 0, 05, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-05-05 16:00', 0, 0, 05, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-05-05 16:00', 0, 0, 05, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Vasco')),
+                ('2024-05-05 18:30', 0, 0, 05, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Bahia')),
+                ('2024-05-05 18:30', 0, 0, 05, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-06-05 19:00', 0, 0, 05, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-08-28 19:30', 0, 0, 05, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Internacional')),
+                ('2024-05-11 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-05-12 11:00', 0, 0, 06, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Vitória')),
+                ('2024-05-12 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-05-12 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-05-12 16:00', 0, 0, 06, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-05-12 18:30', 0, 0, 06, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-05-13 19:00', 0, 0, 06, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-06-09 20:00', 0, 0, 06, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-08-14 19:30', 0, 0, 06, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Juventude')),
+                ('2024-06-01 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-06-01 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-06-01 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Internacional')),
+                ('2024-06-01 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Juventude')),
+                ('2024-06-01 21:30', 0, 0, 07, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-06-02 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-06-02 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-06-02 16:00', 0, 0, 07, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Bahia')),
+                ('2024-06-02 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-06-02 18:30', 0, 0, 07, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-06-11 19:00', 0, 0, 08, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Vitória')),
+                ('2024-06-11 19:00', 0, 0, 08, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-06-11 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-06-11 21:30', 0, 0, 08, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-06-13 19:00', 0, 0, 08, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-06-13 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-06-13 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-06-13 20:00', 0, 0, 08, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-06-13 21:30', 0, 0, 08, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Vasco')),
+                ('2024-06-13 21:30', 0, 0, 08, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-06-15 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Juventude')),
+                ('2024-06-15 21:00', 0, 0, 09, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-06-16 16:00', 0, 0, 09, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Internacional')),
+                ('2024-06-16 16:00', 0, 0, 09, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-06-16 16:00', 0, 0, 09, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-06-16 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Bahia')),
+                ('2024-06-16 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-06-16 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-06-16 18:30', 0, 0, 09, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-06-17 21:30', 0, 0, 09, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-06-19 19:00', 0, 0, 10, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-06-19 19:00', 0, 0, 10, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-06-19 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-06-19 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Vasco')),
+                ('2024-06-19 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-06-19 21:30', 0, 0, 10, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-06-19 21:30', 0, 0, 10, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-06-20 18:30', 0, 0, 10, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-06-20 20:00', 0, 0, 10, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Bahia')),
+                ('2024-06-20 21:30', 0, 0, 10, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-06-22 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-06-22 17:30', 0, 0, 11, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Internacional')),
+                ('2024-06-22 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-06-22 21:30', 0, 0, 11, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-06-23 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-06-23 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-06-23 16:00', 0, 0, 11, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-06-23 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Juventude')),
+                ('2024-06-23 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Vitória')),
+                ('2024-06-23 18:30', 0, 0, 11, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-06-26 19:00', 0, 0, 12, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-06-26 19:00', 0, 0, 12, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-06-26 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-06-26 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-06-26 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-06-26 21:30', 0, 0, 12, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Vasco')),
+                ('2024-06-26 21:30', 0, 0, 12, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-06-26 21:30', 0, 0, 12, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-06-27 19:00', 0, 0, 12, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Vitória')),
+                ('2024-06-27 20:00', 0, 0, 12, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-06-29 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-06-29 19:00', 0, 0, 13, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-06-30 11:00', 0, 0, 13, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-06-30 16:00', 0, 0, 13, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Bahia')),
+                ('2024-06-30 16:00', 0, 0, 13, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-06-30 16:00', 0, 0, 13, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Juventude')),
+                ('2024-06-30 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-06-30 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-06-30 18:30', 0, 0, 13, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Internacional')),
+                ('2024-07-01 20:00', 0, 0, 13, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-07-03 19:00', 0, 0, 14, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-07-03 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-07-03 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-07-03 21:30', 0, 0, 14, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-07-03 21:30', 0, 0, 14, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-07-03 21:30', 0, 0, 14, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-07-04 19:00', 0, 0, 14, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-07-04 19:00', 0, 0, 14, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Juventude')),
+                ('2024-07-04 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Vitória')),
+                ('2024-07-04 20:00', 0, 0, 14, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Internacional')),
+                ('2024-07-06 20:00', 0, 0, 15, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-07-06 20:00', 0, 0, 15, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-07-07 16:00', 0, 0, 15, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-07-07 16:00', 0, 0, 15, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-07-07 16:00', 0, 0, 15, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-07-07 18:00', 0, 0, 15, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Vasco')),
+                ('2024-07-07 18:30', 0, 0, 15, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-07-07 18:30', 0, 0, 15, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Bahia')),
+                ('2024-07-07 18:30', 0, 0, 15, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-07-07 20:30', 0, 0, 15, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-07-10 18:30', 0, 0, 16, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-07-10 19:00', 0, 0, 16, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Bahia')),
+                ('2024-07-10 19:00', 0, 0, 16, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-07-11 19:30', 0, 0, 16, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-07-11 20:00', 0, 0, 16, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-07-11 20:00', 0, 0, 16, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-07-11 21:30', 0, 0, 16, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-07-11 21:30', 0, 0, 16, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-09-05 20:00', 0, 0, 16, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Juventude')),
+                ('2024-07-13 16:00', 0, 0, 17, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-07-13 16:00', 0, 0, 17, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-07-16 19:00', 0, 0, 17, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-07-16 21:00', 0, 0, 17, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-07-17 19:00', 0, 0, 17, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Vasco')),
+                ('2024-07-17 20:00', 0, 0, 17, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-07-17 21:30', 0, 0, 17, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Vitória')),
+                ('2024-07-17 21:30', 0, 0, 17, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-07-20 16:00', 0, 0, 18, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-07-20 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Internacional')),
+                ('2024-07-20 21:00', 0, 0, 18, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-07-21 11:00', 0, 0, 18, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Vitória')),
+                ('2024-07-21 16:00', 0, 0, 18, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Vasco')),
+                ('2024-07-21 16:00', 0, 0, 18, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-07-21 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-07-21 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-07-21 18:30', 0, 0, 18, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-07-21 20:00', 0, 0, 18, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-07-24 19:00', 0, 0, 19, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Juventude')),
+                ('2024-07-24 19:30', 0, 0, 19, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-07-24 20:00', 0, 0, 19, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-07-24 21:30', 0, 0, 19, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-07-24 21:30', 0, 0, 19, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Bahia')),
+                ('2024-07-25 20:00', 0, 0, 19, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-08-28 19:30', 0, 0, 19, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-07-27 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Vitória')),
+                ('2024-07-27 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-07-27 20:00', 0, 0, 20, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Internacional')),
+                ('2024-07-27 21:30', 0, 0, 20, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-07-27 21:30', 0, 0, 20, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-07-28 11:00', 0, 0, 20, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-07-28 16:00', 0, 0, 20, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-07-28 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Vasco')),
+                ('2024-07-28 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-07-28 19:00', 0, 0, 20, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-08-03 19:00', 0, 0, 21, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-08-03 20:00', 0, 0, 21, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-08-03 20:00', 0, 0, 21, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-08-03 21:30', 0, 0, 21, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-08-04 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Bahia')),
+                ('2024-08-04 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Juventude')),
+                ('2024-08-04 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-08-04 16:00', 0, 0, 21, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-08-04 19:00', 0, 0, 21, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-08-05 21:00', 0, 0, 21, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-08-10 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-08-10 19:00', 0, 0, 22, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-08-10 21:30', 0, 0, 22, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-08-10 21:30', 0, 0, 22, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-08-10 21:30', 0, 0, 22, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-08-11 11:00', 0, 0, 22, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-08-11 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Vitória')),
+                ('2024-08-11 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-08-11 16:00', 0, 0, 22, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-08-11 19:00', 0, 0, 22, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-08-17 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-08-17 18:30', 0, 0, 23, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-08-17 18:30', 0, 0, 23, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Bahia')),
+                ('2024-08-17 21:00', 0, 0, 23, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-08-18 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-08-18 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Internacional')),
+                ('2024-08-18 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Vasco')),
+                ('2024-08-18 16:00', 0, 0, 23, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Juventude')),
+                ('2024-08-18 18:30', 0, 0, 23, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-08-19 20:00', 0, 0, 23, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-08-24 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Juventude')),
+                ('2024-08-24 18:30', 0, 0, 24, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-08-24 21:00', 0, 0, 24, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-08-25 11:00', 0, 0, 24, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-08-25 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-08-25 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-08-25 16:00', 0, 0, 24, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-08-25 18:30', 0, 0, 24, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Vitória')),
+                ('2024-08-25 20:00', 0, 0, 24, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-08-26 21:00', 0, 0, 24, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-08-31 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Bahia')),
+                ('2024-08-31 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-08-31 21:00', 0, 0, 25, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-09-01 11:00', 0, 0, 25, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-09-01 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-09-01 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-09-01 16:00', 0, 0, 25, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-09-01 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Vasco')),
+                ('2024-09-01 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-09-01 18:30', 0, 0, 25, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Internacional')),
+                ('2024-09-14 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Vitória')),
+                ('2024-09-14 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-09-14 21:00', 0, 0, 26, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-09-15 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-09-15 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-09-15 16:00', 0, 0, 26, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-09-15 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-09-15 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-09-15 18:30', 0, 0, 26, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Vasco')),
+                ('2024-09-16 20:00', 0, 0, 26, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-09-21 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Juventude')),
+                ('2024-09-21 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-09-21 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-09-21 21:00', 0, 0, 27, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Bahia')),
+                ('2024-09-22 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-09-22 16:00', 0, 0, 27, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-09-22 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Internacional')),
+                ('2024-09-22 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-09-22 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-09-22 18:30', 0, 0, 27, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-09-28 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-09-28 21:00', 0, 0, 28, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-09-29 11:00', 0, 0, 28, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Vitória')),
+                ('2024-09-29 16:00', 0, 0, 28, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-09-29 16:00', 0, 0, 28, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-09-29 16:00', 0, 0, 28, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-09-29 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Vasco')),
+                ('2024-09-29 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-09-29 18:30', 0, 0, 28, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-09-29 20:00', 0, 0, 28, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-10-03 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-10-03 21:30', 0, 0, 29, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-10-04 21:30', 0, 0, 29, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-10-05 16:30', 0, 0, 29, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Vitória')),
+                ('2024-10-05 16:30', 0, 0, 29, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-10-05 16:30', 0, 0, 29, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-10-05 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-10-05 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Internacional')),
+                ('2024-10-05 19:00', 0, 0, 29, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-10-05 21:00', 0, 0, 29, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Juventude')),
+                ('2024-10-16 21:45', 0, 0, 30, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Vasco')),
+                ('2024-10-16 21:45', 0, 0, 30, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-10-17 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-10-17 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-10-18 19:00', 0, 0, 30, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-10-18 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-10-18 21:30', 0, 0, 30, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Bahia')),
+                ('2024-10-19 16:00', 0, 0, 30, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-10-19 16:00', 0, 0, 30, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-10-20 20:00', 0, 0, 30, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-10-26 16:30', 0, 0, 31, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-10-26 16:30', 0, 0, 31, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-10-26 16:30', 0, 0, 31, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-10-26 18:30', 0, 0, 31, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-10-26 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Internacional')),
+                ('2024-10-26 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Juventude')),
+                ('2024-10-26 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-10-26 21:00', 0, 0, 31, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-10-28 19:00', 0, 0, 31, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-10-28 21:00', 0, 0, 31, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Bahia')),
+                ('2024-11-01 21:00', 0, 0, 32, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-11-02 16:00', 0, 0, 32, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-11-02 18:30', 0, 0, 32, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Vitória')),
+                ('2024-11-02 18:30', 0, 0, 32, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-11-04 20:00', 0, 0, 32, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-11-05 21:30', 0, 0, 32, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-11-05 21:30', 0, 0, 32, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-11-05 21:30', 0, 0, 32, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Vasco')),
+                ('2024-11-06 21:00', 0, 0, 32, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-11-06 21:00', 0, 0, 32, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-11-08 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-11-08 21:30', 0, 0, 33, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-11-09 16:30', 0, 0, 33, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-11-09 16:30', 0, 0, 33, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-11-09 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-11-09 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Vasco')),
+                ('2024-11-09 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-11-09 19:00', 0, 0, 33, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Bahia')),
+                ('2024-11-09 21:00', 0, 0, 33, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-11-13 20:00', 0, 0, 33, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-11-20 11:00', 0, 0, 34, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-11-20 16:30', 0, 0, 34, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-11-20 16:30', 0, 0, 34, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-11-20 16:30', 0, 0, 34, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Vitória')),
+                ('2024-11-20 19:00', 0, 0, 34, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Juventude')),
+                ('2024-11-20 19:00', 0, 0, 34, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-11-20 20:00', 0, 0, 34, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-11-20 21:30', 0, 0, 34, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-11-21 20:00', 0, 0, 34, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Internacional')),
+                ('2024-11-22 21:30', 0, 0, 34, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-11-23 19:30', 0, 0, 35, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'Vitória')),
+                ('2024-11-23 19:30', 0, 0, 35, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-11-23 19:30', 0, 0, 35, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-11-23 21:30', 0, 0, 35, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-11-24 16:00', 0, 0, 35, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-11-24 16:00', 0, 0, 35, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-11-24 16:00', 0, 0, 35, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Vasco')),
+                ('2024-11-26 19:00', 0, 0, 35, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-11-26 20:00', 0, 0, 35, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-11-27 21:00', 0, 0, 35, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-11-26 21:30', 0, 0, 36, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Juventude')),
+                ('2024-11-26 21:30', 0, 0, 36, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-11-30 19:30', 0, 0, 36, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Bahia')),
+                ('2024-11-30 19:30', 0, 0, 36, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-11-30 21:30', 0, 0, 36, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-12-01 16:00', 0, 0, 36, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-12-01 16:00', 0, 0, 36, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Internacional')),
+                ('2024-12-01 18:30', 0, 0, 36, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-12-01 18:30', 0, 0, 36, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Cruzeiro')),
+                ('2024-12-01 18:30', 0, 0, 36, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-12-03 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Neo Química Arena'), (select idtime from time where nome = 'Corinthians'), (select idtime from time where nome = 'Bahia')),
+                ('2024-12-04 19:00', 0, 0, 37, (select idestadio from estadio where nome = 'São Januário'), (select idtime from time where nome = 'Vasco'), (select idtime from time where nome = 'Atlético Mineiro')),
+                ('2024-12-04 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Barradão'), (select idtime from time where nome = 'Vitória'), (select idtime from time where nome = 'Grêmio')),
+                ('2024-12-04 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'MorumBIS'), (select idtime from time where nome = 'São Paulo'), (select idtime from time where nome = 'Juventude')),
+                ('2024-12-04 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Heriberto Hülse'), (select idtime from time where nome = 'Criciúma'), (select idtime from time where nome = 'Flamengo')),
+                ('2024-12-04 21:30', 0, 0, 37, (select idestadio from estadio where nome = 'Beira-Rio'), (select idtime from time where nome = 'Internacional'), (select idtime from time where nome = 'Botafogo')),
+                ('2024-12-04 21:30', 0, 0, 37, (select idestadio from estadio where nome = 'Mineirão'), (select idtime from time where nome = 'Cruzeiro'), (select idtime from time where nome = 'Palmeiras')),
+                ('2024-12-04 21:30', 0, 0, 37, (select idestadio from estadio where nome = 'Antônio Accioly'), (select idtime from time where nome = 'Atlético Goianiense'), (select idtime from time where nome = 'Fortaleza')),
+                ('2024-12-05 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Fluminense'), (select idtime from time where nome = 'Cuiabá')),
+                ('2024-12-05 20:00', 0, 0, 37, (select idestadio from estadio where nome = 'Ligga Arena'), (select idtime from time where nome = 'Atlético Paranaense'), (select idtime from time where nome = 'Red Bull Bragantino')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena do Grêmio'), (select idtime from time where nome = 'Grêmio'), (select idtime from time where nome = 'Corinthians')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena MRV'), (select idtime from time where nome = 'Atlético Mineiro'), (select idtime from time where nome = 'Atlético Paranaense')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Fonte Nova'), (select idtime from time where nome = 'Bahia'), (select idtime from time where nome = 'Atlético Goianiense')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Maracanã'), (select idtime from time where nome = 'Flamengo'), (select idtime from time where nome = 'Vitória')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Nilton Santos'), (select idtime from time where nome = 'Botafogo'), (select idtime from time where nome = 'São Paulo')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Allianz Parque'), (select idtime from time where nome = 'Palmeiras'), (select idtime from time where nome = 'Fluminense')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Nabi Abi Chedid'), (select idtime from time where nome = 'Red Bull Bragantino'), (select idtime from time where nome = 'Criciúma')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena Castelão'), (select idtime from time where nome = 'Fortaleza'), (select idtime from time where nome = 'Internacional')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Arena Pantanal'), (select idtime from time where nome = 'Cuiabá'), (select idtime from time where nome = 'Vasco')),
+                ('2024-12-08 16:00', 0, 0, 38, (select idestadio from estadio where nome = 'Alfredo Jaconi'), (select idtime from time where nome = 'Juventude'), (select idtime from time where nome = 'Cruzeiro'))
                 """)
 
     cur.execute("""

@@ -75,7 +75,7 @@ def bd(request):
         if 'criar_tabelas' in request.POST:            
             try:
                 create_all_tables(cur)
-                insert_example_data(cur)
+                #insert_example_data(cur)
                 cur.close()
                 conn.close()
                 messages.success(request, 'Tabelas criadas com sucesso!')

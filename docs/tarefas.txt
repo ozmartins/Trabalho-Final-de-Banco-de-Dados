@@ -6,5 +6,4 @@
 	[ ]Execute as consultas definidas no item 6. Deve existir uma forma de realizar cada consulta que apresentará como retorno o resultado do SQL executado no Banco de Dados, tanto na forma tabular quando graficamente.	
 	[ ]Por fim, tenha uma opção que demonstre a integração da aplicação com conceitos de IA Generativa, por exemplo, utilizando-se de embeddings ou Large Language Models (LLMs) para auxiliar em alguma tarefa no domínio da aplicação, seja operacional ou voltada à tomada de decisão
 
-[ ]Descrição do objetivo geral do sistema.
-[ ]Uma descrição mais detalhada do sistema.	
+[ ]Inserts from dataset da CBF.
