@@ -29,14 +29,15 @@ def create_table_city(cur):
                 CREATE TABLE Cidade (
                 IdCidade serial PRIMARY KEY,
                 Nome varchar(100),
-                UF varchar(2)
+                UF varchar(2),
+                UNIQUE (Nome, UF)
                 )""")
 
 def create_table_stadium(cur):
     cur.execute("""
                 CREATE TABLE Estadio (
                 IdEstadio serial PRIMARY KEY,
-                Nome varchar(100),
+                Nome varchar(100) UNIQUE,
                 Capacidade integer,
                 IdCidade integer
                 )""")
@@ -45,7 +46,7 @@ def create_table_referee_role(cur):
     cur.execute("""
                 CREATE TABLE FuncaoArbitro (
                 IdFuncaoArbitro serial PRIMARY KEY,
-                Descricao varchar(100)
+                Descricao varchar(100) UNIQUE
                 )""")
 
 def create_table_season(cur):    
@@ -76,14 +77,15 @@ def create_table_match(cur):
                 IdRodada integer,
                 IdEstadio integer,
                 IdTimeMandante integer,
-                IdTimeVisitante integer
+                IdTimeVisitante integer,
+                UNIQUE(IdTimeMandante, IdTimeVisitante)
                 )""")
 
 def create_table_team(cur):
     cur.execute("""
                 CREATE TABLE Time (
                 IdTime serial PRIMARY KEY,
-                Nome varchar(100),
+                Nome varchar(100) UNIQUE,
                 IdCidade integer
                 )""")
 
@@ -168,7 +170,8 @@ def create_table_lineup(cur):
                 IdEscalacao serial PRIMARY KEY,
                 IdPartida integer,
                 IdJogador integer,
-                IdPosicao integer
+                IdPosicao integer,
+                UNIQUE(IdPartida, IdJogador)
                 )""")
     
 def create_table_position(cur):

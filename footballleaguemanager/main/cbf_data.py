@@ -20,7 +20,7 @@ def insert_cities(cur, jogos):
         cur.execute(f"""
                     INSERT INTO Cidade (Nome, UF)
                     VALUES ('{nome_cidade}', '{uf_cidade}')   
-                    ON CONFLICT (nome) DO NOTHING
+                    ON CONFLICT (Nome, UF) DO NOTHING
                     """)
         
 def insert_stadiums(cur, jogos):
@@ -43,16 +43,16 @@ def insert_teams(cur, jogos):
         nome_visitante = jogo['visitante']['nome']
 
         local = jogo['local'].replace('Beira-Rio', 'Beira Rio').split('-')
-        cidade_estadio = local[1].strip()        
+        cidade_estadio = local[1].strip()                
 
         cur.execute(f"""
-                    INSERT INTO Time (IdTime, Nome, IdCidade) VALUES
+                    INSERT INTO Time (IdTime, Nome, IdCidade) 
                     VALUES ({id_mandante}, '{nome_mandante}', (select idcidade from cidade where nome = '{cidade_estadio}'))
                     ON CONFLICT (Nome) DO NOTHING
                     """)
         
         cur.execute(f"""
-                    INSERT INTO Time (IdTime, Nome, IdCidade) VALUES
+                    INSERT INTO Time (IdTime, Nome, IdCidade) 
                     VALUES ({id_visitante}, '{nome_visitante}', (select idcidade from cidade where nome = '{cidade_estadio}'))
                     ON CONFLICT (Nome) DO NOTHING
                     """)
@@ -165,8 +165,8 @@ def insert_referee_roles(cur, jogos):
             nome_funcao = arbitro['funcao']
             cur.execute(f"""
                         INSERT INTO FuncaoArbitro (Descricao) 
-                        VALUES ({nome_funcao})
-                        ON CONFLICT (Nome) DO NOTHING
+                        VALUES ('{nome_funcao}')
+                        ON CONFLICT (Descricao) DO NOTHING
                         """)
 
 def insert_referees(cur, jogos):
@@ -247,9 +247,12 @@ def insert_participation(cur, jogos):
 def insert_matches(cur, jogos):
     for jogo in jogos:
         data = jogo['data'].replace('/','')
-        ano = data[4:]
-        mes = data[:-4]
-        dia = data[:-6]
+        ano = data[5:]
+        mes = data[3:-4]
+        dia = data[1:-6]        
+
+        id_jogo = jogo['id_jogo']
+
         hora = jogo['hora']
         data_hora = f'{ano}-{mes}-{dia}:{hora}'        
         
@@ -260,12 +263,18 @@ def insert_matches(cur, jogos):
         id_visitante = jogo['visitante']['id']
 
         cur.execute(f"""
-                    INSERT INTO Partida (DataHora, Publico, Renda, IdRodada, IdEstadio, IdTimeMandante, IdTimeVisitante) VALUES
-                    VALUES ({data_hora}, 0, 0, {jogo['rodada']}, (select idestadio where nome = {nome_estadio}), {id_mandante}, {id_visitante})
+                    INSERT INTO Partida (IdPartida, DataHora, Publico, Renda, IdRodada, IdEstadio, IdTimeMandante, IdTimeVisitante) 
+                    VALUES ({id_jogo}, '{data_hora}', 0, 0, {jogo['rodada']}, (select idestadio from estadio where nome = '{nome_estadio}'), {id_mandante}, {id_visitante})
                     ON CONFLICT (IdTimeMandante, IdTimeVisitante) DO NOTHING
                     """)        
 
 def insert_data_from_cbf_json(cur):
+    insert_league(cur)
+    insert_season(cur)
+    insert_rounds(cur)
+    insert_nationalities(cur)
+    insert_positions(cur)
+    insert_federations(cur)
     for rodada in range(38):
         with open(f'main/datasets/rodada-{rodada+1}.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -273,15 +282,9 @@ def insert_data_from_cbf_json(cur):
             jogos = data['jogos'][0]['jogo']
 
             insert_cities(cur, jogos)
-            insert_league(cur)
-            insert_season(cur)
             insert_stadiums(cur, jogos)
             insert_teams(cur, jogos)
-            insert_rounds(cur)        
-            insert_matches(cur, jogos)
-            insert_nationalities(cur)
-            insert_positions(cur)
-            insert_federations(cur)
+            insert_matches(cur, jogos)            
             insert_referee_roles(cur, jogos)
             insert_referees(cur, jogos)
             insert_players(cur, jogos)

@@ -63,10 +63,10 @@
             <form method="post">
                 {% csrf_token %}
                 <label for="db_user">Usuário:</label><br>
-                <input type="text" id="db_user" name="db_user" required autocomplete="off"><br><br>
+                <input type="text" id="db_user" name="db_user" required autocomplete="off" value="postgres"><br><br>
 
                 <label for="db_password">Senha:</label><br>
-                <input type="password" id="db_password" name="db_password" required autocomplete="off"><br><br>
+                <input type="password" id="db_password" name="db_password" required autocomplete="off" value="master"><br><br>
 
                 <button type="submit" name="criar_tabelas">Criar Tabelas</button>
                 <button type="submit" name="destruir_tabelas">Destruir Tabelas</button>
