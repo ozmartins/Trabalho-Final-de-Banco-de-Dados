@@ -266,7 +266,58 @@ def insert_matches(cur, jogos):
                     INSERT INTO Partida (IdPartida, DataHora, Publico, Renda, IdRodada, IdEstadio, IdTimeMandante, IdTimeVisitante) 
                     VALUES ({id_jogo}, '{data_hora}', 0, 0, {jogo['rodada']}, (select idestadio from estadio where nome = '{nome_estadio}'), {id_mandante}, {id_visitante})
                     ON CONFLICT (IdTimeMandante, IdTimeVisitante) DO NOTHING
-                    """)        
+                    """)
+
+def insert_player_contract(cur, jogos):
+    for jogo in jogos:
+        id_jogo = jogo['id_jogo']
+
+        id_mandante = jogo['mandante']['id']
+        id_visitante = jogo['visitante']['id']
+
+        atletas_mandante = jogo['mandante']['atletas']
+        atletas_visitante = jogo['visitante']['atletas']
+        
+        for atleta in atletas_mandante:
+            id_atleta = atleta['id']                
+            cur.execute(f"""
+                        INSERT INTO ContratoJogador (Numero, IdJogador, IdTime, DataRescisao, DataAssinatura, MultaRescisoria) VALUES
+                        ('{id_mandante}/{id_atleta}', {id_atleta}, {id_mandante}, NULL, '2024-01-01', 0)
+                        ON CONFLICT (Numero) DO NOTHING
+                        """)
+            
+        for atleta in atletas_visitante:
+            id_atleta = atleta['id']
+            cur.execute(f"""
+                        INSERT INTO ContratoJogador (Numero, IdJogador, IdTime, DataRescisao, DataAssinatura, MultaRescisoria) VALUES
+                        ('{id_visitante}/{id_atleta}', {id_atleta}, {id_visitante}, NULL, '2024-01-01', 0)
+                        ON CONFLICT (Numero) DO NOTHING
+                        """)
+
+def insert_coach_contract(cur):
+    cur.execute("""
+                INSERT INTO ContratoTecnico (IdTecnico, IdTime, DataAssinatura, DataRescisao, MultaRescisoria) VALUES
+                (1, (select idtime from time where nome = 'Athletico Paranense'), '2024-04-13', '2024-12-08', 0),
+                (2, (select idtime from time where nome = 'Atletico Goiniense'), '2024-04-13', '2024-12-08', 0),
+                (3, (select idtime from time where nome = 'Atletico Mineiro'), '2024-04-13', '2024-12-08', 0),
+                (4, (select idtime from time where nome = 'Bahia'), '2024-04-13', '2024-12-08', 0),
+                (5, (select idtime from time where nome = 'Botafogo'), '2024-04-13', '2024-12-08', 0),
+                (6, (select idtime from time where nome = 'Corinthians'), '2024-04-13', '2024-12-08', 0),
+                (7, (select idtime from time where nome = 'Criciúma'), '2024-04-13', '2024-12-08', 0),
+                (8, (select idtime from time where nome = 'Cruzeiro'), '2024-04-13', '2024-12-08', 0),
+                (9, (select idtime from time where nome = 'Cuiabá'), '2024-04-13', '2024-12-08', 0),
+                (10, (select idtime from time where nome = 'Flamengo'), '2024-04-13', '2024-12-08', 0),
+                (11, (select idtime from time where nome = 'Fluminense'), '2024-04-13', '2024-12-08', 0),
+                (12, (select idtime from time where nome = 'Fortaleza'), '2024-04-13', '2024-12-08', 0),
+                (13, (select idtime from time where nome = 'Grêmio'), '2024-04-13', '2024-12-08', 0),
+                (14, (select idtime from time where nome = 'Internacional'), '2024-04-13', '2024-12-08', 0),
+                (15, (select idtime from time where nome = 'Juventude'), '2024-04-13', '2024-12-08', 0),
+                (16, (select idtime from time where nome = 'Palmeiras'), '2024-04-13', '2024-12-08', 0),
+                (17, (select idtime from time where nome = 'São Paulo'), '2024-04-13', '2024-12-08', 0),
+                (18, (select idtime from time where nome = 'Vasco da Gama'), '2024-04-13', '2024-12-08', 0),
+                (19, (select idtime from time where nome = 'Vitória'), '2024-04-13', '2024-12-08', 0),
+                (20, (select idtime from time where nome = 'Santos'), '2024-04-13', '2024-12-08', 0)
+                """)
 
 def insert_data_from_cbf_json(cur):
     insert_league(cur)
@@ -275,6 +326,7 @@ def insert_data_from_cbf_json(cur):
     insert_nationalities(cur)
     insert_positions(cur)
     insert_federations(cur)
+    #insert_coach_contract(cur)
     for rodada in range(38):
         with open(f'main/datasets/rodada-{rodada+1}.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -289,3 +341,4 @@ def insert_data_from_cbf_json(cur):
             insert_referees(cur, jogos)
             insert_players(cur, jogos)
             insert_lineup(cur, jogos)
+            insert_player_contract(cur, jogos)
