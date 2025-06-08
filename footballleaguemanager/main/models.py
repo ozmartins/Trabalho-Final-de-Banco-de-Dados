@@ -6,6 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+from enum import Enum
 
 
 class Arbitro(models.Model):
@@ -260,10 +261,33 @@ class Estadio(models.Model):
         verbose_name = "Estádio"
         verbose_name_plural = "Estádios"
 
+class TipoEvento(Enum):
+    GOL_NORMAL = (1, "Gol normal")
+    GOL_FALTA = (2, "Gol de falta")
+    GOL_PENALTI = (3, "Gol de pênalti")
+    CARTAO_AMARELO = (4, "Cartão amarelo")
+    CARTAO_VERMELHO = (5, "Cartão vermelho")
+    FALTA = (6, "Falta")
+    PENALTI = (7, "Pênalti")
+    SUBSTITUICAO_SAIDA = (8, "Substituição saída")
+    SUBSTITUICAO_ENTRADA = (9, "Substituição entrada")    
+
+    def __init__(self, value, label):
+        self._value_ = value
+        self.label = label
+
+    @classmethod
+    def choices(cls):
+        return [(e.value, e.label) for e in cls]
 
 class Evento(models.Model):
-    idevento = models.AutoField(primary_key=True, verbose_name="Código")
-    tipoevento = models.IntegerField(blank=True, null=True, verbose_name="Tipo")
+    idevento = models.AutoField(primary_key=True, verbose_name="Código")    
+    tipoevento = models.IntegerField(
+        blank=True,
+        null=True,
+        choices=TipoEvento.choices(),
+        verbose_name="Tipo"
+    )    
     minuto = models.IntegerField(blank=True, null=True, verbose_name="Minuto")
     idpartida = models.ForeignKey('Partida', models.DO_NOTHING, db_column='idpartida', blank=True, null=True, verbose_name="Partida")
     idjogador = models.ForeignKey('Jogador', models.DO_NOTHING, db_column='idjogador', blank=True, null=True, verbose_name="Jogador")

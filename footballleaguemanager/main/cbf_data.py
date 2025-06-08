@@ -1,18 +1,17 @@
 import json
 import os
-import csv
-import psycopg2
+from .models import TipoEvento
 
 def to_pascal_case(s):
     return ''.join(word.capitalize()+' ' for word in s.split()).strip()
 
-def insert_league(cur):
+def insert_leagues(cur):
     cur.execute(f"""
                 INSERT INTO Campeonato (IdCampeonato, Nome, Premiacao, IdFederacao) VALUES
                 (1, 'Campeonato Brasileiro', 481600000, null)
                 """)
     
-def insert_season(cur):    
+def insert_seasons(cur):    
     cur.execute(f"""
                 INSERT INTO Temporada (IdTemporada, QuantidadeRodadas, DataInicio, DataFim, Ano, IdCampeonato) VALUES
                 (1, 38, '2024-04-13', '2024-12-08', 2024, 1)
@@ -169,7 +168,8 @@ def insert_positions(cur):
                 (4, 'Zagueiro'),
                 (5, 'Volante'),
                 (6, 'Meia'),
-                (7, 'Atacante')
+                (7, 'Atacante'),
+                (8, 'Desconhecida')
                 """)
     
 def insert_federations(cur):
@@ -241,7 +241,8 @@ def insert_referee_teams(cur, jogos):
                         """)
 
 def insert_players(cur, jogos):
-    for jogo in jogos:
+    camisas = set()
+    for jogo in jogos:    
         atletas_mandante = jogo['mandante']['atletas']
         atletas_visitante = jogo['visitante']['atletas']
         
@@ -260,6 +261,7 @@ def insert_players(cur, jogos):
                         VALUES ({atleta['id']}, '{nome_atleta}', '1900-01-01', null, null)
                         ON CONFLICT (IdJogador) DO NOTHING
                         """)
+                
             
 def insert_coaches(cur):
     with open(f'main/datasets/treinadores.json', 'r', encoding='utf-8') as file:
@@ -288,9 +290,11 @@ def calc_position(numero_camisa):
         return 6
     elif numero_camisa in [0,9,11]:
         return 7
+    else:
+        return 8
 
 
-def insert_lineup(cur, jogos):
+def insert_lineups(cur, jogos):
     for jogo in jogos:
         id_jogo = jogo['id_jogo']
         
@@ -300,8 +304,7 @@ def insert_lineup(cur, jogos):
         for atleta in atletas_mandante:                                    
             id_atleta = atleta['id']
             numero_camisa = int(atleta['numero_camisa']) % 11
-            posicao = calc_position(numero_camisa)
-            print(f"{numero_camisa} - {posicao}")
+            posicao = calc_position(numero_camisa)            
 
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
@@ -316,7 +319,7 @@ def insert_lineup(cur, jogos):
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
                         VALUES ({id_jogo}, {id_atleta}, {posicao})
-                       ON CONFLICT (IdPartida, IdJogador) DO NOTHING
+                        ON CONFLICT (IdPartida, IdJogador) DO NOTHING
                         """)         
             
 def insert_participation(cur, jogos):
@@ -349,8 +352,8 @@ def insert_matches(cur, jogos):
                     ON CONFLICT (IdTimeMandante, IdTimeVisitante) DO NOTHING
                     """)
 
-def insert_player_contract(cur, jogos):
-    for jogo in jogos:        
+def insert_player_contracts(cur, jogos):
+    for jogo in jogos:
         id_mandante = jogo['mandante']['id']
         id_visitante = jogo['visitante']['id']
 
@@ -392,9 +395,88 @@ def insert_coach_contract(cur):
                             AND IdTecnico = (select idtecnico from tecnico where nome = '{treinador['nome']}')
                             """)
 
+def insert_events(cur, jogos):    
+    for jogo in jogos:
+        id_jogo = jogo['id_jogo']
+        
+        substituicoes_mandante = jogo['mandante']['alteracoes']
+        for substituicao in substituicoes_mandante:
+            minuto = int(substituicao['tempo_jogo'].split(":")[0])
+            id_jogador_saiu = substituicao['codigo_jogador_saiu']
+            id_jogador_entrou = substituicao['codigo_jogador_entrou']
+
+            cur.execute(f'select count(*) as qtd from jogador where idjogador in ({id_jogador_saiu}, {id_jogador_entrou})')
+            result = cur.fetchone()            
+
+            if result[0] == 2:
+                cur.execute(f"""
+                            INSERT INTO Evento (TipoEvento, Minuto, IdPartida, IdJogador) 
+                            VALUES ({TipoEvento.SUBSTITUICAO_SAIDA.value}, {minuto}, {id_jogo}, {id_jogador_saiu})
+                            """)
+                cur.execute(f"""
+                            INSERT INTO Evento (TipoEvento, Minuto, IdPartida, IdJogador) 
+                            VALUES ({TipoEvento.SUBSTITUICAO_ENTRADA.value}, {minuto}, {id_jogo}, {id_jogador_entrou})
+                            """)
+            
+        substituicoes_visitante = jogo['visitante']['alteracoes']
+        for substituicao in substituicoes_visitante:
+            minuto = int(substituicao['tempo_jogo'].split(":")[0])
+            id_jogador_saiu = substituicao['codigo_jogador_saiu']
+            id_jogador_entrou = substituicao['codigo_jogador_entrou']
+
+            cur.execute(f'select count(*) as qtd from jogador where idjogador in ({id_jogador_saiu}, {id_jogador_entrou})')
+            result = cur.fetchone()            
+
+            if result[0] == 2:
+                cur.execute(f"""
+                            INSERT INTO Evento (TipoEvento, Minuto, IdPartida, IdJogador) 
+                            VALUES ({TipoEvento.SUBSTITUICAO_SAIDA.value}, {minuto}, {id_jogo}, {id_jogador_saiu})
+                            """)
+                cur.execute(f"""
+                            INSERT INTO Evento (TipoEvento, Minuto, IdPartida, IdJogador) 
+                            VALUES ({TipoEvento.SUBSTITUICAO_ENTRADA.value}, {minuto}, {id_jogo}, {id_jogador_entrou})
+                            """)
+
+        penalidades = jogo['penalidades']
+        for penalidade in penalidades:            
+            if (penalidade['tipo'] == 'GOL'):
+                if (penalidade['resultado'] == 'NR'):
+                    evento = TipoEvento.GOL_NORMAL.value
+                elif (penalidade['resultado'] == 'FT'):
+                    evento = TipoEvento.GOL_FALTA.value                    
+                elif (penalidade['resultado'] == 'PN'):
+                    evento = TipoEvento.GOL_PENALTI.value                    
+            elif (penalidade['tipo'] == 'PENALIDADE'):
+                if (penalidade['resultado'] == 'AMARELO'):
+                    evento = TipoEvento.CARTAO_AMARELO.value
+                elif (penalidade['resultado'] == 'VERMELHO2AMARELO'):
+                    evento = TipoEvento.CARTAO_VERMELHO.value
+            
+            if penalidade['tempo_jogo'] in ['AC1', 'TN1']:
+                tempo_jogo = 1
+            elif penalidade['tempo_jogo'] in ['AC2', 'TN2']:
+                tempo_jogo = 1
+            elif penalidade['tempo_jogo'].isdigit():
+                tempo_jogo = int(penalidade['tempo_jogo'])                
+            else:
+                tempo_jogo = 0            
+
+            minuto = tempo_jogo * int(penalidade['minutos'].split(":")[0])
+            id_jogador = penalidade['atleta_id']
+
+            cur.execute(f'select count(*) as qtd from jogador where idjogador = {id_jogador}')
+            result = cur.fetchone()            
+
+            if result[0] == 1:
+                cur.execute(f"""
+                            INSERT INTO Evento (TipoEvento, Minuto, IdPartida, IdJogador) 
+                            VALUES ({evento}, {minuto}, {id_jogo}, {id_jogador})
+                            """)
+
+
 def insert_data_from_cbf_json(cur):
-    insert_league(cur)
-    insert_season(cur)
+    insert_leagues(cur)
+    insert_seasons(cur)
     insert_rounds(cur)
     insert_nationalities(cur)
     insert_positions(cur)
@@ -412,6 +494,7 @@ def insert_data_from_cbf_json(cur):
             insert_referees(cur, jogos)
             insert_referee_teams(cur, jogos)
             insert_players(cur, jogos)
-            insert_lineup(cur, jogos)
-            insert_player_contract(cur, jogos)
-    insert_coach_contract(cur)
+            insert_lineups(cur, jogos)
+            insert_player_contracts(cur, jogos)
+            insert_events(cur, jogos)
+    insert_coach_contract(cur)    
