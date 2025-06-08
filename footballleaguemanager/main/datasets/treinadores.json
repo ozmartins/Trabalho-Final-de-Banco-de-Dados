@@ -1,0 +1,292 @@
+[
+    {
+        "clube": "Athletico Paranaense",
+        "treinadores": [
+            {
+                "nome": "Cuca",
+                "inicio": "2024-01-01",
+                "fim": "2024-07-24"
+            },
+            {
+                "nome": "Martín Varini",
+                "inicio": "2024-07-09",
+                "fim": "2024-09-23"
+            },
+            {
+                "nome": "Lucho González",
+                "inicio": "2024-09-24",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Atlético Goianiense Saf",
+        "treinadores": [
+            {
+                "nome": "Jair Ventura",
+                "inicio": "2024-01-01",
+                "fim": "2024-07-24"
+            },
+            {
+                "nome": "Vagner Mancini",
+                "inicio": "2024-07-04",
+                "fim": "2024-08-05"
+            },
+            {
+                "nome": "Umberto Louzer",
+                "inicio": "2024-08-05",
+                "fim": "2024-10-29"
+            }
+        ]
+    },
+    {
+        "clube": "Atlético Mineiro Saf",
+        "treinadores": [
+            {
+                "nome": "Gabriel Milito",
+                "inicio": "2024-03-24",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Bahia",
+        "treinadores": [
+            {
+                "nome": "Rogério Ceni",
+                "inicio": "2023-09-09",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Botafogo",
+        "treinadores": [
+            {
+                "nome": "Artur Jorge",
+                "inicio": "2024-04-03",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Red Bull Bragantino",
+        "treinadores": [
+            {
+                "nome": "Pedro Caixinha",
+                "inicio": "2023-01-01",
+                "fim": "2024-10-27"
+            },
+            {
+                "nome": "Fernando Seabra",
+                "inicio": "2024-10-31",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Corinthians",
+        "treinadores": [
+            {
+                "nome": "António Oliveira",
+                "inicio": "2024-01-01",
+                "fim": "2024-07-02"
+            },
+            {
+                "nome": "Ramón Díaz",
+                "inicio": "2024-07-10",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Criciúma",
+        "treinadores": [
+            {
+                "nome": "Cláudio Tencati",
+                "inicio": "2021-10-07",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Cruzeiro Saf",
+        "treinadores": [
+            {
+                "nome": "Fernando Seabra",
+                "inicio": "2024-01-01",
+                "fim": "2024-09-23"
+            },
+            {
+                "nome": "Fernando Diniz",
+                "inicio": "2024-09-23",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Cuiabá Saf",
+        "treinadores": [
+            {
+                "nome": "Luiz Fernando Iubel",
+                "inicio": "2024-01-01",
+                "fim": "2024-05-01"
+            },
+            {
+                "nome": "Petit",
+                "inicio": "2024-05-01",
+                "fim": "2024-08-27"
+            },
+            {
+                "nome": "Bernardo Franco",
+                "inicio": "2024-08-28",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Flamengo",
+        "treinadores": [
+            {
+                "nome": "Tite",
+                "inicio": "2023-10-09",
+                "fim": "2024-09-30"
+            },
+            {
+                "nome": "Filipe Luís",
+                "inicio": "2024-09-30",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Fluminense",
+        "treinadores": [
+            {
+                "nome": "Fernando Diniz",
+                "inicio": "2024-01-01",
+                "fim": "2024-07-24"
+            },
+            {
+                "nome": "Mano Menezes",
+                "inicio": "2024-07-01",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Fortaleza",
+        "treinadores": [
+            {
+                "nome": "Juan Pablo Vojvoda",
+                "inicio": "2021-05-04",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Grêmio",
+        "treinadores": [
+            {
+                "nome": "Renato Gaúcho",
+                "inicio": "2022-09-08",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Internacional",
+        "treinadores": [
+            {
+                "nome": "Eduardo Coudet",
+                "inicio": "2024-01-01",
+                "fim": "2024-07-10"
+            },
+            {
+                "nome": "Roger Machado",
+                "inicio": "2024-07-10",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Juventude",
+        "treinadores": [
+            {
+                "nome": "Roger Machado",
+                "inicio": "2024-01-01",
+                "fim": "2024-07-17"
+            },
+            {
+                "nome": "Jair Ventura",
+                "inicio": "2024-07-17",
+                "fim": "2024-10-26"
+            },
+            {
+                "nome": "Fábio Matias",
+                "inicio": "2024-10-27",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Palmeiras",
+        "treinadores": [
+            {
+                "nome": "Abel Ferreira",
+                "inicio": "2020-11-04",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "São Paulo",
+        "treinadores": [
+            {
+                "nome": "Thiago Carpini",
+                "inicio": "2024-01-01",
+                "fim": "2024-04-18"
+            },
+            {
+                "nome": "Luis Zubeldía",
+                "inicio": "2024-04-18",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Vasco da Gama S.a.f.",
+        "treinadores": [
+            {
+                "nome": "Ramón Díaz",
+                "inicio": "2024-01-01",
+                "fim": "2024-04-27"
+            },
+            {
+                "nome": "Álvaro Pacheco",
+                "inicio": "2024-04-27",
+                "fim": "2024-06-20"
+            },
+            {
+                "nome": "Rafael Paiva",
+                "inicio": "2024-06-20",
+                "fim": null
+            }
+        ]
+    },
+    {
+        "clube": "Vitória",
+        "treinadores": [
+            {
+                "nome": "Léo Condé",
+                "inicio": "2024-01-01",
+                "fim": "2024-05-14"
+            },
+            {
+                "nome": "Thiago Carpini",
+                "inicio": "2024-05-14",
+                "fim": null
+            }
+        ]
+    }
+]
