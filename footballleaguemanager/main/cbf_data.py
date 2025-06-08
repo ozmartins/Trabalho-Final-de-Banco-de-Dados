@@ -1,4 +1,10 @@
 import json
+import os
+import csv
+import psycopg2
+
+def to_pascal_case(s):
+    return ''.join(word.capitalize()+' ' for word in s.split()).strip()
 
 def insert_league(cur):
     cur.execute(f"""
@@ -37,10 +43,10 @@ def insert_stadiums(cur, jogos):
 def insert_teams(cur, jogos):
     for jogo in jogos:
         id_mandante = jogo['mandante']['id']
-        nome_mandante = jogo['mandante']['nome']
+        nome_mandante = to_pascal_case(jogo['mandante']['nome'])
 
         id_visitante = jogo['visitante']['id']
-        nome_visitante = jogo['visitante']['nome']
+        nome_visitante = to_pascal_case(jogo['visitante']['nome'])
 
         local = jogo['local'].replace('Beira-Rio', 'Beira Rio').split('-')
         cidade_estadio = local[1].strip()                
@@ -180,19 +186,19 @@ def insert_referees(cur, jogos):
                         INSERT INTO Arbitro (idarbitro, nome, datanascimento, idfederacao) 
                         VALUES ({id_arbitro}, '{nome_arbitro}', '1900-01-01', (select idfederacao from federacao where uf = '{uf_arbitro}'))
                         ON CONFLICT (idarbitro) DO NOTHING
-                        """)
+                        """)        
             
 def insert_referee_teams(cur, jogos):
     for jogo in jogos:
         for arbitro in jogo['arbitros']:
-            id_jogo = jogo['idjogo']
+            id_jogo = jogo['id_jogo']
             id_arbrito = arbitro['id']
-            nome_funcao = arbitro['funcao']
-            
+            nome_funcao = arbitro['funcao']                    
+
             cur.execute(f"""
                         INSERT INTO EquipeArbitragem (IdPartida, IdArbitro, IdFuncaoArbitro)
-                        VALUES ({id_jogo}, '{id_arbrito}', (select ifduncaoarbitro from funcaoarbitro where nome = '{nome_funcao}'))
-                        ON CONFLICT (idarbitro) DO NOTHING
+                        VALUES ({id_jogo}, {id_arbrito}, (select idfuncaoarbitro from funcaoarbitro where descricao = '{nome_funcao}'))
+                        ON CONFLICT (IdPartida, IdArbitro, IdFuncaoArbitro) DO NOTHING
                         """)
 
 def insert_players(cur, jogos):
@@ -216,25 +222,62 @@ def insert_players(cur, jogos):
                         ON CONFLICT (IdJogador) DO NOTHING
                         """)
             
+def insert_coaches(cur):
+    with open(f'.\\datasets\\treinadores.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
+        for team in data:
+            treinadores = team['treinadores']
+            for treinador in treinadores:
+                cur.execute(f"""
+                            INSERT INTO Tecnico (Nome, DataNascimento, IdNacionalidade) 
+                            VALUES ('{treinador['nome']}', '1900-01-01', 1)
+                            ON CONFLICT (Nome) DO NOTHING
+                            """)
+
+
 def insert_lineup(cur, jogos):
     for jogo in jogos:
         id_jogo = jogo['id_jogo']
+        
+        caminho_arquivo_mandante = f"datasets/jogadores-{jogo['mandante']['nome']}.csv".lower()
+        caminho_arquivo_visitante = f"datasets/jogadores-{jogo['visitante']['nome']}.csv".lower()
+
         atletas_mandante = jogo['mandante']['atletas']
         atletas_visitante = jogo['visitante']['atletas']
         
+        posicao_mandante = 'NULL'
+        posicao_visitante = 'NULL'
+
         for atleta in atletas_mandante:
+            
+            if os.path.exists(caminho_arquivo_mandante):
+                with open(caminho_arquivo_mandante, newline='', encoding='utf-8') as csv_file:
+                    leitor = csv.reader(csv_file)
+                    for linha in leitor:
+                        posicao_mandante = linha.split(';')[1]
+
+            
             id_atleta = atleta['id']
+
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
-                        VALUES ({id_jogo}, {id_atleta}, null)
+                        VALUES ({id_jogo}, {id_atleta}, {posicao_mandante})
                         ON CONFLICT (IdPartida, IdJogador) DO NOTHING
                         """)
             
         for atleta in atletas_visitante:
+            
+            if os.path.exists(caminho_arquivo_visitante):
+                with open(caminho_arquivo_visitante, newline='', encoding='utf-8') as csv_file:
+                    leitor = csv.reader(csv_file)
+                    for linha in leitor:
+                        posicao_visitante = linha.split(';')[1]
+
             id_atleta = atleta['id']
+            
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
-                        VALUES ({id_jogo}, {id_atleta}, null)
+                        VALUES ({id_jogo}, {id_atleta}, {posicao_visitante})
                         ON CONFLICT (IdPartida, IdJogador) DO NOTHING
                         """)         
             
@@ -269,9 +312,7 @@ def insert_matches(cur, jogos):
                     """)
 
 def insert_player_contract(cur, jogos):
-    for jogo in jogos:
-        id_jogo = jogo['id_jogo']
-
+    for jogo in jogos:        
         id_mandante = jogo['mandante']['id']
         id_visitante = jogo['visitante']['id']
 
@@ -292,32 +333,26 @@ def insert_player_contract(cur, jogos):
                         INSERT INTO ContratoJogador (Numero, IdJogador, IdTime, DataRescisao, DataAssinatura, MultaRescisoria) VALUES
                         ('{id_visitante}/{id_atleta}', {id_atleta}, {id_visitante}, NULL, '2024-01-01', 0)
                         ON CONFLICT (Numero) DO NOTHING
-                        """)
+                        """)                              
 
 def insert_coach_contract(cur):
-    cur.execute("""
-                INSERT INTO ContratoTecnico (IdTecnico, IdTime, DataAssinatura, DataRescisao, MultaRescisoria) VALUES
-                (1, (select idtime from time where nome = 'Athletico Paranense'), '2024-04-13', '2024-12-08', 0),
-                (2, (select idtime from time where nome = 'Atletico Goiniense'), '2024-04-13', '2024-12-08', 0),
-                (3, (select idtime from time where nome = 'Atletico Mineiro'), '2024-04-13', '2024-12-08', 0),
-                (4, (select idtime from time where nome = 'Bahia'), '2024-04-13', '2024-12-08', 0),
-                (5, (select idtime from time where nome = 'Botafogo'), '2024-04-13', '2024-12-08', 0),
-                (6, (select idtime from time where nome = 'Corinthians'), '2024-04-13', '2024-12-08', 0),
-                (7, (select idtime from time where nome = 'Criciúma'), '2024-04-13', '2024-12-08', 0),
-                (8, (select idtime from time where nome = 'Cruzeiro'), '2024-04-13', '2024-12-08', 0),
-                (9, (select idtime from time where nome = 'Cuiabá'), '2024-04-13', '2024-12-08', 0),
-                (10, (select idtime from time where nome = 'Flamengo'), '2024-04-13', '2024-12-08', 0),
-                (11, (select idtime from time where nome = 'Fluminense'), '2024-04-13', '2024-12-08', 0),
-                (12, (select idtime from time where nome = 'Fortaleza'), '2024-04-13', '2024-12-08', 0),
-                (13, (select idtime from time where nome = 'Grêmio'), '2024-04-13', '2024-12-08', 0),
-                (14, (select idtime from time where nome = 'Internacional'), '2024-04-13', '2024-12-08', 0),
-                (15, (select idtime from time where nome = 'Juventude'), '2024-04-13', '2024-12-08', 0),
-                (16, (select idtime from time where nome = 'Palmeiras'), '2024-04-13', '2024-12-08', 0),
-                (17, (select idtime from time where nome = 'São Paulo'), '2024-04-13', '2024-12-08', 0),
-                (18, (select idtime from time where nome = 'Vasco da Gama'), '2024-04-13', '2024-12-08', 0),
-                (19, (select idtime from time where nome = 'Vitória'), '2024-04-13', '2024-12-08', 0),
-                (20, (select idtime from time where nome = 'Santos'), '2024-04-13', '2024-12-08', 0)
-                """)
+    with open(f'main/datasets/treinadores.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
+        for time in data:
+            for treinador in time['treinadores']:                                
+                cur.execute(f"""
+                            INSERT INTO ContratoTecnico (IdTecnico, IdTime, DataAssinatura, DataRescisao, MultaRescisoria) VALUES (                             
+                             (select idtecnico from tecnico where lower(nome) = lower('{treinador['nome']}')), 
+                             (select idtime from time where lower(nome) = lower('{time['clube']}')), 
+                             '{treinador['inicio']}', NULL, 0)
+                            """)
+                fim = 'NULL' if treinador['fim'] == None else f"'{treinador['fim']}'"
+                cur.execute(f"""
+                            UPDATE ContratoTecnico 
+                            SET DataRescisao = {fim} 
+                            WHERE IdTime = (select idtime from time where nome = '{time['clube']}')
+                            AND IdTecnico = (select idtecnico from tecnico where nome = '{treinador['nome']}')
+                            """)
 
 def insert_data_from_cbf_json(cur):
     insert_league(cur)
@@ -326,19 +361,19 @@ def insert_data_from_cbf_json(cur):
     insert_nationalities(cur)
     insert_positions(cur)
     insert_federations(cur)
-    #insert_coach_contract(cur)
+    insert_coaches(cur)    
     for rodada in range(38):
-        with open(f'main/datasets/rodada-{rodada+1}.json', 'r', encoding='utf-8') as file:
+        with open(f'datasets/rodada-{rodada+1}.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
-
             jogos = data['jogos'][0]['jogo']
-
             insert_cities(cur, jogos)
             insert_stadiums(cur, jogos)
             insert_teams(cur, jogos)
             insert_matches(cur, jogos)            
             insert_referee_roles(cur, jogos)
             insert_referees(cur, jogos)
+            insert_referee_teams(cur, jogos)
             insert_players(cur, jogos)
             insert_lineup(cur, jogos)
             insert_player_contract(cur, jogos)
+    insert_coach_contract(cur)
