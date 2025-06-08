@@ -240,25 +240,28 @@ def insert_referee_teams(cur, jogos):
                         ON CONFLICT (IdPartida, IdArbitro, IdFuncaoArbitro) DO NOTHING
                         """)
 
-def insert_players(cur, jogos):
-    camisas = set()
+def insert_players(cur, jogos):    
     for jogo in jogos:    
         atletas_mandante = jogo['mandante']['atletas']
         atletas_visitante = jogo['visitante']['atletas']
         
         for atleta in atletas_mandante:
             nome_atleta = atleta['nome'].split('-')[1].strip()
+            numero_camisa = int(atleta['numero_camisa']) % 11
+            posicao = calc_position(numero_camisa)
             cur.execute(f"""
                         INSERT INTO Jogador (IdJogador, Nome, DataNascimento, IdNacionalidade, IdPosicao) 
-                        VALUES ({atleta['id']}, '{nome_atleta}', '1900-01-01', null, null)
+                        VALUES ({atleta['id']}, '{nome_atleta}', '1900-01-01', null, {posicao})
                         ON CONFLICT (IdJogador) DO NOTHING
                         """)
             
         for atleta in atletas_visitante:
             nome_atleta = atleta['nome'].split('-')[1].strip()
+            numero_camisa = int(atleta['numero_camisa']) % 11
+            posicao = calc_position(numero_camisa)
             cur.execute(f"""
                         INSERT INTO Jogador (IdJogador, Nome, DataNascimento, IdNacionalidade, IdPosicao) 
-                        VALUES ({atleta['id']}, '{nome_atleta}', '1900-01-01', null, null)
+                        VALUES ({atleta['id']}, '{nome_atleta}', '1900-01-01', null, {posicao})
                         ON CONFLICT (IdJogador) DO NOTHING
                         """)
                 
@@ -304,7 +307,7 @@ def insert_lineups(cur, jogos):
         for atleta in atletas_mandante:                                    
             id_atleta = atleta['id']
             numero_camisa = int(atleta['numero_camisa']) % 11
-            posicao = calc_position(numero_camisa)            
+            posicao = calc_position(numero_camisa)
 
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
@@ -473,6 +476,9 @@ def insert_events(cur, jogos):
                             VALUES ({evento}, {minuto}, {id_jogo}, {id_jogador})
                             """)
 
+def insert_participation(cur):
+    cur.execute("INSERT INTO Participacao (IdTime, IdTemporada) select idtime, 1 from time")
+
 
 def insert_data_from_cbf_json(cur):
     insert_leagues(cur)
@@ -497,4 +503,5 @@ def insert_data_from_cbf_json(cur):
             insert_lineups(cur, jogos)
             insert_player_contracts(cur, jogos)
             insert_events(cur, jogos)
-    insert_coach_contract(cur)    
+    insert_coach_contract(cur)
+    insert_participation(cur)
