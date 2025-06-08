@@ -103,7 +103,7 @@ def create_table_coach(cur):
     cur.execute("""
                 CREATE TABLE Tecnico (
                 IdTecnico serial PRIMARY KEY,
-                Nome varchar(100),
+                Nome varchar(100) UNIQUE,
                 DataNascimento date,
                 IdNacionalidade integer
                 )""")
@@ -139,13 +139,14 @@ def create_table_referee_team(cur):
                 IdEquipeArbitragem serial PRIMARY KEY,
                 IdPartida integer,
                 IdArbitro integer,
-                IdFuncaoArbitro integer
+                IdFuncaoArbitro integer,
+                UNIQUE (IdPartida, IdArbitro, IdFuncaoArbitro)
                 )""")
 
 def create_table_coach_contract(cur):
     cur.execute("""
                 CREATE TABLE ContratoTecnico (
-                Numero serial PRIMARY KEY,
+                Numero SERIAL PRIMARY KEY,
                 IdTecnico integer,
                 IdTime integer,
                 DataAssinatura date,
