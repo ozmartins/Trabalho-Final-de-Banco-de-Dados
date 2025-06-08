@@ -76,15 +76,15 @@ def bd(request):
         if 'criar_tabelas' in request.POST:            
             try:
                 create_all_tables(cur)
-                insert_data_from_cbf_json(cur)
-                #insert_example_data(cur)
+                insert_data_from_cbf_json(cur)                
                 cur.close()
                 conn.close()
                 messages.success(request, 'Tabelas criadas com sucesso!')
+                return redirect('/admin')
             except psycopg2.errors.DatabaseDropped:
                 messages.warning(request, 'O banco de dados não existe.')
             except Exception as e:
-                messages.error(request, f'Erro ao criar tabelas: {e}')
+                messages.error(request, f'Erro ao criar tabelas: {e}')            
 
         if 'destruir_tabelas' in request.POST:                        
             try:                      

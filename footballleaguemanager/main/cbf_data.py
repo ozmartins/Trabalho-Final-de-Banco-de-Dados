@@ -30,13 +30,52 @@ def insert_cities(cur, jogos):
                     """)
         
 def insert_stadiums(cur, jogos):
+    capacidade_estadios = [
+        {"nome": "Brinco de Ouro", "capacidade": 29130},
+        {"nome": "Arena Condá", "capacidade": 20589},
+        {"nome": "Mané Garrincha", "capacidade": 72788},
+        {"nome": "Independência", "capacidade": 23000},
+        {"nome": "Centenário", "capacidade": 22132},
+        {"nome": "Orlando Scarpelli", "capacidade": 19584},
+        {"nome": "Presidente Vargas", "capacidade": 20166},
+        {"nome": "Couto Pereira", "capacidade": 40310},
+        {"nome": "Kleber Andrade", "capacidade":  21000},
+        {"nome": "Antônio Accioly", "capacidade": 12500},
+        {"nome": "Allianz Parque", "capacidade": 43713},
+        {"nome": "Arena Pantanal", "capacidade": 44097},
+        {"nome": "Nilton Santos", "capacidade": 46831},
+        {"nome": "Arena Castelão", "capacidade": 63903},
+        {"nome": "ARENA MRV", "capacidade": 44892},
+        {"nome": "Arena Barueri", "capacidade": 31000},
+        {"nome": "Alfredo Jaconi", "capacidade": 23726},
+        {"nome": "Nabi Abi Chedid", "capacidade": 17000},
+        {"nome": "Arena do Grêmio", "capacidade": 55662},
+        {"nome": "Arena Fonte Nova", "capacidade": 50025},
+        {"nome": "Manoel Barradas", "capacidade": 30618},
+        {"nome": "Mineirão", "capacidade": 61846},
+        {"nome": "Ligga Arena", "capacidade": 42372},
+        {"nome": "São Januário", "capacidade": 24000},
+        {"nome": "Neo Química Arena", "capacidade": 48905},
+        {"nome": "Serra Dourada", "capacidade": 50049},
+        {"nome": "Morumbi", "capacidade": 66795},
+        {"nome": "Maracanã", "capacidade": 78838},
+        {"nome": "Beira Rio", "capacidade": 51300},
+        {"nome": "Heriberto Hulse", "capacidade": 19255}
+    ]    
+
     for jogo in jogos:
         local = jogo['local'].replace('Beira-Rio', 'Beira Rio').split('-')
         nome_estadio = local[0].strip()
         cidade_estadio = local[1].strip()
+        capacidade = 0
+
+        for estadio in capacidade_estadios:
+            if estadio["nome"].lower() == nome_estadio.lower():
+                capacidade = estadio["capacidade"]
+
         cur.execute(f"""
                     INSERT INTO Estadio (Nome, Capacidade, IdCidade) 
-                    VALUES ('{nome_estadio}', 0, (select idcidade from cidade where nome = '{cidade_estadio}'))
+                    VALUES ('{nome_estadio}', {capacidade}, (select idcidade from cidade where nome = '{cidade_estadio}'))
                     ON CONFLICT (Nome) DO NOTHING
                     """)
         
@@ -123,14 +162,14 @@ def insert_nationalities(cur):
 
 def insert_positions(cur):
     cur.execute("""
-                INSERT INTO Posicao (Descricao) VALUES
-                ('Goleiro'),
-                ('Lateral Direito'),
-                ('Lateral Esquerdo'),
-                ('Zagueiro'),
-                ('Volante'),
-                ('Meia'),
-                ('Atacante')
+                INSERT INTO Posicao (IdPosicao, Descricao) VALUES
+                (1, 'Goleiro'),
+                (2, 'Lateral Direito'),
+                (3, 'Lateral Esquerdo'),
+                (4, 'Zagueiro'),
+                (5, 'Volante'),
+                (6, 'Meia'),
+                (7, 'Atacante')
                 """)
     
 def insert_federations(cur):
@@ -223,7 +262,7 @@ def insert_players(cur, jogos):
                         """)
             
 def insert_coaches(cur):
-    with open(f'.\\datasets\\treinadores.json', 'r', encoding='utf-8') as file:
+    with open(f'main/datasets/treinadores.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
         for team in data:
             treinadores = team['treinadores']
@@ -234,51 +273,50 @@ def insert_coaches(cur):
                             ON CONFLICT (Nome) DO NOTHING
                             """)
 
+def calc_position(numero_camisa):
+    if numero_camisa == 1:
+        return 1
+    elif numero_camisa == 2:
+        return 2
+    elif numero_camisa in [3,4]:
+        return 4
+    elif numero_camisa == 5:
+        return 5
+    elif numero_camisa == 6:
+        return 3
+    elif numero_camisa in [7,8,10]:
+        return 6
+    elif numero_camisa in [0,9,11]:
+        return 7
+
 
 def insert_lineup(cur, jogos):
     for jogo in jogos:
         id_jogo = jogo['id_jogo']
         
-        caminho_arquivo_mandante = f"datasets/jogadores-{jogo['mandante']['nome']}.csv".lower()
-        caminho_arquivo_visitante = f"datasets/jogadores-{jogo['visitante']['nome']}.csv".lower()
-
         atletas_mandante = jogo['mandante']['atletas']
-        atletas_visitante = jogo['visitante']['atletas']
-        
-        posicao_mandante = 'NULL'
-        posicao_visitante = 'NULL'
+        atletas_visitante = jogo['visitante']['atletas']            
 
-        for atleta in atletas_mandante:
-            
-            if os.path.exists(caminho_arquivo_mandante):
-                with open(caminho_arquivo_mandante, newline='', encoding='utf-8') as csv_file:
-                    leitor = csv.reader(csv_file)
-                    for linha in leitor:
-                        posicao_mandante = linha.split(';')[1]
-
-            
+        for atleta in atletas_mandante:                                    
             id_atleta = atleta['id']
+            numero_camisa = int(atleta['numero_camisa']) % 11
+            posicao = calc_position(numero_camisa)
+            print(f"{numero_camisa} - {posicao}")
 
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
-                        VALUES ({id_jogo}, {id_atleta}, {posicao_mandante})
+                        VALUES ({id_jogo}, {id_atleta}, {posicao})
                         ON CONFLICT (IdPartida, IdJogador) DO NOTHING
                         """)
             
-        for atleta in atletas_visitante:
-            
-            if os.path.exists(caminho_arquivo_visitante):
-                with open(caminho_arquivo_visitante, newline='', encoding='utf-8') as csv_file:
-                    leitor = csv.reader(csv_file)
-                    for linha in leitor:
-                        posicao_visitante = linha.split(';')[1]
-
-            id_atleta = atleta['id']
-            
+        for atleta in atletas_visitante:                        
+            id_atleta = atleta['id'] 
+            numero_camisa = int(atleta['numero_camisa']) % 11
+            posicao = calc_position(numero_camisa)
             cur.execute(f"""
                         INSERT INTO Escalacao (IdPartida, IdJogador, IdPosicao)
-                        VALUES ({id_jogo}, {id_atleta}, {posicao_visitante})
-                        ON CONFLICT (IdPartida, IdJogador) DO NOTHING
+                        VALUES ({id_jogo}, {id_atleta}, {posicao})
+                       ON CONFLICT (IdPartida, IdJogador) DO NOTHING
                         """)         
             
 def insert_participation(cur, jogos):
@@ -363,7 +401,7 @@ def insert_data_from_cbf_json(cur):
     insert_federations(cur)
     insert_coaches(cur)    
     for rodada in range(38):
-        with open(f'datasets/rodada-{rodada+1}.json', 'r', encoding='utf-8') as file:
+        with open(f'main/datasets/rodada-{rodada+1}.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
             jogos = data['jogos'][0]['jogo']
             insert_cities(cur, jogos)
