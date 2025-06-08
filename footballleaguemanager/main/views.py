@@ -4,7 +4,6 @@ from django.contrib import messages
 from django.conf import settings
 from .tables import create_all_tables, drop_all_tables
 from .cbf_data import insert_data_from_cbf_json
-from .example_data import insert_example_data
 import psycopg2
 
 
