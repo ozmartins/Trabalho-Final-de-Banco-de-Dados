@@ -1,18 +1,18 @@
-DROP TABLE cbf.jogo CASCADE;
-DROP TABLE cbf.clube CASCADE;
-DROP TABLE cbf.atleta CASCADE;
-DROP TABLE cbf.alteracao CASCADE;
-DROP TABLE cbf.evento CASCADE;
-DROP TABLE cbf.campeonato CASCADE;
-DROP TABLE cbf.documento CASCADE;
-DROP TABLE cbf.arbitro CASCADE;
-DROP TABLE cbf.equipe_arbitragem CASCADE;
-DROP TABLE cbf.penalidade CASCADE;
-DROP TABLE cbf.estadio CASCADE;
-DROP TABLE cbf.cidade CASCADE;
-DROP TABLE cbf.escalacao CASCADE;
+DROP TABLE jogo CASCADE;
+DROP TABLE clube CASCADE;
+DROP TABLE atleta CASCADE;
+DROP TABLE alteracao CASCADE;
+DROP TABLE evento CASCADE;
+DROP TABLE campeonato CASCADE;
+DROP TABLE documento CASCADE;
+DROP TABLE arbitro CASCADE;
+DROP TABLE equipe_arbitragem CASCADE;
+DROP TABLE penalidade CASCADE;
+DROP TABLE estadio CASCADE;
+DROP TABLE cidade CASCADE;
+DROP TABLE escalacao CASCADE;
 
-CREATE TABLE cbf.jogo (
+CREATE TABLE jogo (
     id_jogo int,
     num_jogo int,
     rodada int,
@@ -26,26 +26,26 @@ CREATE TABLE cbf.jogo (
     id_clube_visitante int
 );
  
-ALTER TABLE cbf.jogo ADD CONSTRAINT pk_jogo PRIMARY KEY (id_jogo);
+ALTER TABLE jogo ADD CONSTRAINT pk_jogo PRIMARY KEY (id_jogo);
 
-CREATE TABLE cbf.clube (
+CREATE TABLE clube (
     id_clube int,
     nome varchar(100),
     url_escudo varchar(500)
 );
  
-ALTER TABLE cbf.clube ADD CONSTRAINT pk_clube PRIMARY KEY (id_clube);
+ALTER TABLE clube ADD CONSTRAINT pk_clube PRIMARY KEY (id_clube);
 
-CREATE TABLE cbf.atleta (
+CREATE TABLE atleta (
     id_atleta int,
     nome varchar(100),
     apelido varchar(100),
     foto varchar(500)
 );
  
-ALTER TABLE cbf.atleta ADD CONSTRAINT pk_atleta PRIMARY KEY (id_atleta);
+ALTER TABLE atleta ADD CONSTRAINT pk_atleta PRIMARY KEY (id_atleta);
 
-CREATE TABLE cbf.alteracao (
+CREATE TABLE alteracao (
     id_alteracao serial,
     codigo_jogador_saiu int,
     codigo_jogador_entrou int,
@@ -56,51 +56,51 @@ CREATE TABLE cbf.alteracao (
     id_clube int
 );
  
-ALTER TABLE cbf.alteracao ADD CONSTRAINT pk_alteracao PRIMARY KEY (id_alteracao);
+ALTER TABLE alteracao ADD CONSTRAINT pk_alteracao PRIMARY KEY (id_alteracao);
 
-CREATE TABLE cbf.evento (
+CREATE TABLE evento (
     id_jogo int,
     id_clube int,
     gols int,
     penaltis int
 );
  
-ALTER TABLE cbf.evento ADD CONSTRAINT pk_evento PRIMARY KEY (id_clube, id_jogo);
+ALTER TABLE evento ADD CONSTRAINT pk_evento PRIMARY KEY (id_clube, id_jogo);
 
-CREATE TABLE cbf.campeonato (
+CREATE TABLE campeonato (
     id_campeonato int,
     nome varchar(100) UNIQUE
 );
  
-ALTER TABLE cbf.campeonato ADD CONSTRAINT pk_campeonato PRIMARY KEY (id_campeonato);
+ALTER TABLE campeonato ADD CONSTRAINT pk_campeonato PRIMARY KEY (id_campeonato);
 
-CREATE TABLE cbf.documento (
+CREATE TABLE documento (
     id_documento serial,
     url varchar(500),
     title varchar(100),
     id_jogo int
 );
  
-ALTER TABLE cbf.documento ADD CONSTRAINT pk_documento PRIMARY KEY (id_documento);
+ALTER TABLE documento ADD CONSTRAINT pk_documento PRIMARY KEY (id_documento);
 
-CREATE TABLE cbf.arbitro (
+CREATE TABLE arbitro (
     id_arbitro int,
     nome varchar(100),
     uf varchar(2),
     categoria varchar(100)
 );
  
-ALTER TABLE cbf.arbitro ADD CONSTRAINT pk_arbitro PRIMARY KEY (id_arbitro);
+ALTER TABLE arbitro ADD CONSTRAINT pk_arbitro PRIMARY KEY (id_arbitro);
 
-CREATE TABLE cbf.equipe_arbitragem (
+CREATE TABLE equipe_arbitragem (
     id_arbitro int,
     id_jogo int,
     funcao varchar(100)
 );
  
-ALTER TABLE cbf.equipe_arbitragem ADD CONSTRAINT pk_equipe_arbitragem PRIMARY KEY (id_jogo, id_arbitro);
+ALTER TABLE equipe_arbitragem ADD CONSTRAINT pk_equipe_arbitragem PRIMARY KEY (id_jogo, id_arbitro);
 
-CREATE TABLE cbf.penalidade (
+CREATE TABLE penalidade (
     id_penalidade int,
     tipo varchar(100),
     resultado varchar(100),
@@ -111,25 +111,25 @@ CREATE TABLE cbf.penalidade (
     id_atleta int
 );
  
-ALTER TABLE cbf.penalidade ADD CONSTRAINT pk_penalidade PRIMARY KEY (id_penalidade);
+ALTER TABLE penalidade ADD CONSTRAINT pk_penalidade PRIMARY KEY (id_penalidade);
 
-CREATE TABLE cbf.estadio (
+CREATE TABLE estadio (
     id_estadio serial,
     nome varchar(100) UNIQUE,
     id_cidade serial
 );
  
-ALTER TABLE cbf.estadio ADD CONSTRAINT pk_estadio PRIMARY KEY (id_estadio);
+ALTER TABLE estadio ADD CONSTRAINT pk_estadio PRIMARY KEY (id_estadio);
 
-CREATE TABLE cbf.cidade (
+CREATE TABLE cidade (
     id_cidade serial,
     nome varchar(100) UNIQUE,
     uf varchar(2)
 );
  
-ALTER TABLE cbf.cidade ADD CONSTRAINT pk_cidade PRIMARY KEY (id_cidade);
+ALTER TABLE cidade ADD CONSTRAINT pk_cidade PRIMARY KEY (id_cidade);
 
-CREATE TABLE cbf.escalacao (
+CREATE TABLE escalacao (
     id_escalacao serial,
     numero_camisa int,
     reserva bool,
@@ -140,91 +140,91 @@ CREATE TABLE cbf.escalacao (
     id_jogo int
 );
  
-ALTER TABLE cbf.escalacao ADD CONSTRAINT pk_escalacao PRIMARY KEY (id_escalacao);
+ALTER TABLE escalacao ADD CONSTRAINT pk_escalacao PRIMARY KEY (id_escalacao);
  
-ALTER TABLE cbf.jogo ADD CONSTRAINT fk_jogo_campeonato
+ALTER TABLE jogo ADD CONSTRAINT fk_jogo_campeonato
     FOREIGN KEY (id_campeonato)
-    REFERENCES cbf.campeonato (id_campeonato)
+    REFERENCES campeonato (id_campeonato)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.jogo ADD CONSTRAINT fk_jogo_estadio
+ALTER TABLE jogo ADD CONSTRAINT fk_jogo_estadio
     FOREIGN KEY (id_estadio)
-    REFERENCES cbf.estadio (id_estadio)
+    REFERENCES estadio (id_estadio)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.jogo ADD CONSTRAINT fk_jogo_mandante
+ALTER TABLE jogo ADD CONSTRAINT fk_jogo_mandante
     FOREIGN KEY (id_clube_mandante)
-    REFERENCES cbf.clube (id_clube)
+    REFERENCES clube (id_clube)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.jogo ADD CONSTRAINT fk_jogo_visitante
+ALTER TABLE jogo ADD CONSTRAINT fk_jogo_visitante
     FOREIGN KEY (id_clube_visitante)
-    REFERENCES cbf.clube (id_clube);
+    REFERENCES clube (id_clube);
  
-ALTER TABLE cbf.alteracao ADD CONSTRAINT fk_alteracao_jogo
+ALTER TABLE alteracao ADD CONSTRAINT fk_alteracao_jogo
     FOREIGN KEY (id_jogo)
-    REFERENCES cbf.jogo (id_jogo)
+    REFERENCES jogo (id_jogo)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.alteracao ADD CONSTRAINT fk_alteracao_clube
+ALTER TABLE alteracao ADD CONSTRAINT fk_alteracao_clube
     FOREIGN KEY (id_clube)
-    REFERENCES cbf.clube (id_clube)
+    REFERENCES clube (id_clube)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.evento ADD CONSTRAINT fk_evento_jogo
+ALTER TABLE evento ADD CONSTRAINT fk_evento_jogo
     FOREIGN KEY (id_jogo)
-    REFERENCES cbf.jogo (id_jogo)
+    REFERENCES jogo (id_jogo)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.evento ADD CONSTRAINT fk_evento_clube
+ALTER TABLE evento ADD CONSTRAINT fk_evento_clube
     FOREIGN KEY (id_clube)
-    REFERENCES cbf.clube (id_clube)
+    REFERENCES clube (id_clube)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.documento ADD CONSTRAINT fk_documento_jogo
+ALTER TABLE documento ADD CONSTRAINT fk_documento_jogo
     FOREIGN KEY (id_jogo)
-    REFERENCES cbf.jogo (id_jogo)
+    REFERENCES jogo (id_jogo)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.equipe_arbitragem ADD CONSTRAINT fk_equipe_arbitragem_arbitro
+ALTER TABLE equipe_arbitragem ADD CONSTRAINT fk_equipe_arbitragem_arbitro
     FOREIGN KEY (id_arbitro)
-    REFERENCES cbf.arbitro (id_arbitro);
+    REFERENCES arbitro (id_arbitro);
  
-ALTER TABLE cbf.equipe_arbitragem ADD CONSTRAINT fk_equipe_arbitragem_jogo
+ALTER TABLE equipe_arbitragem ADD CONSTRAINT fk_equipe_arbitragem_jogo
     FOREIGN KEY (id_jogo)
-    REFERENCES cbf.jogo (id_jogo);
+    REFERENCES jogo (id_jogo);
  
-ALTER TABLE cbf.penalidade ADD CONSTRAINT fk_penalidade_jogo
+ALTER TABLE penalidade ADD CONSTRAINT fk_penalidade_jogo
     FOREIGN KEY (id_jogo)
-    REFERENCES cbf.jogo (id_jogo)
+    REFERENCES jogo (id_jogo)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.penalidade ADD CONSTRAINT fk_penalidade_clube
+ALTER TABLE penalidade ADD CONSTRAINT fk_penalidade_clube
     FOREIGN KEY (id_clube)
-    REFERENCES cbf.clube (id_clube)
+    REFERENCES clube (id_clube)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.penalidade ADD CONSTRAINT fk_penalidade_atleta
+ALTER TABLE penalidade ADD CONSTRAINT fk_penalidade_atleta
     FOREIGN KEY (id_atleta)
-    REFERENCES cbf.atleta (id_atleta)
+    REFERENCES atleta (id_atleta)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.estadio ADD CONSTRAINT fk_estadio_cidade
+ALTER TABLE estadio ADD CONSTRAINT fk_estadio_cidade
     FOREIGN KEY (id_cidade)
-    REFERENCES cbf.cidade (id_cidade)
+    REFERENCES cidade (id_cidade)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.escalacao ADD CONSTRAINT fk_escalacao_clube
+ALTER TABLE escalacao ADD CONSTRAINT fk_escalacao_clube
     FOREIGN KEY (id_clube)
-    REFERENCES cbf.clube (id_clube)
+    REFERENCES clube (id_clube)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.escalacao ADD CONSTRAINT fk_escalacao_atleta
+ALTER TABLE escalacao ADD CONSTRAINT fk_escalacao_atleta
     FOREIGN KEY (id_atleta)
-    REFERENCES cbf.atleta (id_atleta)
+    REFERENCES atleta (id_atleta)
     ON DELETE CASCADE;
  
-ALTER TABLE cbf.escalacao ADD CONSTRAINT fk_escalacao_jogo
+ALTER TABLE escalacao ADD CONSTRAINT fk_escalacao_jogo
     FOREIGN KEY (id_jogo)
-    REFERENCES cbf.jogo (id_jogo)
+    REFERENCES jogo (id_jogo)
     ON DELETE CASCADE;

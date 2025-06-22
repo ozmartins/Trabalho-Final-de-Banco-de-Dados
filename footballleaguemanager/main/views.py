@@ -78,7 +78,7 @@ def bd(request):
         if 'criar_tabelas' in request.POST:            
             try:
                 create_all_tables(cur)
-                insert_data_from_cbf_json(cur)                
+                #insert_data_from_cbf_json(cur)                
                 cur.close()
                 conn.close()
                 messages.success(request, 'Tabelas criadas com sucesso!')

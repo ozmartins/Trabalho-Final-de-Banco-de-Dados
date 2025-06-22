@@ -1,418 +1,234 @@
-def create_table_league(cur):
-    cur.execute("""
-                CREATE TABLE Campeonato (
-                IdCampeonato serial PRIMARY KEY,
-                Nome varchar(100),
-                Premiacao numeric(14,2),
-                IdFederacao integer
-                )""")
-
-def create_table_federation(cur):
-    cur.execute("""
-                CREATE TABLE Federacao (
-                IdFederacao serial PRIMARY KEY,
-                Nome varchar(100),
-                UF varchar(2)
-                )""")
-
-def create_table_referee(cur):
-    cur.execute("""
-                CREATE TABLE Arbitro (
-                IdArbitro serial PRIMARY KEY,
-                Nome varchar(100),
-                DataNascimento date,
-                IdFederacao integer
-                )""")
-
-def create_table_city(cur):
-    cur.execute("""
-                CREATE TABLE Cidade (
-                IdCidade serial PRIMARY KEY,
-                Nome varchar(100),
-                UF varchar(2),
-                UNIQUE (Nome, UF)
-                )""")
-
-def create_table_stadium(cur):
-    cur.execute("""
-                CREATE TABLE Estadio (
-                IdEstadio serial PRIMARY KEY,
-                Nome varchar(100) UNIQUE,
-                Capacidade integer,
-                IdCidade integer
-                )""")
-
-def create_table_referee_role(cur):
-    cur.execute("""
-                CREATE TABLE FuncaoArbitro (
-                IdFuncaoArbitro serial PRIMARY KEY,
-                Descricao varchar(100) UNIQUE
-                )""")
-
-def create_table_season(cur):    
-    cur.execute("""
-                CREATE TABLE Temporada (
-                IdTemporada serial PRIMARY KEY,
-                QuantidadeRodadas integer,
-                DataInicio date,
-                DataFim date,
-                Ano integer,
-                IdCampeonato integer
-                )""")
-
-def create_table_round(cur):
-    cur.execute("""
-                CREATE TABLE Rodada (
-                IdRodada serial PRIMARY KEY,
-                NumeroRodada integer,
-                IdTemporada integer
-                )""")
-
-def create_table_match(cur):    
-    cur.execute("""CREATE TABLE Partida (
-                IdPartida serial PRIMARY KEY,
-                DataHora timestamp,
-                Publico integer,
-                Renda numeric(14,2),
-                IdRodada integer,
-                IdEstadio integer,
-                IdTimeMandante integer,
-                IdTimeVisitante integer,
-                UNIQUE(IdTimeMandante, IdTimeVisitante)
-                )""")
-
-def create_table_team(cur):
-    cur.execute("""
-                CREATE TABLE Time (
-                IdTime serial PRIMARY KEY,
-                Nome varchar(100) UNIQUE,
-                IdCidade integer
-                )""")
-
-def create_table_player(cur):
-    cur.execute("""
-                CREATE TABLE Jogador (
-                IdJogador serial PRIMARY KEY,
-                Nome varchar(100),
-                DataNascimento date,
-                IdNacionalidade integer,
-                IdPosicao integer
-                )""")
-
-def create_table_coach(cur):
-    cur.execute("""
-                CREATE TABLE Tecnico (
-                IdTecnico serial PRIMARY KEY,
-                Nome varchar(100) UNIQUE,
-                DataNascimento date,
-                IdNacionalidade integer
-                )""")
-
-def create_table_nationality(cur):
-    cur.execute("""
-                CREATE TABLE Nacionalidade (
-                IdNacionalidade serial PRIMARY KEY,
-                Descricao varchar(100)
-                )""")
-
-def create_table_event(cur):
-    cur.execute("""
-                CREATE TABLE Evento (
-                IdEvento serial PRIMARY KEY,
-                TipoEvento integer,
-                Minuto integer,
-                IdPartida integer,
-                IdJogador integer
-                )""")
-
-def create_table_participation(cur):
-    cur.execute("""
-                CREATE TABLE Participacao (
-                IdParticipacao serial PRIMARY KEY,
-                IdTime integer,
-                IdTemporada integer
-                )""")
-
-def create_table_referee_team(cur):
-    cur.execute("""
-                CREATE TABLE EquipeArbitragem (
-                IdEquipeArbitragem serial PRIMARY KEY,
-                IdPartida integer,
-                IdArbitro integer,
-                IdFuncaoArbitro integer,
-                UNIQUE (IdPartida, IdArbitro, IdFuncaoArbitro)
-                )""")
-
-def create_table_coach_contract(cur):
-    cur.execute("""
-                CREATE TABLE ContratoTecnico (
-                Numero SERIAL PRIMARY KEY,
-                IdTecnico integer,
-                IdTime integer,
-                DataAssinatura date,
-                DataRescisao date,
-                MultaRescisoria numeric(14,2)
-                )""")
-
-def create_table_player_contract(cur):
-    cur.execute("""
-                CREATE TABLE ContratoJogador (
-                Numero varchar(50) PRIMARY KEY,
-                IdJogador integer,
-                IdTime integer,
-                DataRescisao date,
-                DataAssinatura date,
-                MultaRescisoria numeric(14,2)
-                )""")
-
-def create_table_lineup(cur):
-    cur.execute("""
-                CREATE TABLE Escalacao (
-                IdEscalacao serial PRIMARY KEY,
-                IdPartida integer,
-                IdJogador integer,
-                IdPosicao integer,
-                UNIQUE(IdPartida, IdJogador)
-                )""")
-    
-def create_table_position(cur):
-    cur.execute("""
-                CREATE TABLE Posicao (
-                IdPosicao  serial PRIMARY KEY,
-                Descricao varchar(100)
-                )""")
-
-def create_constraints(cur):    
-    cur.execute("""
-                ALTER TABLE Campeonato ADD CONSTRAINT FK_Campeonato_Federacao
-                FOREIGN KEY (IdFederacao)
-                REFERENCES Federacao (IdFederacao)
-                ON DELETE SET NULL
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Arbitro ADD CONSTRAINT FK_Arbitro_Federacao
-                FOREIGN KEY (IdFederacao)
-                REFERENCES Federacao (IdFederacao)
-                ON DELETE CASCADE
-                """)
-
-    cur.execute("""
-                ALTER TABLE Estadio ADD CONSTRAINT FK_Estadio_Cidade
-                FOREIGN KEY (IdCidade)
-                REFERENCES Cidade (IdCidade)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Temporada ADD CONSTRAINT FK_Temporada_Campeonato
-                FOREIGN KEY (IdCampeonato)
-                REFERENCES Campeonato (IdCampeonato)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Rodada ADD CONSTRAINT FK_Rodada_Temporada
-                FOREIGN KEY (IdTemporada)
-                REFERENCES Temporada (IdTemporada)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Partida ADD CONSTRAINT FK_Partida_Rodada
-                FOREIGN KEY (IdRodada)
-                REFERENCES Rodada (IdRodada)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Partida ADD CONSTRAINT FK_Partida_Estadio
-                FOREIGN KEY (IdEstadio)
-                REFERENCES Estadio (IdEstadio)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Partida ADD CONSTRAINT FK_Partida_TimeMandante
-                FOREIGN KEY (IdTimeMandante)
-                REFERENCES Time (IdTime)
-                ON DELETE CASCADE
-                """)
-
-    cur.execute("""
-                ALTER TABLE Partida ADD CONSTRAINT FK_Partida_TimeVisitante
-                FOREIGN KEY (IdTimeVisitante)
-                REFERENCES Time (IdTime)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Time ADD CONSTRAINT FK_Time_Cidade
-                FOREIGN KEY (IdCidade)
-                REFERENCES Cidade (IdCidade)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Jogador ADD CONSTRAINT FK_Jogador_Nacionalidade
-                FOREIGN KEY (IdNacionalidade)
-                REFERENCES Nacionalidade (IdNacionalidade)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Jogador ADD CONSTRAINT FK_Jogador_Posicao
-                FOREIGN KEY (IdPosicao)
-                REFERENCES Posicao (IdPosicao)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Tecnico ADD CONSTRAINT FK_Tecnico_Nacionalidade
-                FOREIGN KEY (IdNacionalidade)
-                REFERENCES Nacionalidade (IdNacionalidade)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Evento ADD CONSTRAINT FK_Evento_Partida
-                FOREIGN KEY (IdPartida)
-                REFERENCES Partida (IdPartida)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Evento ADD CONSTRAINT FK_Evento_Jogador
-                FOREIGN KEY (IdJogador)
-                REFERENCES Jogador (IdJogador)
-                ON DELETE CASCADE
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Participacao ADD CONSTRAINT FK_Participacao_Time
-                FOREIGN KEY (IdTime)
-                REFERENCES Time (IdTime)
-                ON DELETE RESTRICT
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Participacao ADD CONSTRAINT FK_Participacao_Temporada
-                FOREIGN KEY (IdTemporada)
-                REFERENCES Temporada (IdTemporada)
-                ON DELETE SET NULL
-                """)
-    
-    cur.execute("""
-                ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_Partida
-                FOREIGN KEY (IdPartida)
-                REFERENCES Partida (IdPartida)
-                ON DELETE NO ACTION
-                """)
-    
-    cur.execute("""
-                ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_Arbitro
-                FOREIGN KEY (IdArbitro)
-                REFERENCES Arbitro (IdArbitro)
-                ON DELETE NO ACTION
-                """)
-    
-    cur.execute("""
-                ALTER TABLE EquipeArbitragem ADD CONSTRAINT FK_EquipeArbitragem_FuncaoArbitro
-                FOREIGN KEY (IdFuncaoArbitro)
-                REFERENCES FuncaoArbitro (IdFuncaoArbitro)
-                ON DELETE RESTRICT
-                """)
-    
-    cur.execute("""
-                ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_Tecnico
-                FOREIGN KEY (IdTecnico)
-                REFERENCES Tecnico (IdTecnico)
-                ON DELETE SET NULL
-                """)
-    
-    cur.execute("""
-                ALTER TABLE ContratoTecnico ADD CONSTRAINT FK_ContratoTecnico_3
-                FOREIGN KEY (IdTime)
-                REFERENCES Time (IdTime)
-                ON DELETE SET NULL
-                """)
-    
-    cur.execute("""
-                ALTER TABLE ContratoJogador ADD CONSTRAINT FK_ContratoJogador_Jogador
-                FOREIGN KEY (IdJogador)
-                REFERENCES Jogador (IdJogador)
-                ON DELETE SET NULL
-                """)
-    
-    cur.execute("""
-                ALTER TABLE ContratoJogador ADD CONSTRAINT FK_ContratoJogador_Time
-                FOREIGN KEY (IdTime)
-                REFERENCES Time (IdTime)
-                ON DELETE SET NULL
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_Partida
-                FOREIGN KEY (IdPartida)
-                REFERENCES Partida (IdPartida)
-                ON DELETE NO ACTION
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_Jogador
-                FOREIGN KEY (IdJogador)
-                REFERENCES Jogador (IdJogador)
-                ON DELETE NO ACTION
-                """)
-    
-    cur.execute("""
-                ALTER TABLE Escalacao ADD CONSTRAINT FK_Escalacao_Posicao
-                FOREIGN KEY (IdPosicao)
-                REFERENCES Posicao (IdPosicao)
-                ON DELETE NO ACTION
-                """)
-
 def create_all_tables(cur):
-    create_table_league(cur)
-    create_table_federation(cur)
-    create_table_referee(cur)
-    create_table_city(cur)
-    create_table_stadium(cur)
-    create_table_referee_role(cur)
-    create_table_season(cur)
-    create_table_round(cur)
-    create_table_match(cur)
-    create_table_team(cur)
-    create_table_player(cur)
-    create_table_coach(cur)
-    create_table_nationality(cur)    
-    create_table_event(cur)
-    create_table_participation(cur)
-    create_table_referee_team(cur)
-    create_table_coach_contract(cur)
-    create_table_player_contract(cur)
-    create_table_lineup(cur)
-    create_table_position(cur)
-    create_constraints(cur)    
+    cur.execute("""
+                CREATE TABLE jogo (
+                    id_jogo int,
+                    num_jogo int,
+                    rodada int,
+                    grupo varchar(100),
+                    data date,
+                    hora timestamp,
+                    qtd_alteracoes_jogo int,
+                    id_campeonato int,
+                    id_estadio int,
+                    id_clube_mandante int,
+                    id_clube_visitante int
+                );
+                
+                ALTER TABLE jogo ADD CONSTRAINT pk_jogo PRIMARY KEY (id_jogo);
 
-def drop_all_tables(cur):
-    cur.execute("DROP TABLE IF EXISTS Cidade CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Estadio CASCADE")
-    cur.execute("DROP TABLE IF EXISTS FuncaoArbitro CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Posicao CASCADE")
-    cur.execute("DROP TABLE IF EXISTS ContratoTecnico CASCADE")
-    cur.execute("DROP TABLE IF EXISTS ContratoJogador CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Escalacao CASCADE")
-    cur.execute("DROP TABLE IF EXISTS EquipeArbitragem CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Participacao CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Tecnico CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Arbitro CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Federacao CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Partida CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Rodada CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Temporada CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Time CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Jogador CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Nacionalidade CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Evento CASCADE")
-    cur.execute("DROP TABLE IF EXISTS Campeonato CASCADE")
+                CREATE TABLE clube (
+                    id_clube int,
+                    nome varchar(100),
+                    url_escudo varchar(500)
+                );
+                
+                ALTER TABLE clube ADD CONSTRAINT pk_clube PRIMARY KEY (id_clube);
+
+                CREATE TABLE atleta (
+                    id_atleta int,
+                    nome varchar(100),
+                    apelido varchar(100),
+                    foto varchar(500)
+                );
+                
+                ALTER TABLE atleta ADD CONSTRAINT pk_atleta PRIMARY KEY (id_atleta);
+
+                CREATE TABLE alteracao (
+                    id_alteracao serial,
+                    codigo_jogador_saiu int,
+                    codigo_jogador_entrou int,
+                    tempo_jogo timestamp,
+                    tempo_subs varchar(3),
+                    tempo_acrescimo timestamp,
+                    id_jogo int,
+                    id_clube int
+                );
+                
+                ALTER TABLE alteracao ADD CONSTRAINT pk_alteracao PRIMARY KEY (id_alteracao);
+
+                CREATE TABLE evento (
+                    id_jogo int,
+                    id_clube int,
+                    gols int,
+                    penaltis int
+                );
+                
+                ALTER TABLE evento ADD CONSTRAINT pk_evento PRIMARY KEY (id_clube, id_jogo);
+
+                CREATE TABLE campeonato (
+                    id_campeonato int,
+                    nome varchar(100) UNIQUE
+                );
+                
+                ALTER TABLE campeonato ADD CONSTRAINT pk_campeonato PRIMARY KEY (id_campeonato);
+
+                CREATE TABLE documento (
+                    id_documento serial,
+                    url varchar(500),
+                    title varchar(100),
+                    id_jogo int
+                );
+                
+                ALTER TABLE documento ADD CONSTRAINT pk_documento PRIMARY KEY (id_documento);
+
+                CREATE TABLE arbitro (
+                    id_arbitro int,
+                    nome varchar(100),
+                    uf varchar(2),
+                    categoria varchar(100)
+                );
+                
+                ALTER TABLE arbitro ADD CONSTRAINT pk_arbitro PRIMARY KEY (id_arbitro);
+
+                CREATE TABLE equipe_arbitragem (
+                    id_arbitro int,
+                    id_jogo int,
+                    funcao varchar(100)
+                );
+                
+                ALTER TABLE equipe_arbitragem ADD CONSTRAINT pk_equipe_arbitragem PRIMARY KEY (id_jogo, id_arbitro);
+
+                CREATE TABLE penalidade (
+                    id_penalidade int,
+                    tipo varchar(100),
+                    resultado varchar(100),
+                    tempo_jogo varchar(3),
+                    minutos timestamp,
+                    id_jogo int,
+                    id_clube int,
+                    id_atleta int
+                );
+                
+                ALTER TABLE penalidade ADD CONSTRAINT pk_penalidade PRIMARY KEY (id_penalidade);
+
+                CREATE TABLE estadio (
+                    id_estadio serial,
+                    nome varchar(100) UNIQUE,
+                    id_cidade serial
+                );
+                
+                ALTER TABLE estadio ADD CONSTRAINT pk_estadio PRIMARY KEY (id_estadio);
+
+                CREATE TABLE cidade (
+                    id_cidade serial,
+                    nome varchar(100) UNIQUE,
+                    uf varchar(2)
+                );
+                
+                ALTER TABLE cidade ADD CONSTRAINT pk_cidade PRIMARY KEY (id_cidade);
+
+                CREATE TABLE escalacao (
+                    id_escalacao serial,
+                    numero_camisa int,
+                    reserva bool,
+                    goleiro bool,
+                    entrou_jogando bool,
+                    id_clube int,
+                    id_atleta int,
+                    id_jogo int
+                );
+                
+                ALTER TABLE escalacao ADD CONSTRAINT pk_escalacao PRIMARY KEY (id_escalacao);
+                
+                ALTER TABLE jogo ADD CONSTRAINT fk_jogo_campeonato
+                    FOREIGN KEY (id_campeonato)
+                    REFERENCES campeonato (id_campeonato)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE jogo ADD CONSTRAINT fk_jogo_estadio
+                    FOREIGN KEY (id_estadio)
+                    REFERENCES estadio (id_estadio)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE jogo ADD CONSTRAINT fk_jogo_mandante
+                    FOREIGN KEY (id_clube_mandante)
+                    REFERENCES clube (id_clube)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE jogo ADD CONSTRAINT fk_jogo_visitante
+                    FOREIGN KEY (id_clube_visitante)
+                    REFERENCES clube (id_clube);
+                
+                ALTER TABLE alteracao ADD CONSTRAINT fk_alteracao_jogo
+                    FOREIGN KEY (id_jogo)
+                    REFERENCES jogo (id_jogo)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE alteracao ADD CONSTRAINT fk_alteracao_clube
+                    FOREIGN KEY (id_clube)
+                    REFERENCES clube (id_clube)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE evento ADD CONSTRAINT fk_evento_jogo
+                    FOREIGN KEY (id_jogo)
+                    REFERENCES jogo (id_jogo)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE evento ADD CONSTRAINT fk_evento_clube
+                    FOREIGN KEY (id_clube)
+                    REFERENCES clube (id_clube)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE documento ADD CONSTRAINT fk_documento_jogo
+                    FOREIGN KEY (id_jogo)
+                    REFERENCES jogo (id_jogo)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE equipe_arbitragem ADD CONSTRAINT fk_equipe_arbitragem_arbitro
+                    FOREIGN KEY (id_arbitro)
+                    REFERENCES arbitro (id_arbitro);
+                
+                ALTER TABLE equipe_arbitragem ADD CONSTRAINT fk_equipe_arbitragem_jogo
+                    FOREIGN KEY (id_jogo)
+                    REFERENCES jogo (id_jogo);
+                
+                ALTER TABLE penalidade ADD CONSTRAINT fk_penalidade_jogo
+                    FOREIGN KEY (id_jogo)
+                    REFERENCES jogo (id_jogo)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE penalidade ADD CONSTRAINT fk_penalidade_clube
+                    FOREIGN KEY (id_clube)
+                    REFERENCES clube (id_clube)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE penalidade ADD CONSTRAINT fk_penalidade_atleta
+                    FOREIGN KEY (id_atleta)
+                    REFERENCES atleta (id_atleta)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE estadio ADD CONSTRAINT fk_estadio_cidade
+                    FOREIGN KEY (id_cidade)
+                    REFERENCES cidade (id_cidade)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE escalacao ADD CONSTRAINT fk_escalacao_clube
+                    FOREIGN KEY (id_clube)
+                    REFERENCES clube (id_clube)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE escalacao ADD CONSTRAINT fk_escalacao_atleta
+                    FOREIGN KEY (id_atleta)
+                    REFERENCES atleta (id_atleta)
+                    ON DELETE CASCADE;
+                
+                ALTER TABLE escalacao ADD CONSTRAINT fk_escalacao_jogo
+                    FOREIGN KEY (id_jogo)
+                    REFERENCES jogo (id_jogo)
+                    ON DELETE CASCADE;
+                """)
+
+def drop_all_tables(cur):       
+    cur.execute("DROP TABLE IF EXISTS jogo CASCADE")
+    cur.execute("DROP TABLE IF EXISTS clube CASCADE")
+    cur.execute("DROP TABLE IF EXISTS atleta CASCADE")
+    cur.execute("DROP TABLE IF EXISTS alteracao CASCADE")
+    cur.execute("DROP TABLE IF EXISTS evento CASCADE")
+    cur.execute("DROP TABLE IF EXISTS campeonato CASCADE")
+    cur.execute("DROP TABLE IF EXISTS documento CASCADE")
+    cur.execute("DROP TABLE IF EXISTS arbitro CASCADE")
+    cur.execute("DROP TABLE IF EXISTS equipe_arbitragem CASCADE")
+    cur.execute("DROP TABLE IF EXISTS penalidade CASCADE")
+    cur.execute("DROP TABLE IF EXISTS estadio CASCADE")
+    cur.execute("DROP TABLE IF EXISTS cidade CASCADE")
+    cur.execute("DROP TABLE IF EXISTS escalacao CASCADE")
