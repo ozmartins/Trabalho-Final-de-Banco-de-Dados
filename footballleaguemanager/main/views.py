@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 from .tables import create_all_tables, drop_all_tables
 from .cbf_data import insert_data_from_cbf_json
+from .graphics import generate_graphics
 import psycopg2
 
 
@@ -23,6 +24,7 @@ def index(request):
 
         if resultado[0] is not None:
             request.session['tables_created'] = 1
+            generate_graphics()
         else:
             request.session['tables_created'] = 0
             return redirect('bd')

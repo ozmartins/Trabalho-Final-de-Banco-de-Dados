@@ -15,6 +15,30 @@
             overflow: hidden;
         }
 
+        .tab-buttons {
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        .tab-buttons a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .tab-buttons a.active {
+            background-color: #222;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .tab-buttons a:hover {
+            background-color: #333;
+        }
+
         .navbar a {
             float: left;
             display: block;
@@ -36,17 +60,53 @@
 
 <body>
     <div class="navbar">
-        <a href="/">Início</a>     
+        <a href="/">Início</a>
         {% if request.session.tables_created == 1 %}
         <a href="/admin">Cadastros</a>
         {% endif %}
         <a href="/bd">Banco de dados</a>
     </div>
 
-    <div class="content">
-        <h1>Bem-vindo à página inicial!</h1>
-        <p>Essa é a sua aplicação Django com barra de menu.</p>
+    <div class="tab-buttons">
+        <a href="#" onclick="openTab('tab1', this)" class="active">Escalações arbitros</a>
+        <a href="#" onclick="openTab('tab2', this)">Escalações jogadores </a>
+        <a href="#" onclick="openTab('tab3', this)">Evolução clubes</a>
+        <a href="#" onclick="openTab('tab4', this)">Gols por rodada</a>
+        <a href="#" onclick="openTab('tab5', this)">Jogos por estado</a>
     </div>
+
+    <div class="content">
+        <div class="tab-container">
+            <div id="tab1" class="tab" style="display: block;">
+                <img src="../static/escalacoes-arbitros.png" width="600" height="400" />
+            </div>
+            <div id="tab2" class="tab">
+                <img src="../static/escalacoes-jogadores.png" width="600" height="400" />
+            </div>
+            <div id="tab3" class="tab">
+                <img src="../static/evolucao-clubes.png" width="600" height="400" />
+            </div>
+            <div id="tab4" class="tab">
+                <img src="../static/gols-por-rodada.png" width="600" height="400" />
+            </div>
+            <div id="tab5" class="tab">
+                <img src="../static/jogos-por-estado.png" width="600" height="400" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId, element) {
+            const tabs = document.querySelectorAll('.tab');
+            const buttons = document.querySelectorAll('.tab-buttons a');
+
+            tabs.forEach(tab => tab.style.display = 'none');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).style.display = 'block';
+            element.classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
