@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.conf import settings
 from .tables import create_all_tables, drop_all_tables
-from .cbf_data import insert_data_from_cbf_json
+from .fill_database import insert_data_from_cbf_datasets
 from .graphics import generate_graphics
 import psycopg2
 
@@ -78,7 +78,7 @@ def bd(request):
         if 'criar_tabelas' in request.POST:            
             try:
                 create_all_tables(cur)
-                #insert_data_from_cbf_json(cur)                
+                insert_data_from_cbf_datasets(conn, cur)
                 cur.close()
                 conn.close()
                 messages.success(request, 'Tabelas criadas com sucesso!')
