@@ -74,7 +74,7 @@ def insert_stadiums(cur, jogos):
 
         cur.execute(f"""
                     INSERT INTO Estadio (Nome, Capacidade, IdCidade) 
-                    VALUES ('{nome_estadio}', {capacidade}, (select idcidade from cidade where nome = '{cidade_estadio}'))
+                    VALUES ('{nome_estadio}', {capacidade}, (SELECT idcidade FROM cidade WHERE nome = '{cidade_estadio}'))
                     ON CONFLICT (Nome) DO NOTHING
                     """)
         
@@ -91,13 +91,13 @@ def insert_teams(cur, jogos):
 
         cur.execute(f"""
                     INSERT INTO Time (IdTime, Nome, IdCidade) 
-                    VALUES ({id_mandante}, '{nome_mandante}', (select idcidade from cidade where nome = '{cidade_estadio}'))
+                    VALUES ({id_mandante}, '{nome_mandante}', (SELECT idcidade FROM cidade WHERE nome = '{cidade_estadio}'))
                     ON CONFLICT (Nome) DO NOTHING
                     """)
         
         cur.execute(f"""
                     INSERT INTO Time (IdTime, Nome, IdCidade) 
-                    VALUES ({id_visitante}, '{nome_visitante}', (select idcidade from cidade where nome = '{cidade_estadio}'))
+                    VALUES ({id_visitante}, '{nome_visitante}', (SELECT idcidade FROM cidade WHERE nome = '{cidade_estadio}'))
                     ON CONFLICT (Nome) DO NOTHING
                     """)
                 
@@ -223,7 +223,7 @@ def insert_referees(cur, jogos):
             
             cur.execute(f"""
                         INSERT INTO Arbitro (idarbitro, nome, datanascimento, idfederacao) 
-                        VALUES ({id_arbitro}, '{nome_arbitro}', '1900-01-01', (select idfederacao from federacao where uf = '{uf_arbitro}'))
+                        VALUES ({id_arbitro}, '{nome_arbitro}', '1900-01-01', (SELECT idfederacao FROM federacao WHERE uf = '{uf_arbitro}'))
                         ON CONFLICT (idarbitro) DO NOTHING
                         """)        
             
@@ -236,7 +236,7 @@ def insert_referee_teams(cur, jogos):
 
             cur.execute(f"""
                         INSERT INTO EquipeArbitragem (IdPartida, IdArbitro, IdFuncaoArbitro)
-                        VALUES ({id_jogo}, {id_arbrito}, (select idfuncaoarbitro from funcaoarbitro where descricao = '{nome_funcao}'))
+                        VALUES ({id_jogo}, {id_arbrito}, (SELECT idfuncaoarbitro FROM funcaoarbitro WHERE descricao = '{nome_funcao}'))
                         ON CONFLICT (IdPartida, IdArbitro, IdFuncaoArbitro) DO NOTHING
                         """)
 
@@ -328,7 +328,7 @@ def insert_lineups(cur, jogos):
 def insert_participation(cur, jogos):
     cur.execute("""
                 INSERT INTO Participacao (IdTime, IdTemporada)
-                SELECT IdTime, 1 from time
+                SELECT IdTime, 1 FROM time
                 """)
 
 def insert_matches(cur, jogos):
@@ -351,7 +351,7 @@ def insert_matches(cur, jogos):
 
         cur.execute(f"""
                     INSERT INTO Partida (IdPartida, DataHora, Publico, Renda, IdRodada, IdEstadio, IdTimeMandante, IdTimeVisitante) 
-                    VALUES ({id_jogo}, '{data_hora}', 0, 0, {jogo['rodada']}, (select idestadio from estadio where nome = '{nome_estadio}'), {id_mandante}, {id_visitante})
+                    VALUES ({id_jogo}, '{data_hora}', 0, 0, {jogo['rodada']}, (SELECT idestadio FROM estadio WHERE nome = '{nome_estadio}'), {id_mandante}, {id_visitante})
                     ON CONFLICT (IdTimeMandante, IdTimeVisitante) DO NOTHING
                     """)
 
@@ -386,16 +386,16 @@ def insert_coach_contract(cur):
             for treinador in time['treinadores']:                                
                 cur.execute(f"""
                             INSERT INTO ContratoTecnico (IdTecnico, IdTime, DataAssinatura, DataRescisao, MultaRescisoria) VALUES (                             
-                             (select idtecnico from tecnico where lower(nome) = lower('{treinador['nome']}')), 
-                             (select idtime from time where lower(nome) = lower('{time['clube']}')), 
+                             (SELECT idtecnico FROM tecnico WHERE lower(nome) = lower('{treinador['nome']}')), 
+                             (SELECT idtime FROM time WHERE lower(nome) = lower('{time['clube']}')), 
                              '{treinador['inicio']}', NULL, 0)
                             """)
                 fim = 'NULL' if treinador['fim'] == None else f"'{treinador['fim']}'"
                 cur.execute(f"""
                             UPDATE ContratoTecnico 
                             SET DataRescisao = {fim} 
-                            WHERE IdTime = (select idtime from time where nome = '{time['clube']}')
-                            AND IdTecnico = (select idtecnico from tecnico where nome = '{treinador['nome']}')
+                            WHERE IdTime = (SELECT idtime FROM time WHERE nome = '{time['clube']}')
+                            AND IdTecnico = (SELECT idtecnico FROM tecnico WHERE nome = '{treinador['nome']}')
                             """)
 
 def insert_events(cur, jogos):    
@@ -408,7 +408,7 @@ def insert_events(cur, jogos):
             id_jogador_saiu = substituicao['codigo_jogador_saiu']
             id_jogador_entrou = substituicao['codigo_jogador_entrou']
 
-            cur.execute(f'select count(*) as qtd from jogador where idjogador in ({id_jogador_saiu}, {id_jogador_entrou})')
+            cur.execute(f'SELECT count(*) as qtd FROM jogador WHERE idjogador in ({id_jogador_saiu}, {id_jogador_entrou})')
             result = cur.fetchone()            
 
             if result[0] == 2:
@@ -427,7 +427,7 @@ def insert_events(cur, jogos):
             id_jogador_saiu = substituicao['codigo_jogador_saiu']
             id_jogador_entrou = substituicao['codigo_jogador_entrou']
 
-            cur.execute(f'select count(*) as qtd from jogador where idjogador in ({id_jogador_saiu}, {id_jogador_entrou})')
+            cur.execute(f'SELECT count(*) as qtd FROM jogador WHERE idjogador in ({id_jogador_saiu}, {id_jogador_entrou})')
             result = cur.fetchone()            
 
             if result[0] == 2:
@@ -467,7 +467,7 @@ def insert_events(cur, jogos):
             minuto = tempo_jogo * int(penalidade['minutos'].split(":")[0])
             id_jogador = penalidade['atleta_id']
 
-            cur.execute(f'select count(*) as qtd from jogador where idjogador = {id_jogador}')
+            cur.execute(f'SELECT count(*) as qtd FROM jogador WHERE idjogador = {id_jogador}')
             result = cur.fetchone()            
 
             if result[0] == 1:
@@ -477,8 +477,10 @@ def insert_events(cur, jogos):
                             """)
 
 def insert_participation(cur):
-    cur.execute("INSERT INTO Participacao (IdTime, IdTemporada) select idtime, 1 from time")
+    cur.execute("INSERT INTO Participacao (IdTime, IdTemporada) SELECT idtime, 1 FROM time")
 
+def adjust_some_data(cur):
+    cur.execute("DELETE FROM EquipeArbitragem WHERE idfuncaoarbitro = (SELECT idfuncaoarbitro FROM funcaoarbitro WHERE descricao = 'Radar')")    
 
 def insert_data_from_cbf_json(cur):
     insert_leagues(cur)
@@ -505,3 +507,4 @@ def insert_data_from_cbf_json(cur):
             insert_events(cur, jogos)
     insert_coach_contract(cur)
     insert_participation(cur)
+    adjust_some_data(cur)
