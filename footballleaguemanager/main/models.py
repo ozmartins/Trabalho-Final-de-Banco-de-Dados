@@ -94,7 +94,7 @@ class AuthUserUserPermissions(models.Model):
 
 class Campeonato(models.Model):
     id_campeonato = models.AutoField(primary_key=True, verbose_name="Código")
-    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")    
+    nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
 
     def __str__(self):
         return f"{self.nome}"
@@ -180,11 +180,11 @@ class EquipeArbitragem(models.Model):
     funcao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Função")
 
     def __str__(self):
-        return f"{self.idarbitro} - {self.idfuncaoarbitro}"
+        return f"{self.funcao} {self.id_arbitro} atuando no jogo {self.id_jogo}"
 
     class Meta:
         managed = False
-        db_table = 'equipearbitragem'
+        db_table = 'equipe_arbitragem'
         verbose_name = "Equipe Arbitragem"
         verbose_name_plural = "Equipes Arbitragens"
         unique_together = ('id_jogo', 'id_arbitro')
@@ -198,10 +198,10 @@ class Escalacao(models.Model):
     entrou_jogando = models.BooleanField(blank=True, null=True, verbose_name="Entrou jogando")
     id_clube = models.ForeignKey('Clube', models.DO_NOTHING, db_column='id_clube', blank=True, null=True, verbose_name="Clube")
     id_atleta = models.ForeignKey('Atleta', models.DO_NOTHING, db_column='id_atleta', blank=True, null=True, verbose_name="Atleta")
-    id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")    
+    id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")
 
     def __str__(self):
-        return f"{self.idpartida} - {self.idjogador} - {self.idposicao}"
+        return f"{self.id_escalacao}"
 
     class Meta:
         managed = False
@@ -214,7 +214,7 @@ class Estadio(models.Model):
     id_estadio = models.AutoField(primary_key=True, verbose_name="Código")
     nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")    
     id_cidade = models.ForeignKey(Cidade, models.DO_NOTHING, db_column='id_cidade', blank=True, null=True, verbose_name="Cidade")
-
+    
     def __str__(self):
         return f"{self.nome}"
 
@@ -231,7 +231,7 @@ class Evento(models.Model):
     penaltis = models.IntegerField(blank=True, null=True, verbose_name="Penaltis")    
 
     def __str__(self):
-        return f"{self.tipoevento} - {self.minuto}"
+        return f"{self.id_jogo}: clube {self.id_clube} marcou {self.gols} gol(s) e teve {self.penaltis} penalti(s)"
 
     class Meta:
         managed = False
@@ -244,7 +244,7 @@ class Atleta(models.Model):
     id_atleta = models.AutoField(primary_key=True, verbose_name="Código")
     nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
     apelido = models.CharField(max_length=100, blank=True, null=True, verbose_name="Apelido")
-    foto = models.CharField(max_length=500, blank=True, null=True, verbose_name="Foto")    
+    foto = models.CharField(max_length=500, blank=True, null=True, verbose_name="Foto")
 
     def __str__(self):
         return f"{self.nome}"
@@ -267,11 +267,10 @@ class Jogo(models.Model):
     id_campeonato = models.ForeignKey('Campeonato', models.DO_NOTHING, db_column='id_campeonato', blank=True, null=True, verbose_name="Campeonato")
     id_estadio = models.ForeignKey(Estadio, models.DO_NOTHING, db_column='id_estadio', blank=True, null=True, verbose_name="Estádio")
     id_clube_mandante = models.ForeignKey('Clube',  models.DO_NOTHING, related_name='jogo_como_mandante', db_column='id_clube_mandante', blank=True, null=True, verbose_name="Mandante")
-    id_clube_visitante = models.ForeignKey('Clube', models.DO_NOTHING, related_name='jogo_como_visitante', db_column='id_clube_visitante', blank=True, null=True, verbose_name="Visitante")
-    
+    id_clube_visitante = models.ForeignKey('Clube', models.DO_NOTHING, related_name='jogo_como_visitante', db_column='id_clube_visitante', blank=True, null=True, verbose_name="Visitante")    
 
     def __str__(self):
-        return f"{self.idpartida}"
+        return f"{self.id_jogo}"
 
     class Meta:
         managed = False
@@ -306,13 +305,13 @@ class Alteracao(models.Model):
     id_clube = models.ForeignKey('Clube', models.DO_NOTHING, db_column='id_clube', blank=True, null=True, verbose_name="Clube")
 
     def __str__(self):
-        return f"{self.nome}"
+        return f"{self.id_alteracao}"
 
     class Meta:
         managed = False
         db_table = 'alteracao'
-        verbose_name = "Alteracao"
-        verbose_name_plural = "Alteracaos"
+        verbose_name = "Alteração"
+        verbose_name_plural = "Alterações"
 
 
 class Documento(models.Model):
@@ -322,7 +321,7 @@ class Documento(models.Model):
     id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")    
 
     def __str__(self):
-        return f"{self.nome}"
+        return f"{self.title}"
 
     class Meta:
         managed = False
@@ -342,7 +341,7 @@ class Penalidade(models.Model):
     id_atleta = models.ForeignKey('Atleta', models.DO_NOTHING, db_column='id_atleta', blank=True, null=True, verbose_name="Atleta")
 
     def __str__(self):
-        return f"{self.nome}"
+        return f"{self.id_penalidade}"
 
     class Meta:
         managed = False
