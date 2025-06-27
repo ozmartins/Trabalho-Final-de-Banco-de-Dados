@@ -7,7 +7,7 @@ import psycopg2
 def generate_referee_assignments_graphic(conn):    
     query = """
             SELECT a.nome, COUNT(*) AS qtd_partidas
-            FROM equipearbitragem ea
+            FROM equipe_arbitragem ea
             JOIN arbitro a ON a.idarbitro = ea.idarbitro
             JOIN funcaoarbitro f ON f.idfuncaoarbitro = f.idfuncaoarbitro		
             WHERE f.descricao = 'Arbitro'
