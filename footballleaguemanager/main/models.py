@@ -296,11 +296,11 @@ class Clube(models.Model):
 
 class Alteracao(models.Model):
     id_alteracao = models.AutoField(primary_key=True, verbose_name="Código")
-    codigo_jogador_saiu = models.IntegerField(blank=True, null=True, verbose_name="Código jogador saiu")
-    codigo_jogador_entrou = models.IntegerField(blank=True, null=True, verbose_name="Código jogador entrou")
-    tempo_jogo = models.DateTimeField(blank=True, null=True, verbose_name="Tempo jogo")
+    codigo_jogador_saiu = models.ForeignKey('atleta', models.DO_NOTHING, db_column='codigo_jogador_saiu', blank=True, null=True, related_name="fk_codigo_jogador_saiu", verbose_name="Código jogador saiu")
+    codigo_jogador_entrou = models.ForeignKey('atleta', models.DO_NOTHING, db_column='codigo_jogador_entrou', blank=True, null=True, related_name="fk_codigo_jogador_entrou", verbose_name="Código jogador entrou")
+    tempo_jogo = models.TimeField(blank=True, null=True, verbose_name="Tempo jogo")
     tempo_subs = models.CharField(max_length=3, blank=True, null=True, verbose_name="Tempos subst.")
-    tempo_acrescimo = models.DateTimeField(blank=True, null=True, verbose_name="Tempo acréscimo")
+    tempo_acrescimo = models.TimeField(blank=True, null=True, verbose_name="Tempo acréscimo")
     id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")
     id_clube = models.ForeignKey('Clube', models.DO_NOTHING, db_column='id_clube', blank=True, null=True, verbose_name="Clube")
 
