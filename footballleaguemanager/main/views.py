@@ -5,10 +5,11 @@ from django.conf import settings
 from .tables import create_all_tables, drop_all_tables
 from .fill_database import insert_data_from_cbf_datasets
 from .graphics import referee_assignments_graphic, lineup_players_graphic, teams_evolution, goals_per_round, games_per_state
+from .inteligencia_artificial import ask_gpt
 import psycopg2
 
 
-def index(request):
+def index(request):    
     try:
         conn = psycopg2.connect(
             dbname=settings.DATABASES['default']['NAME'],
@@ -38,6 +39,7 @@ def index(request):
     except Exception as e:
         messages.error(request, f'Erro ao conectar no banco: {e}')
         return redirect('bd')
+
     return render(request, 'index.html')
 
 
@@ -93,7 +95,7 @@ def bd(request):
             except psycopg2.errors.DatabaseDropped:
                 messages.warning(request, 'O banco de dados não existe.')
             except Exception as e:
-                messages.error(request, f'Erro ao criar tabelas: {e}')            
+                messages.error(request, f'Erro ao criar tabelas: {e}')
 
         if 'destruir_tabelas' in request.POST:                        
             try:                      
@@ -109,3 +111,17 @@ def bd(request):
         return redirect('bd')
     
     return render(request, 'bd.html')
+
+def llm(request):
+    if 'perguntar' in request.POST:            
+        try:
+            year = request.POST.get('year')
+            round = request.POST.get('round')
+            question = request.POST.get('question')
+            if (question == "" or year == "" or round == ""):
+                messages.error(request, 'Informe todos os campos do formulário')
+            messages.success(request, ask_gpt(year, round, question))                    
+        except Exception as e:
+            messages.error(request, f'Erro na comunição com o LLM: {e}')
+
+    return render(request, 'llm.html')

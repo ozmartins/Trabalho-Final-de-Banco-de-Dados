@@ -76,35 +76,28 @@
     </div>
 
     <div class="content">
-        <h1>Gerenciamento do Banco de Dados</h1>
+        <h1>Large Language Models</h1>
         <div class="actions">
             <form method="post" onsubmit="showSpinner()">
                 {% csrf_token %}
-                <label for="db_user">Usuário:</label><br>
-                <input type="text" id="db_user" name="db_user" required autocomplete="off" value="postgres"><br><br>
-
-                <label for="db_password">Senha:</label><br>
-                <input type="password" id="db_password" name="db_password" required autocomplete="off"
-                    value="admin"><br><br>
-
-                <button id="criar_tabelas_button" type="submit" name="criar_tabelas">
-                    Criar Tabelas
-                </button>
-                <button id="destruir_tabelas_button" type="submit" name="destruir_tabelas">
-                    Destruir Tabelas
+                <label for="year">Ano:</label><br>
+                <input type="text" id="year" name="year" required width="100px"><br><br>
+                <label for="round">Rodada:</label><br>
+                <input type="text" id="round" name="round" required width="100px"><br><br>
+                <label for="question">Pergunta:</label><br>
+                <input type="text" id="question" name="question" required width="100px"><br><br>
+                <button id="perguntar" type="submit" name="perguntar">
+                    Enviar
                 </button>
             </form>
         </div>
-        {% if messages %}
-        <ul>
+        <div>
+            {% if messages %}
             {% for message in messages %}
-            <li
-                style="color: {% if message.tags == 'error' %}red{% elif message.tags == 'success' %}green{% else %}orange{% endif %};">
-                {{ message }}
-            </li>
+            {{ message }}
             {% endfor %}
-        </ul>
-        {% endif %}
+            {% endif %}
+        </div>
     </div>
 
     <div id="spinner" class="spinner"></div>
