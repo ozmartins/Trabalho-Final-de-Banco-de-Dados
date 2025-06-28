@@ -68,29 +68,29 @@
     </div>
 
     <div class="tab-buttons">
-        <a href="#" onclick="openTab('tab1', this)" class="active">Escalações arbitros</a>
-        <a href="#" onclick="openTab('tab2', this)">Escalações jogadores </a>
-        <a href="#" onclick="openTab('tab3', this)">Evolução clubes</a>
-        <a href="#" onclick="openTab('tab4', this)">Gols por rodada</a>
-        <a href="#" onclick="openTab('tab5', this)">Jogos por estado</a>
+        <a href="#" id="link_tab_1" onclick="openTab('tab1', this)" class="active">Escalações arbitros</a>
+        <a href="#" id="link_tab_2" onclick="openTab('tab2', this)">Escalações jogadores </a>
+        <a href="#" id="link_tab_3" onclick="openTab('tab3', this)">Evolução clubes</a>
+        <a href="#" id="link_tab_4" onclick="openTab('tab4', this)">Gols por rodada</a>
+        <a href="#" id="link_tab_5" onclick="openTab('tab5', this)">Jogos por estado</a>
     </div>
 
     <div class="content">
         <div class="tab-container">
             <div id="tab1" class="tab" style="display: block;">
-                <img src="../static/escalacoes-arbitros.png" width="600" height="400" />
+                <img src="../static/escalacoes-arbitros.jpg" width="600" height="400" />
             </div>
             <div id="tab2" class="tab">
-                <img src="../static/escalacoes-jogadores.png" width="600" height="400" />
+                <img src="../static/escalacoes-jogadores.jpg" width="600" height="400" />
             </div>
             <div id="tab3" class="tab">
-                <img src="../static/evolucao-clubes.png" width="600" height="400" />
+                <img src="../static/evolucao-clubes.jpg" width="600" height="400" />
             </div>
             <div id="tab4" class="tab">
-                <img src="../static/gols-por-rodada.png" width="600" height="400" />
+                <img src="../static/gols-por-rodada.jpg" width="600" height="400" />
             </div>
             <div id="tab5" class="tab">
-                <img src="../static/jogos-por-estado.png" width="600" height="400" />
+                <img src="../static/jogos-por-estado.jpg" width="600" height="400" />
             </div>
         </div>
     </div>
@@ -106,6 +106,8 @@
             document.getElementById(tabId).style.display = 'block';
             element.classList.add('active');
         }
+
+        openTab('tab1', document.getElementById("link_tab_1"))
     </script>
 </body>
 

@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 from .tables import create_all_tables, drop_all_tables
 from .fill_database import insert_data_from_cbf_datasets
-from .graphics import generate_graphics
+from .graphics import referee_assignments_graphic, lineup_players_graphic, teams_evolution, goals_per_round, games_per_state
 import psycopg2
 
 
@@ -24,10 +24,17 @@ def index(request):
 
         if resultado[0] is not None:
             request.session['tables_created'] = 1
-            generate_graphics()
+            referee_assignments_graphic.generate_graphic(conn)
+            lineup_players_graphic.generate_graphic(conn)
+            teams_evolution.generate_graphic(conn)
+            goals_per_round.generate_graphic(conn)
+            games_per_state.generate_graphic(conn)
         else:
             request.session['tables_created'] = 0
             return redirect('bd')
+        
+        cur.close()
+        conn.close()
     except Exception as e:
         messages.error(request, f'Erro ao conectar no banco: {e}')
         return redirect('bd')
