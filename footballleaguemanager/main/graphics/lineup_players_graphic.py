@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')
+
 from scipy.stats import gaussian_kde
 import pandas as pd
 import numpy as np
