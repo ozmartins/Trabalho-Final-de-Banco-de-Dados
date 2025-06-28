@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def generate_graphic(conn):
+def generate_graphic(conn, context):
         plt.clf()
 
         query = """
@@ -30,3 +30,6 @@ def generate_graphic(conn):
         plt.grid(True)
         plt.tight_layout()
         plt.savefig('./main/static/gols-por-rodada.jpg')    
+
+        for item in df.values:
+                context['dados']['gols_por_rodada'].append({'ano': item[0], 'rodada': item[1], 'total_gols': item[2]})

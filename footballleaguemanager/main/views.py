@@ -7,9 +7,10 @@ from .fill_database import insert_data_from_cbf_datasets
 from .graphics import referee_assignments_graphic, lineup_players_graphic, teams_evolution, goals_per_round, games_per_state
 from .inteligencia_artificial import ask_gpt
 import psycopg2
+import os
 
 
-def index(request):    
+def index(request):        
     try:
         conn = psycopg2.connect(
             dbname=settings.DATABASES['default']['NAME'],
@@ -25,11 +26,19 @@ def index(request):
 
         if resultado[0] is not None:
             request.session['tables_created'] = 1
-            referee_assignments_graphic.generate_graphic(conn)
-            lineup_players_graphic.generate_graphic(conn)
-            teams_evolution.generate_graphic(conn)
-            goals_per_round.generate_graphic(conn)
-            games_per_state.generate_graphic(conn)
+            context = {}
+            context['dados'] = {
+                'escalacoes_arbitros': [],
+                'escalacoes_jogadores': [],
+                'evolucao_clubes': [],
+                'gols_por_rodada': [],
+                'jogos_por_estado': []
+                }            
+            referee_assignments_graphic.generate_graphic(conn, context)
+            lineup_players_graphic.generate_graphic(conn, context)
+            teams_evolution.generate_graphic(conn, context)
+            goals_per_round.generate_graphic(conn, context)
+            games_per_state.generate_graphic(conn, context)
         else:
             request.session['tables_created'] = 0
             return redirect('bd')
@@ -40,7 +49,7 @@ def index(request):
         messages.error(request, f'Erro ao conectar no banco: {e}')
         return redirect('bd')
 
-    return render(request, 'index.html')
+    return render(request, 'index.html', context)
 
 
 def bd(request):

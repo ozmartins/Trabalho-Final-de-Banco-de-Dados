@@ -7,7 +7,7 @@ import pandas as pd
 import os
 import requests
 
-def generate_graphic(conn):                
+def generate_graphic(conn, context):
         plt.clf()
 
         query = """
@@ -84,3 +84,6 @@ def generate_graphic(conn):
         ax.axis('off')
         
         plt.savefig('./main/static/jogos-por-estados.jpg')
+
+        for item in df.values:
+                context['dados']['jogos_por_estado'].append({'uf': item[0], 'qtd': item[1]})

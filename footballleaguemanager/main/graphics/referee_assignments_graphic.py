@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def generate_graphic(conn):
+def generate_graphic(conn, context):    
     plt.clf()
 
     query = """
@@ -18,7 +18,7 @@ def generate_graphic(conn):
 
     df = pd.read_sql(query, conn)    
 
-    df = df.head(50)
+    df = df.head(50)    
     
     plt.figure(figsize=(12, 8))
     plt.barh(df['nome'], df['qtd_partidas'], color='steelblue')
@@ -27,4 +27,7 @@ def generate_graphic(conn):
     plt.title("Árbitros que mais atuaram")
     plt.gca().invert_yaxis()  # Coloca o mais atuante no topo
     plt.tight_layout()        
-    plt.savefig('./main/static/escalacoes-arbitros.jpg')
+    plt.savefig('./main/static/escalacoes-arbitros.jpg')    
+        
+    for item in df.values:                
+        context['dados']['escalacoes_arbitros'].append({'nome': item[0], 'escalacoes': item[1]})

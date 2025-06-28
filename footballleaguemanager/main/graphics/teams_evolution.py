@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def generate_graphic(conn):
+def generate_graphic(conn, context):
         query = """
                 select
                 ano,
@@ -76,16 +76,19 @@ def generate_graphic(conn):
         for ano in sorted(anos):
                 dados_ano = df[df['ano'] == ano]
 
-        plt.figure(figsize=(14, 8))
-        for clube in dados_ano['clube'].unique():
-                dados_clube = dados_ano[dados_ano['clube'] == clube]
-                plt.plot(dados_clube['rodada'], dados_clube['posicao'], label=clube)
+                plt.figure(figsize=(14, 8))
+                for clube in dados_ano['clube'].unique():
+                        dados_clube = dados_ano[dados_ano['clube'] == clube]
+                        plt.plot(dados_clube['rodada'], dados_clube['posicao'], label=clube)
 
-        plt.gca().invert_yaxis()  # Posição 1 no topo
-        plt.title(f"Evolução da Classificação - {ano}")
-        plt.xlabel("Rodada")
-        plt.ylabel("Posição")
-        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small', ncol=1)
-        plt.tight_layout()
-        plt.grid(True)
-        plt.savefig('./main/static/evolucao-clubes.jpg')
+                        plt.gca().invert_yaxis()  # Posição 1 no topo
+                        plt.title(f"Evolução da Classificação - {ano}")
+                        plt.xlabel("Rodada")
+                        plt.ylabel("Posição")
+                        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small', ncol=1)
+                        plt.tight_layout()
+                        plt.grid(True)
+                        plt.savefig(f'./main/static/evolucao-clubes-{ano}.jpg')
+
+        for item in df.values:
+                context['dados']['evolucao_clubes'].append({'ano': item[0], 'rodada': item[1], 'clube': item[2], 'posicao': item[3]})                        

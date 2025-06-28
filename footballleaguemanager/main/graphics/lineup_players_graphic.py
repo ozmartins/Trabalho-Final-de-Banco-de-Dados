@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-def generate_graphic(conn):
+def generate_graphic(conn, context):
     plt.clf()
 
     query = """
@@ -33,3 +33,6 @@ def generate_graphic(conn):
     plt.grid(True)
     plt.legend()    
     plt.savefig('./main/static/escalacoes-jogadores.jpg')    
+        
+    for item in df.sort_values(by='quantidade_escalacoes').values:
+        context['dados']['escalacoes_jogadores'].append({'nome': item[0], 'quantidade_escalacoes': item[1]})

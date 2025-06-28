@@ -55,10 +55,57 @@
         .content {
             padding: 20px;
         }
+
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 500px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #333;
+            color: white;
+        }
+
+        th,
+        td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
     </style>
 </head>
 
 <body>
+    <script>
+        current_year = 2024
+    </script>
     <div class="navbar">
         <a href="/">Início</a>
         {% if request.session.tables_created == 1 %}
@@ -79,19 +126,149 @@
     <div class="content">
         <div class="tab-container">
             <div id="tab1" class="tab" style="display: block;">
-                <img src="../static/escalacoes-arbitros.jpg" width="600" height="400" />
+                <div class="flex-container">
+                    <img src="../static/escalacoes-arbitros.jpg" width="600" height="400" />
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Escalações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in dados.escalacoes_arbitros %}
+                                <tr>
+                                    <td>{{ item.nome }}</td>
+                                    <td>{{ item.escalacoes }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div id="tab2" class="tab">
-                <img src="../static/escalacoes-jogadores.jpg" width="600" height="400" />
+
+
+            <div id="tab2" class="tab" style="display: block;">
+                <div class="flex-container">
+                    <img src="../static/escalacoes-jogadores.jpg" width="600" height="400" />
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Escalações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in dados.escalacoes_jogadores %}
+                                <tr>
+                                    <td>{{ item.nome }}</td>
+                                    <td>{{ item.quantidade_escalacoes }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div id="tab3" class="tab">
-                <img src="../static/evolucao-clubes.jpg" width="600" height="400" />
+
+            <div id="tab3" class="tab" style="display: block;">
+                <div class="tab-anos">
+                    <a href="#" id="link_2018" onclick="changeYear('2018', 'img-evolucao-clube-2018')"
+                        class="active">2018</a>
+                    <a href="#" id="link_2022" onclick="changeYear('2022', 'img-evolucao-clube-2022')">2022</a>
+                    <a href="#" id="link_2023" onclick="changeYear('2023', 'img-evolucao-clube-2023')">2023</a>
+                    <a href="#" id="link_2024" onclick="changeYear('2024', 'img-evolucao-clube-2024')">2024</a>
+                </div>
+                <div class="flex-container">
+                    <img src="../static/evolucao-clubes-2018.jpg" width="600" height="400" style="display: none;"
+                        class="img-evolucao-clube" id="img-evolucao-clube-2018" />
+                    <img src="../static/evolucao-clubes-2022.jpg" width="600" height="400" style="display: none;"
+                        class="img-evolucao-clube" id="img-evolucao-clube-2022" />
+                    <img src="../static/evolucao-clubes-2023.jpg" width="600" height="400" style="display: none;"
+                        class="img-evolucao-clube" id="img-evolucao-clube-2023" />
+                    <img src="../static/evolucao-clubes-2024.jpg" width="600" height="400" style="display: block;"
+                        class="img-evolucao-clube" id="img-evolucao-clube-2024" />
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ano</th>
+                                    <th>Rodada</th>
+                                    <th>Clube</th>
+                                    <th>Posicao</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in dados.evolucao_clubes %}
+                                <tr>
+                                    <td>{{ item.ano }}</td>
+                                    <td>{{ item.rodada }}</td>
+                                    <td>{{ item.clube }}</td>
+                                    <td>{{ item.posicao }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div id="tab4" class="tab">
-                <img src="../static/gols-por-rodada.jpg" width="600" height="400" />
+
+            <div id="tab4" class="tab" style="display: block;">
+                <div class="flex-container">
+                    <img src="../static/gols-por-rodada.jpg" width="600" height="400" />
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ano</th>
+                                    <th>Rodada</th>
+                                    <th>Gols</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in dados.gols_por_rodada %}
+                                <tr>
+                                    <td>{{ item.ano }}</td>
+                                    <td>{{ item.rodada }}</td>
+                                    <td>{{ item.total_gols }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div id="tab5" class="tab">
-                <img src="../static/jogos-por-estado.jpg" width="600" height="400" />
+
+            <div id="tab5" class="tab" style="display: block;">
+                <div class="flex-container">
+                    <img src="../static/jogos-por-estados.jpg" width="600" height="400" />
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>UF</th>
+                                    <th>Jogos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in dados.jogos_por_estado %}
+                                <tr>
+                                    <td>{{ item.uf }}</td>
+                                    <td>{{ item.qtd }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -106,6 +283,13 @@
 
             document.getElementById(tabId).style.display = 'block';
             element.classList.add('active');
+        }
+
+        function changeYear(year, elementId) {
+            const tabs = document.querySelectorAll('.img-evolucao-clube');
+
+            tabs.forEach(tab => tab.style.display = 'none');
+            document.getElementById(elementId).style.display = 'block';
         }
 
         openTab('tab1', document.getElementById("link_tab_1"))
