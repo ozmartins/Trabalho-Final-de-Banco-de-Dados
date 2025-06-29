@@ -3,6 +3,7 @@ matplotlib.use('Agg')
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import json
 
 def generate_graphic(conn, context):
         plt.clf()
@@ -33,3 +34,10 @@ def generate_graphic(conn, context):
 
         for item in df.values:
                 context['dados']['gols_por_rodada'].append({'ano': item[0], 'rodada': item[1], 'total_gols': item[2]})
+
+        gols_por_rodada = []
+        for item in df.values:
+                gols_por_rodada.append({'ano': item[0], 'rodada': item[1], 'total_gols': item[2]})
+
+        with open("./main/static/gols-por-rodada.json", "w", encoding="utf-8") as f:
+                json.dump(gols_por_rodada, f, ensure_ascii=False, indent=4)

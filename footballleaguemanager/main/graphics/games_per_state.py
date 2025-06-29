@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 import pandas as pd
 import os
+import json
 import requests
 
 def generate_graphic(conn, context):
@@ -83,7 +84,11 @@ def generate_graphic(conn, context):
         ax.set_title('Quantidade de Jogos por Estado', fontsize=16)
         ax.axis('off')
         
-        plt.savefig('./main/static/jogos-por-estados.jpg')
+        plt.savefig('./main/static/jogos-por-estados.jpg')        
 
+        jogos_por_estado = []
         for item in df.values:
-                context['dados']['jogos_por_estado'].append({'uf': item[0], 'qtd': item[1]})
+                jogos_por_estado.append({'uf': item[0], 'qtd': item[1]})
+
+        with open("./main/static/jogos-por-estado.json", "w", encoding="utf-8") as f:
+                json.dump(jogos_por_estado, f, ensure_ascii=False, indent=4)

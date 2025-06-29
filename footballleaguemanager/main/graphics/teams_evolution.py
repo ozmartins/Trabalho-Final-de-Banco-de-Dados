@@ -3,6 +3,7 @@ matplotlib.use('Agg')
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import json
 
 def generate_graphic(conn, context):
         query = """
@@ -90,5 +91,10 @@ def generate_graphic(conn, context):
                         plt.grid(True)
                         plt.savefig(f'./main/static/evolucao-clubes-{ano}.jpg')
 
-        for item in df.values:
-                context['dados']['evolucao_clubes'].append({'ano': item[0], 'rodada': item[1], 'clube': item[2], 'posicao': item[3]})                        
+                        evolucao_clubes = []
+                        for item in df.values:
+                                if item[0] == str(ano):
+                                        evolucao_clubes.append({'ano': item[0], 'rodada': item[1], 'clube': item[2], 'posicao': item[3]})
+
+                        with open(f"./main/static/evolucao-clubes-{ano}.json", "w", encoding="utf-8") as f:
+                                json.dump(evolucao_clubes, f, ensure_ascii=False, indent=4)

@@ -1,0 +1,4562 @@
+[
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Athletico Paranaense",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "America",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Santos Fc",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Vasco da Gama",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Grêmio",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Flamengo",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Vitória",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Palmeiras",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Atlético Mineiro",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Fluminense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Parana",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "clube": "Sport",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Athletico Paranaense",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Vasco da Gama",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Palmeiras",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Grêmio",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "São Paulo",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "America",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Atlético Mineiro",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Internacional",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Vitória",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Sport",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Ceará",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "America",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Atlético Mineiro",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Vasco da Gama",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Palmeiras",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Santos Fc",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Sport",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Grêmio",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Internacional",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Ceará",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Vasco da Gama",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Palmeiras",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Fluminense",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Sport",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "America",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "São Paulo",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Athletico Paranaense",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Santos Fc",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Internacional",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Ceará",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Vitória",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Vasco da Gama",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Palmeiras",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "America",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "São Paulo",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Sport",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Athletico Paranaense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Internacional",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Vitória",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Atlético Mineiro",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Palmeiras",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "America",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Fluminense",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "São Paulo",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Vasco da Gama",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Grêmio",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Sport",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Internacional",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Vitória",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Santos Fc",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Fluminense",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "São Paulo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Atlético Mineiro",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Corinthians",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Palmeiras",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Sport",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Internacional",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "America",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Vasco da Gama",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Vitória",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Santos Fc",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Chapecoense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Sport",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Grêmio",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Vasco da Gama",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Palmeiras",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "America",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Athletico Paranaense",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Chapecoense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Vitória",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Santos Fc",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Grêmio",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Sport",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Palmeiras",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Corinthians",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "America",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Vasco da Gama",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Santos Fc",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Athletico Paranaense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Parana",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Sport",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Palmeiras",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Grêmio",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Internacional",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Corinthians",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "America",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Vasco da Gama",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Vitória",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Santos Fc",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Parana",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "São Paulo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Sport",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Vasco da Gama",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Corinthians",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Fluminense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "America",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Vitória",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Santos Fc",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Parana",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "São Paulo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Sport",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Vasco da Gama",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Corinthians",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "America",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Fluminense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Vitória",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Parana",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Athletico Paranaense",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Palmeiras",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Sport",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Corinthians",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Vasco da Gama",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Vitória",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Santos Fc",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Fluminense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "America",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Athletico Paranaense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Parana",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Grêmio",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Vasco da Gama",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Sport",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Corinthians",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Fluminense",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Santos Fc",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Chapecoense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Vitória",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "America",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Parana",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Athletico Paranaense",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Palmeiras",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Corinthians",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Vasco da Gama",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Sport",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Vitória",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "America",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Santos Fc",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Athletico Paranaense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Parana",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Flamengo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Atlético Mineiro",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Corinthians",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Vasco da Gama",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "America",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Sport",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Vitória",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Santos Fc",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Athletico Paranaense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Parana",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "clube": "Ceará",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Corinthians",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "America",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Sport",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Vitória",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Santos Fc",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Athletico Paranaense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Corinthians",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Chapecoense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "America",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Sport",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Vitória",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Santos Fc",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Palmeiras",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Corinthians",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "America",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Athletico Paranaense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Santos Fc",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Sport",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Vitória",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Palmeiras",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Corinthians",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "America",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Chapecoense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Santos Fc",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Athletico Paranaense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Sport",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Vitória",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Palmeiras",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Corinthians",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "America",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Vasco da Gama",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Athletico Paranaense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Sport",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Palmeiras",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Corinthians",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Athletico Paranaense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Fluminense",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "America",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Vitória",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Sport",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Palmeiras",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Corinthians",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "America",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Fluminense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Athletico Paranaense",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Vitória",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Vasco da Gama",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Sport",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Palmeiras",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Grêmio",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Corinthians",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "America",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Vitória",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Athletico Paranaense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Vasco da Gama",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Sport",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Ceará",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Palmeiras",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Corinthians",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Athletico Paranaense",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "America",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Vitória",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Ceará",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Vasco da Gama",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Sport",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Palmeiras",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Corinthians",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Athletico Paranaense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Santos Fc",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "America",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Vitória",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Ceará",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Sport",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "São Paulo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Flamengo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Corinthians",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Athletico Paranaense",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "America",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Chapecoense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Sport",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Fluminense",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Athletico Paranaense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Corinthians",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Ceará",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "America",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Vasco da Gama",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Vitória",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Sport",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Athletico Paranaense",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Corinthians",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "America",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Chapecoense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Sport",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Athletico Paranaense",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Fluminense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Corinthians",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "America",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Chapecoense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Sport",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Athletico Paranaense",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Corinthians",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Ceará",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "America",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Sport",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Vitória",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Grêmio",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Athletico Paranaense",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Fluminense",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Corinthians",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Sport",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Vitória",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Chapecoense",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "America",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Athletico Paranaense",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Fluminense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Corinthians",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Sport",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Vitória",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "America",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Athletico Paranaense",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Fluminense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Corinthians",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Sport",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Vitória",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "America",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Athletico Paranaense",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Corinthians",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Fluminense",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Sport",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Chapecoense",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "America",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Vitória",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Athletico Paranaense",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Corinthians",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Vasco da Gama",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Fluminense",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Sport",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "America",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Vitória",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Athletico Paranaense",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Corinthians",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Ceará",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Vasco da Gama",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Fluminense",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Chapecoense",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "America",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Sport",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Vitória",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "clube": "Parana",
+        "posicao": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Grêmio",
+        "posicao": 4
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Athletico Paranaense",
+        "posicao": 7
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Cruzeiro Esporte Clube",
+        "posicao": 8
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Botafogo de Futebol E Regatas",
+        "posicao": 9
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Esporte Clube Bahia",
+        "posicao": 11
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Fluminense",
+        "posicao": 12
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Chapecoense",
+        "posicao": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Corinthians",
+        "posicao": 14
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Vasco da Gama",
+        "posicao": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Sport",
+        "posicao": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "America",
+        "posicao": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Vitória",
+        "posicao": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "clube": "Parana",
+        "posicao": 20
+    }
+]

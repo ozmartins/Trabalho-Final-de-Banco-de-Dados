@@ -7,6 +7,7 @@ from .fill_database import insert_data_from_cbf_datasets
 from .graphics import referee_assignments_graphic, lineup_players_graphic, teams_evolution, goals_per_round, games_per_state
 from .inteligencia_artificial import ask_gpt
 import psycopg2
+import json
 import os
 
 
@@ -33,12 +34,43 @@ def index(request):
                 'evolucao_clubes': [],
                 'gols_por_rodada': [],
                 'jogos_por_estado': []
-                }            
-            referee_assignments_graphic.generate_graphic(conn, context)
-            lineup_players_graphic.generate_graphic(conn, context)
-            teams_evolution.generate_graphic(conn, context)
-            goals_per_round.generate_graphic(conn, context)
-            games_per_state.generate_graphic(conn, context)
+                }                                                                    
+
+            if os.path.exists('./main/static/escalacoes-arbitros.json') and os.path.exists('./main/static/escalacoes-arbitros.jpg'):
+                with open("./main/static/escalacoes-arbitros.json", "r", encoding="utf-8") as file:
+                    context['dados']['escalacoes_arbitros'] = json.load(file)
+            else:
+                referee_assignments_graphic.generate_graphic(conn, context)                
+
+            if os.path.exists('./main/static/escalacoes-jogadores.json') and os.path.exists('./main/static/escalacoes-jogadores.jpg'):
+                with open("./main/static/escalacoes-jogadores.json", "r", encoding="utf-8") as file:
+                    context['dados']['escalacoes_jogadores'] = json.load(file)
+            else:
+                lineup_players_graphic.generate_graphic(conn, context)                
+
+            if os.path.exists('./main/static/evolucao-clubes-2018.json') and os.path.exists('./main/static/evolucao-clubes-2018.jpg') and os.path.exists('./main/static/evolucao-clubes-2022.json') and os.path.exists('./main/static/evolucao-clubes-2022.jpg') and os.path.exists('./main/static/evolucao-clubes-2023.json') and os.path.exists('./main/static/evolucao-clubes-2023.jpg')and os.path.exists('./main/static/evolucao-clubes-2024.json') and os.path.exists('./main/static/evolucao-clubes-2024.jpg'):
+                with open("./main/static/evolucao-clubes-2018.json", "r", encoding="utf-8") as file:
+                    context['dados']['evolucao-clubes-2018'] = json.load(file)
+                with open("./main/static/evolucao-clubes-2022.json", "r", encoding="utf-8") as file:
+                    context['dados']['evolucao-clubes-2022'] = json.load(file)
+                with open("./main/static/evolucao-clubes-2023.json", "r", encoding="utf-8") as file:
+                    context['dados']['evolucao-clubes-2023'] = json.load(file)
+                with open("./main/static/evolucao-clubes-2024.json", "r", encoding="utf-8") as file:
+                    context['dados']['evolucao-clubes-2024'] = json.load(file)
+            else:
+                teams_evolution.generate_graphic(conn, context)                
+
+            if os.path.exists('./main/static/gols-por-rodada.json') and os.path.exists('./main/static/gols-por-rodada.jpg'):
+                with open("./main/static/gols-por-rodada.json", "r", encoding="utf-8") as file:
+                    context['dados']['gols_por_rodada'] = json.load(file)
+            else:
+                goals_per_round.generate_graphic(conn, context)
+                
+            if os.path.exists('./main/static/jogos-por-estados.json') and os.path.exists('./main/static/jogos-por-estados.jpg'):
+                with open("./main/static/gols-por-rodada.json", "r", encoding="utf-8") as file:
+                    context['dados']['gols_por_rodada'] = json.load(file)
+            else:
+                games_per_state.generate_graphic(conn, context)                
         else:
             request.session['tables_created'] = 0
             return redirect('bd')

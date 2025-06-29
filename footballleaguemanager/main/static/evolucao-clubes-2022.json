@@ -1,0 +1,4082 @@
+[
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "São Paulo",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Ceará",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Coritiba",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Avaí",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Cuiabá Saf",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Juventude",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Red Bull Bragantino",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Atlético",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Flamengo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Fluminense",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Santos Fc",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Palmeiras",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Botafogo",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "America Saf",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Fortaleza",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Goiás",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "clube": "Internacional",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Red Bull Bragantino",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Santos Fc",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Fluminense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "São Paulo",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "America Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Botafogo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Ceará",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Coritiba",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Internacional",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Avaí",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Cuiabá Saf",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Juventude",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Palmeiras",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Atlético",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Goiás",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Fortaleza",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "clube": "Athletico Paranaense",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Atlético Mineiro",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Santos Fc",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Ceará",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Avaí",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Cuiabá Saf",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Red Bull Bragantino",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Coritiba",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Palmeiras",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "São Paulo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Botafogo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Flamengo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Fluminense",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "America Saf",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Athletico Paranaense",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Atlético",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Goiás",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Red Bull Bragantino",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Coritiba",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Santos Fc",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Avaí",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Cuiabá Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Internacional",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Ceará",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Botafogo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Palmeiras",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Flamengo",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Fluminense",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Atlético",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Athletico Paranaense",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Goiás",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Santos Fc",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Avaí",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "America Saf",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Atlético Mineiro",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Red Bull Bragantino",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Botafogo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Internacional",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Coritiba",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Cuiabá Saf",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Palmeiras",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Ceará",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Athletico Paranaense",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Goiás",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Flamengo",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Fluminense",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Juventude",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "São Paulo",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Botafogo",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Coritiba",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Santos Fc",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Avaí",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Palmeiras",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "America Saf",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Internacional",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Red Bull Bragantino",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Fluminense",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Ceará",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Cuiabá Saf",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Juventude",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Flamengo",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Athletico Paranaense",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Palmeiras",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "São Paulo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Atlético Mineiro",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Botafogo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Santos Fc",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Fluminense",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Coritiba",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "America Saf",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Avaí",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Internacional",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Red Bull Bragantino",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Flamengo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Athletico Paranaense",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Goiás",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Juventude",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Atlético Mineiro",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Palmeiras",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Coritiba",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Botafogo",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Flamengo",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Athletico Paranaense",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Fluminense",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Internacional",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Red Bull Bragantino",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Avaí",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Goiás",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Juventude",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Corinthians",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Palmeiras",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "São Paulo",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Coritiba",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "America Saf",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Internacional",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Athletico Paranaense",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Botafogo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Flamengo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Avaí",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Fluminense",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Red Bull Bragantino",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Juventude",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Athletico Paranaense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Coritiba",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Internacional",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Fluminense",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "America Saf",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Ceará",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Red Bull Bragantino",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Botafogo",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Flamengo",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Avaí",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Juventude",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "São Paulo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Atlético Mineiro",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Coritiba",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Ceará",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Avaí",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Red Bull Bragantino",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "America Saf",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Atlético",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Botafogo",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Flamengo",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Atlético Mineiro",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "São Paulo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Red Bull Bragantino",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Avaí",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Coritiba",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Botafogo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Ceará",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Flamengo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Fluminense",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "America Saf",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Goiás",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Atlético",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Red Bull Bragantino",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Botafogo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Fluminense",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Avaí",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Atlético",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Ceará",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Coritiba",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Flamengo",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "America Saf",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Goiás",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Fluminense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Santos Fc",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Red Bull Bragantino",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Avaí",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Botafogo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Flamengo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Atlético",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Ceará",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Goiás",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Coritiba",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "America Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Athletico Paranaense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Internacional",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Fluminense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "São Paulo",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Flamengo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Botafogo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Red Bull Bragantino",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Avaí",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Coritiba",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Ceará",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "America Saf",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Atlético",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Goiás",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Atlético Mineiro",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "São Paulo",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Red Bull Bragantino",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Flamengo",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Botafogo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Coritiba",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Cuiabá Saf",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Avaí",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "America Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Red Bull Bragantino",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Flamengo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Avaí",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Ceará",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Botafogo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Goiás",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Cuiabá Saf",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "America Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Fortaleza",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Atlético Mineiro",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Fluminense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Red Bull Bragantino",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Flamengo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Ceará",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Avaí",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Goiás",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Botafogo",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Cuiabá Saf",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Coritiba",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "America Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Fortaleza",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Atlético Mineiro",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Flamengo",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Red Bull Bragantino",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Ceará",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Botafogo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Coritiba",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Goiás",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Avaí",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "America Saf",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Juventude",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "clube": "Fortaleza",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Athletico Paranaense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Flamengo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Red Bull Bragantino",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "São Paulo",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Goiás",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Ceará",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Botafogo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "America Saf",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Avaí",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Fortaleza",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Corinthians",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Athletico Paranaense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Flamengo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Red Bull Bragantino",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "São Paulo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Ceará",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Goiás",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Botafogo",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Avaí",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Fortaleza",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Cuiabá Saf",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Fluminense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Internacional",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Red Bull Bragantino",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Santos Fc",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "São Paulo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Botafogo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Ceará",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Fortaleza",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Avaí",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Coritiba",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Fluminense",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Corinthians",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Red Bull Bragantino",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "São Paulo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Botafogo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Fortaleza",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Cuiabá Saf",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Avaí",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Coritiba",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Internacional",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Corinthians",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Santos Fc",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Goiás",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Red Bull Bragantino",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Fortaleza",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "São Paulo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Ceará",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Botafogo",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Coritiba",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Avaí",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Flamengo",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Goiás",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "America Saf",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Red Bull Bragantino",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "São Paulo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Botafogo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Fortaleza",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Cuiabá Saf",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Coritiba",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Avaí",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Fluminense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Corinthians",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Goiás",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "America Saf",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Red Bull Bragantino",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "São Paulo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Ceará",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Botafogo",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Fortaleza",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Coritiba",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Avaí",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Athletico Paranaense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Corinthians",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "America Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Goiás",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Red Bull Bragantino",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "São Paulo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Botafogo",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Ceará",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Fortaleza",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Coritiba",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Avaí",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Fluminense",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Internacional",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Flamengo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "America Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Goiás",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Botafogo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Red Bull Bragantino",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Fortaleza",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Avaí",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Flamengo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "America Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Santos Fc",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Goiás",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Botafogo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Fortaleza",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Red Bull Bragantino",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Avaí",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Atlético",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Fluminense",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Flamengo",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "America Saf",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Botafogo",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Red Bull Bragantino",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Goiás",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Fortaleza",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Santos Fc",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Ceará",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Coritiba",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Avaí",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Corinthians",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Flamengo",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "America Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Botafogo",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Fortaleza",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Red Bull Bragantino",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Goiás",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Avaí",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "America Saf",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "São Paulo",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Fortaleza",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Santos Fc",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Botafogo",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Goiás",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Red Bull Bragantino",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Avaí",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Corinthians",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Fluminense",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Fortaleza",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "America Saf",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Botafogo",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Goiás",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Red Bull Bragantino",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Atlético",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Cuiabá Saf",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Avaí",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "clube": "Juventude",
+        "posicao": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Palmeiras",
+        "posicao": 1
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Internacional",
+        "posicao": 2
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Flamengo",
+        "posicao": 3
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Fluminense",
+        "posicao": 4
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Corinthians",
+        "posicao": 5
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Athletico Paranaense",
+        "posicao": 6
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Atlético Mineiro",
+        "posicao": 7
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "São Paulo",
+        "posicao": 8
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Fortaleza",
+        "posicao": 9
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Botafogo",
+        "posicao": 10
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "America Saf",
+        "posicao": 11
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Santos Fc",
+        "posicao": 12
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Goiás",
+        "posicao": 13
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Red Bull Bragantino",
+        "posicao": 14
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Coritiba",
+        "posicao": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Ceará",
+        "posicao": 16
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Cuiabá Saf",
+        "posicao": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Atlético",
+        "posicao": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Avaí",
+        "posicao": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "clube": "Juventude",
+        "posicao": 20
+    }
+]

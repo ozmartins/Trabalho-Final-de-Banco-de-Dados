@@ -1,0 +1,1012 @@
+[
+    {
+        "ano": "2018",
+        "rodada": 1,
+        "total_gols": 27
+    },
+    {
+        "ano": "2018",
+        "rodada": 2,
+        "total_gols": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 3,
+        "total_gols": 17
+    },
+    {
+        "ano": "2018",
+        "rodada": 4,
+        "total_gols": 31
+    },
+    {
+        "ano": "2018",
+        "rodada": 5,
+        "total_gols": 31
+    },
+    {
+        "ano": "2018",
+        "rodada": 6,
+        "total_gols": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 7,
+        "total_gols": 24
+    },
+    {
+        "ano": "2018",
+        "rodada": 8,
+        "total_gols": 24
+    },
+    {
+        "ano": "2018",
+        "rodada": 9,
+        "total_gols": 31
+    },
+    {
+        "ano": "2018",
+        "rodada": 10,
+        "total_gols": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 11,
+        "total_gols": 31
+    },
+    {
+        "ano": "2018",
+        "rodada": 12,
+        "total_gols": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 13,
+        "total_gols": 21
+    },
+    {
+        "ano": "2018",
+        "rodada": 14,
+        "total_gols": 25
+    },
+    {
+        "ano": "2018",
+        "rodada": 15,
+        "total_gols": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 16,
+        "total_gols": 30
+    },
+    {
+        "ano": "2018",
+        "rodada": 17,
+        "total_gols": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 18,
+        "total_gols": 23
+    },
+    {
+        "ano": "2018",
+        "rodada": 19,
+        "total_gols": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 20,
+        "total_gols": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 21,
+        "total_gols": 21
+    },
+    {
+        "ano": "2018",
+        "rodada": 22,
+        "total_gols": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 23,
+        "total_gols": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 24,
+        "total_gols": 13
+    },
+    {
+        "ano": "2018",
+        "rodada": 25,
+        "total_gols": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 26,
+        "total_gols": 32
+    },
+    {
+        "ano": "2018",
+        "rodada": 27,
+        "total_gols": 26
+    },
+    {
+        "ano": "2018",
+        "rodada": 28,
+        "total_gols": 26
+    },
+    {
+        "ano": "2018",
+        "rodada": 29,
+        "total_gols": 19
+    },
+    {
+        "ano": "2018",
+        "rodada": 30,
+        "total_gols": 25
+    },
+    {
+        "ano": "2018",
+        "rodada": 31,
+        "total_gols": 29
+    },
+    {
+        "ano": "2018",
+        "rodada": 32,
+        "total_gols": 22
+    },
+    {
+        "ano": "2018",
+        "rodada": 33,
+        "total_gols": 20
+    },
+    {
+        "ano": "2018",
+        "rodada": 34,
+        "total_gols": 16
+    },
+    {
+        "ano": "2018",
+        "rodada": 35,
+        "total_gols": 15
+    },
+    {
+        "ano": "2018",
+        "rodada": 36,
+        "total_gols": 23
+    },
+    {
+        "ano": "2018",
+        "rodada": 37,
+        "total_gols": 18
+    },
+    {
+        "ano": "2018",
+        "rodada": 38,
+        "total_gols": 17
+    },
+    {
+        "ano": "2019",
+        "rodada": 1,
+        "total_gols": 33
+    },
+    {
+        "ano": "2020",
+        "rodada": 1,
+        "total_gols": 18
+    },
+    {
+        "ano": "2020",
+        "rodada": 2,
+        "total_gols": 23
+    },
+    {
+        "ano": "2020",
+        "rodada": 3,
+        "total_gols": 20
+    },
+    {
+        "ano": "2020",
+        "rodada": 4,
+        "total_gols": 26
+    },
+    {
+        "ano": "2020",
+        "rodada": 5,
+        "total_gols": 17
+    },
+    {
+        "ano": "2020",
+        "rodada": 6,
+        "total_gols": 22
+    },
+    {
+        "ano": "2020",
+        "rodada": 7,
+        "total_gols": 28
+    },
+    {
+        "ano": "2020",
+        "rodada": 8,
+        "total_gols": 26
+    },
+    {
+        "ano": "2020",
+        "rodada": 9,
+        "total_gols": 27
+    },
+    {
+        "ano": "2020",
+        "rodada": 10,
+        "total_gols": 26
+    },
+    {
+        "ano": "2020",
+        "rodada": 11,
+        "total_gols": 27
+    },
+    {
+        "ano": "2020",
+        "rodada": 12,
+        "total_gols": 24
+    },
+    {
+        "ano": "2020",
+        "rodada": 13,
+        "total_gols": 26
+    },
+    {
+        "ano": "2020",
+        "rodada": 14,
+        "total_gols": 28
+    },
+    {
+        "ano": "2020",
+        "rodada": 15,
+        "total_gols": 24
+    },
+    {
+        "ano": "2020",
+        "rodada": 16,
+        "total_gols": 26
+    },
+    {
+        "ano": "2020",
+        "rodada": 17,
+        "total_gols": 25
+    },
+    {
+        "ano": "2020",
+        "rodada": 18,
+        "total_gols": 29
+    },
+    {
+        "ano": "2020",
+        "rodada": 19,
+        "total_gols": 25
+    },
+    {
+        "ano": "2020",
+        "rodada": 20,
+        "total_gols": 21
+    },
+    {
+        "ano": "2020",
+        "rodada": 21,
+        "total_gols": 29
+    },
+    {
+        "ano": "2020",
+        "rodada": 22,
+        "total_gols": 23
+    },
+    {
+        "ano": "2020",
+        "rodada": 23,
+        "total_gols": 24
+    },
+    {
+        "ano": "2020",
+        "rodada": 24,
+        "total_gols": 21
+    },
+    {
+        "ano": "2020",
+        "rodada": 25,
+        "total_gols": 22
+    },
+    {
+        "ano": "2020",
+        "rodada": 26,
+        "total_gols": 27
+    },
+    {
+        "ano": "2020",
+        "rodada": 27,
+        "total_gols": 20
+    },
+    {
+        "ano": "2021",
+        "rodada": 1,
+        "total_gols": 27
+    },
+    {
+        "ano": "2021",
+        "rodada": 2,
+        "total_gols": 32
+    },
+    {
+        "ano": "2021",
+        "rodada": 3,
+        "total_gols": 15
+    },
+    {
+        "ano": "2021",
+        "rodada": 4,
+        "total_gols": 18
+    },
+    {
+        "ano": "2021",
+        "rodada": 5,
+        "total_gols": 21
+    },
+    {
+        "ano": "2021",
+        "rodada": 6,
+        "total_gols": 30
+    },
+    {
+        "ano": "2021",
+        "rodada": 7,
+        "total_gols": 19
+    },
+    {
+        "ano": "2021",
+        "rodada": 8,
+        "total_gols": 29
+    },
+    {
+        "ano": "2021",
+        "rodada": 9,
+        "total_gols": 18
+    },
+    {
+        "ano": "2021",
+        "rodada": 10,
+        "total_gols": 20
+    },
+    {
+        "ano": "2021",
+        "rodada": 11,
+        "total_gols": 24
+    },
+    {
+        "ano": "2021",
+        "rodada": 12,
+        "total_gols": 25
+    },
+    {
+        "ano": "2021",
+        "rodada": 13,
+        "total_gols": 21
+    },
+    {
+        "ano": "2021",
+        "rodada": 14,
+        "total_gols": 17
+    },
+    {
+        "ano": "2021",
+        "rodada": 15,
+        "total_gols": 21
+    },
+    {
+        "ano": "2021",
+        "rodada": 16,
+        "total_gols": 28
+    },
+    {
+        "ano": "2021",
+        "rodada": 17,
+        "total_gols": 20
+    },
+    {
+        "ano": "2021",
+        "rodada": 18,
+        "total_gols": 16
+    },
+    {
+        "ano": "2021",
+        "rodada": 19,
+        "total_gols": 24
+    },
+    {
+        "ano": "2021",
+        "rodada": 20,
+        "total_gols": 22
+    },
+    {
+        "ano": "2021",
+        "rodada": 21,
+        "total_gols": 21
+    },
+    {
+        "ano": "2021",
+        "rodada": 22,
+        "total_gols": 21
+    },
+    {
+        "ano": "2021",
+        "rodada": 23,
+        "total_gols": 30
+    },
+    {
+        "ano": "2021",
+        "rodada": 24,
+        "total_gols": 27
+    },
+    {
+        "ano": "2021",
+        "rodada": 25,
+        "total_gols": 26
+    },
+    {
+        "ano": "2021",
+        "rodada": 26,
+        "total_gols": 20
+    },
+    {
+        "ano": "2021",
+        "rodada": 27,
+        "total_gols": 18
+    },
+    {
+        "ano": "2021",
+        "rodada": 28,
+        "total_gols": 51
+    },
+    {
+        "ano": "2021",
+        "rodada": 29,
+        "total_gols": 34
+    },
+    {
+        "ano": "2021",
+        "rodada": 30,
+        "total_gols": 44
+    },
+    {
+        "ano": "2021",
+        "rodada": 31,
+        "total_gols": 61
+    },
+    {
+        "ano": "2021",
+        "rodada": 32,
+        "total_gols": 63
+    },
+    {
+        "ano": "2021",
+        "rodada": 33,
+        "total_gols": 37
+    },
+    {
+        "ano": "2021",
+        "rodada": 34,
+        "total_gols": 41
+    },
+    {
+        "ano": "2021",
+        "rodada": 35,
+        "total_gols": 55
+    },
+    {
+        "ano": "2021",
+        "rodada": 36,
+        "total_gols": 24
+    },
+    {
+        "ano": "2021",
+        "rodada": 37,
+        "total_gols": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 1,
+        "total_gols": 26
+    },
+    {
+        "ano": "2022",
+        "rodada": 2,
+        "total_gols": 30
+    },
+    {
+        "ano": "2022",
+        "rodada": 3,
+        "total_gols": 23
+    },
+    {
+        "ano": "2022",
+        "rodada": 4,
+        "total_gols": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 5,
+        "total_gols": 21
+    },
+    {
+        "ano": "2022",
+        "rodada": 6,
+        "total_gols": 27
+    },
+    {
+        "ano": "2022",
+        "rodada": 7,
+        "total_gols": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 8,
+        "total_gols": 21
+    },
+    {
+        "ano": "2022",
+        "rodada": 9,
+        "total_gols": 21
+    },
+    {
+        "ano": "2022",
+        "rodada": 10,
+        "total_gols": 29
+    },
+    {
+        "ano": "2022",
+        "rodada": 11,
+        "total_gols": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 12,
+        "total_gols": 28
+    },
+    {
+        "ano": "2022",
+        "rodada": 13,
+        "total_gols": 23
+    },
+    {
+        "ano": "2022",
+        "rodada": 14,
+        "total_gols": 25
+    },
+    {
+        "ano": "2022",
+        "rodada": 15,
+        "total_gols": 25
+    },
+    {
+        "ano": "2022",
+        "rodada": 16,
+        "total_gols": 19
+    },
+    {
+        "ano": "2022",
+        "rodada": 17,
+        "total_gols": 17
+    },
+    {
+        "ano": "2022",
+        "rodada": 18,
+        "total_gols": 33
+    },
+    {
+        "ano": "2022",
+        "rodada": 19,
+        "total_gols": 23
+    },
+    {
+        "ano": "2022",
+        "rodada": 20,
+        "total_gols": 24
+    },
+    {
+        "ano": "2022",
+        "rodada": 21,
+        "total_gols": 25
+    },
+    {
+        "ano": "2022",
+        "rodada": 22,
+        "total_gols": 18
+    },
+    {
+        "ano": "2022",
+        "rodada": 23,
+        "total_gols": 23
+    },
+    {
+        "ano": "2022",
+        "rodada": 24,
+        "total_gols": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 25,
+        "total_gols": 26
+    },
+    {
+        "ano": "2022",
+        "rodada": 26,
+        "total_gols": 20
+    },
+    {
+        "ano": "2022",
+        "rodada": 27,
+        "total_gols": 21
+    },
+    {
+        "ano": "2022",
+        "rodada": 28,
+        "total_gols": 24
+    },
+    {
+        "ano": "2022",
+        "rodada": 29,
+        "total_gols": 27
+    },
+    {
+        "ano": "2022",
+        "rodada": 30,
+        "total_gols": 29
+    },
+    {
+        "ano": "2022",
+        "rodada": 31,
+        "total_gols": 27
+    },
+    {
+        "ano": "2022",
+        "rodada": 32,
+        "total_gols": 15
+    },
+    {
+        "ano": "2022",
+        "rodada": 33,
+        "total_gols": 26
+    },
+    {
+        "ano": "2022",
+        "rodada": 34,
+        "total_gols": 30
+    },
+    {
+        "ano": "2023",
+        "rodada": 1,
+        "total_gols": 26
+    },
+    {
+        "ano": "2023",
+        "rodada": 2,
+        "total_gols": 25
+    },
+    {
+        "ano": "2023",
+        "rodada": 3,
+        "total_gols": 32
+    },
+    {
+        "ano": "2023",
+        "rodada": 4,
+        "total_gols": 32
+    },
+    {
+        "ano": "2023",
+        "rodada": 5,
+        "total_gols": 27
+    },
+    {
+        "ano": "2023",
+        "rodada": 6,
+        "total_gols": 26
+    },
+    {
+        "ano": "2023",
+        "rodada": 7,
+        "total_gols": 23
+    },
+    {
+        "ano": "2023",
+        "rodada": 8,
+        "total_gols": 22
+    },
+    {
+        "ano": "2023",
+        "rodada": 9,
+        "total_gols": 22
+    },
+    {
+        "ano": "2023",
+        "rodada": 10,
+        "total_gols": 26
+    },
+    {
+        "ano": "2023",
+        "rodada": 11,
+        "total_gols": 20
+    },
+    {
+        "ano": "2023",
+        "rodada": 12,
+        "total_gols": 26
+    },
+    {
+        "ano": "2023",
+        "rodada": 13,
+        "total_gols": 23
+    },
+    {
+        "ano": "2023",
+        "rodada": 14,
+        "total_gols": 22
+    },
+    {
+        "ano": "2023",
+        "rodada": 15,
+        "total_gols": 19
+    },
+    {
+        "ano": "2023",
+        "rodada": 16,
+        "total_gols": 19
+    },
+    {
+        "ano": "2023",
+        "rodada": 17,
+        "total_gols": 32
+    },
+    {
+        "ano": "2023",
+        "rodada": 18,
+        "total_gols": 21
+    },
+    {
+        "ano": "2023",
+        "rodada": 19,
+        "total_gols": 24
+    },
+    {
+        "ano": "2023",
+        "rodada": 20,
+        "total_gols": 24
+    },
+    {
+        "ano": "2023",
+        "rodada": 21,
+        "total_gols": 24
+    },
+    {
+        "ano": "2023",
+        "rodada": 22,
+        "total_gols": 15
+    },
+    {
+        "ano": "2023",
+        "rodada": 23,
+        "total_gols": 32
+    },
+    {
+        "ano": "2023",
+        "rodada": 24,
+        "total_gols": 21
+    },
+    {
+        "ano": "2023",
+        "rodada": 25,
+        "total_gols": 25
+    },
+    {
+        "ano": "2023",
+        "rodada": 26,
+        "total_gols": 32
+    },
+    {
+        "ano": "2023",
+        "rodada": 27,
+        "total_gols": 27
+    },
+    {
+        "ano": "2023",
+        "rodada": 28,
+        "total_gols": 24
+    },
+    {
+        "ano": "2023",
+        "rodada": 29,
+        "total_gols": 40
+    },
+    {
+        "ano": "2023",
+        "rodada": 30,
+        "total_gols": 26
+    },
+    {
+        "ano": "2023",
+        "rodada": 31,
+        "total_gols": 26
+    },
+    {
+        "ano": "2023",
+        "rodada": 32,
+        "total_gols": 13
+    },
+    {
+        "ano": "2023",
+        "rodada": 33,
+        "total_gols": 26
+    },
+    {
+        "ano": "2024",
+        "rodada": 1,
+        "total_gols": 28
+    },
+    {
+        "ano": "2024",
+        "rodada": 2,
+        "total_gols": 19
+    },
+    {
+        "ano": "2024",
+        "rodada": 3,
+        "total_gols": 24
+    },
+    {
+        "ano": "2024",
+        "rodada": 4,
+        "total_gols": 23
+    },
+    {
+        "ano": "2024",
+        "rodada": 5,
+        "total_gols": 20
+    },
+    {
+        "ano": "2024",
+        "rodada": 6,
+        "total_gols": 27
+    },
+    {
+        "ano": "2024",
+        "rodada": 7,
+        "total_gols": 23
+    },
+    {
+        "ano": "2024",
+        "rodada": 8,
+        "total_gols": 23
+    },
+    {
+        "ano": "2024",
+        "rodada": 9,
+        "total_gols": 31
+    },
+    {
+        "ano": "2024",
+        "rodada": 10,
+        "total_gols": 24
+    },
+    {
+        "ano": "2024",
+        "rodada": 11,
+        "total_gols": 26
+    },
+    {
+        "ano": "2024",
+        "rodada": 12,
+        "total_gols": 25
+    },
+    {
+        "ano": "2024",
+        "rodada": 13,
+        "total_gols": 22
+    },
+    {
+        "ano": "2024",
+        "rodada": 14,
+        "total_gols": 32
+    },
+    {
+        "ano": "2024",
+        "rodada": 15,
+        "total_gols": 25
+    },
+    {
+        "ano": "2024",
+        "rodada": 16,
+        "total_gols": 25
+    },
+    {
+        "ano": "2024",
+        "rodada": 17,
+        "total_gols": 21
+    },
+    {
+        "ano": "2024",
+        "rodada": 18,
+        "total_gols": 17
+    },
+    {
+        "ano": "2024",
+        "rodada": 19,
+        "total_gols": 22
+    },
+    {
+        "ano": "2024",
+        "rodada": 20,
+        "total_gols": 21
+    },
+    {
+        "ano": "2024",
+        "rodada": 21,
+        "total_gols": 24
+    },
+    {
+        "ano": "2024",
+        "rodada": 22,
+        "total_gols": 23
+    },
+    {
+        "ano": "2024",
+        "rodada": 23,
+        "total_gols": 27
+    },
+    {
+        "ano": "2024",
+        "rodada": 24,
+        "total_gols": 22
+    },
+    {
+        "ano": "2024",
+        "rodada": 25,
+        "total_gols": 29
+    },
+    {
+        "ano": "2024",
+        "rodada": 26,
+        "total_gols": 28
+    },
+    {
+        "ano": "2024",
+        "rodada": 27,
+        "total_gols": 23
+    },
+    {
+        "ano": "2024",
+        "rodada": 28,
+        "total_gols": 19
+    },
+    {
+        "ano": "2024",
+        "rodada": 29,
+        "total_gols": 22
+    },
+    {
+        "ano": "2024",
+        "rodada": 30,
+        "total_gols": 28
+    },
+    {
+        "ano": "2024",
+        "rodada": 31,
+        "total_gols": 33
+    },
+    {
+        "ano": "2024",
+        "rodada": 32,
+        "total_gols": 22
+    }
+]
