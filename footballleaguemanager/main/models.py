@@ -11,7 +11,7 @@ class Arbitro(models.Model):
     id_arbitro = models.AutoField(primary_key=True, verbose_name="Código")
     nome = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
     uf = models.CharField(max_length=2, blank=True, null=True, verbose_name="UF")
-    categoria = models.CharField(max_length=100, blank=True, null=True, verbose_name="Nome")
+    categoria = models.CharField(max_length=100, blank=True, null=True, verbose_name="Categoria")
 
     def __str__(self):
         return f"{self.nome}"
@@ -175,8 +175,9 @@ class DjangoSession(models.Model):
 
 
 class EquipeArbitragem(models.Model):
-    id_jogo = models.IntegerField(blank=True, null=True, verbose_name="Jogo")
-    id_arbitro = models.IntegerField(blank=True, null=True, verbose_name="Árbitro")
+    id_equipe_arbitragem = models.AutoField(primary_key=True, verbose_name="Código")
+    id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")
+    id_arbitro = models.ForeignKey('Arbitro', models.DO_NOTHING, db_column='id_arbitro', blank=True, null=True, verbose_name="Árbitro")
     funcao = models.CharField(max_length=100, blank=True, null=True, verbose_name="Função")
 
     def __str__(self):
@@ -186,8 +187,7 @@ class EquipeArbitragem(models.Model):
         managed = False
         db_table = 'equipe_arbitragem'
         verbose_name = "Equipe Arbitragem"
-        verbose_name_plural = "Equipes Arbitragens"
-        unique_together = ('id_jogo', 'id_arbitro')
+        verbose_name_plural = "Equipes Arbitragens"        
 
 
 class Escalacao(models.Model):
@@ -225,6 +225,7 @@ class Estadio(models.Model):
         verbose_name_plural = "Estádios"
 
 class Evento(models.Model):
+    id_evento = models.AutoField(primary_key=True, verbose_name="Código")
     id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")
     id_clube = models.ForeignKey('Clube', models.DO_NOTHING, db_column='id_clube', blank=True, null=True, verbose_name="Clube")
     gols = models.IntegerField(blank=True, null=True, verbose_name="Gols")
@@ -261,16 +262,16 @@ class Jogo(models.Model):
     num_jogo = models.IntegerField(blank=True, null=True, verbose_name="Número do jogo")
     rodada = models.IntegerField(blank=True, null=True, verbose_name="Rodada")
     grupo = models.CharField(max_length=100, blank=True, null=True, verbose_name="Grupo")
-    data = models.DateTimeField(blank=True, null=True, verbose_name="Data")
+    data = models.DateField(blank=True, null=True, verbose_name="Data")
     hora = models.DateTimeField(blank=True, null=True, verbose_name="Hora")
     qtd_alteracoes_jogo = models.IntegerField(blank=True, null=True, verbose_name="Quantidade de alterações")
     id_campeonato = models.ForeignKey('Campeonato', models.DO_NOTHING, db_column='id_campeonato', blank=True, null=True, verbose_name="Campeonato")
     id_estadio = models.ForeignKey(Estadio, models.DO_NOTHING, db_column='id_estadio', blank=True, null=True, verbose_name="Estádio")
     id_clube_mandante = models.ForeignKey('Clube',  models.DO_NOTHING, related_name='jogo_como_mandante', db_column='id_clube_mandante', blank=True, null=True, verbose_name="Mandante")
-    id_clube_visitante = models.ForeignKey('Clube', models.DO_NOTHING, related_name='jogo_como_visitante', db_column='id_clube_visitante', blank=True, null=True, verbose_name="Visitante")    
+    id_clube_visitante = models.ForeignKey('Clube', models.DO_NOTHING, related_name='jogo_como_visitante', db_column='id_clube_visitante', blank=True, null=True, verbose_name="Visitante")
 
     def __str__(self):
-        return f"{self.id_jogo}"
+        return f"{self.id_clube_mandante.nome} x {self.id_clube_visitante.nome}"
 
     class Meta:
         managed = False
@@ -295,12 +296,20 @@ class Clube(models.Model):
 
 
 class Alteracao(models.Model):
+    TEMPO_CHOICES = [    
+        ('AC1', 'Acréscimo 1º tempo'),
+        ('TN1', 'Tempo normal 1'),
+        ('AC2', 'Acréscimo 2º tempo'),
+        ('INT', 'Intervalo'),
+        ('TN2', 'Tempo normal 2')
+    ]
+
     id_alteracao = models.AutoField(primary_key=True, verbose_name="Código")
-    codigo_jogador_saiu = models.ForeignKey('atleta', models.DO_NOTHING, db_column='codigo_jogador_saiu', blank=True, null=True, related_name="fk_codigo_jogador_saiu", verbose_name="Código jogador saiu")
-    codigo_jogador_entrou = models.ForeignKey('atleta', models.DO_NOTHING, db_column='codigo_jogador_entrou', blank=True, null=True, related_name="fk_codigo_jogador_entrou", verbose_name="Código jogador entrou")
-    tempo_jogo = models.TimeField(blank=True, null=True, verbose_name="Tempo jogo")
-    tempo_subs = models.CharField(max_length=3, blank=True, null=True, verbose_name="Tempos subst.")
-    tempo_acrescimo = models.TimeField(blank=True, null=True, verbose_name="Tempo acréscimo")
+    codigo_jogador_saiu = models.ForeignKey('atleta', models.DO_NOTHING, db_column='codigo_jogador_saiu', blank=True, null=True, related_name="fk_codigo_jogador_saiu", verbose_name="Jogador saiu")
+    codigo_jogador_entrou = models.ForeignKey('atleta', models.DO_NOTHING, db_column='codigo_jogador_entrou', blank=True, null=True, related_name="fk_codigo_jogador_entrou", verbose_name="Jogador entrou")
+    tempo_jogo = models.DateTimeField(blank=True, null=True, verbose_name="Tempo jogo")
+    tempo_subs = models.CharField(max_length=3, choices=TEMPO_CHOICES, blank=True, null=True, verbose_name="Tempos subst.")
+    tempo_acrescimo = models.DateTimeField(blank=True, null=True, verbose_name="Tempo acréscimo")
     id_jogo = models.ForeignKey('Jogo', models.DO_NOTHING, db_column='id_jogo', blank=True, null=True, verbose_name="Jogo")
     id_clube = models.ForeignKey('Clube', models.DO_NOTHING, db_column='id_clube', blank=True, null=True, verbose_name="Clube")
 

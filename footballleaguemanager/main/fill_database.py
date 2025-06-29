@@ -246,7 +246,7 @@ def insert_data_from_cbf_datasets(conn, cur):
                                             '{alteracao['tempo_subs']}', 
                                             '0001-01-01 00:{"00:00" if alteracao['tempo_acrescimo'] == None else alteracao['tempo_acrescimo']}', 
                                             {jogo['id_jogo']},
-                                            {jogo['visitante']['id']}
+                                            {jogo['mandante']['id']}
                                         );
                                         """)
                                     
@@ -286,14 +286,18 @@ def insert_data_from_cbf_datasets(conn, cur):
                                         """)
                             
                         for penalidade in jogo['penalidades']:
-                            cur.execute(f"""
+                            try:   
+                                    cur.execute(f"""
                                         INSERT INTO penalidade
                                         (
                                             id_penalidade, 
                                             tipo, 
                                             resultado, 
                                             tempo_jogo, 
-                                            minutos                                    
+                                            minutos,
+                                            id_jogo,
+                                            id_clube,
+                                            id_atleta
                                         )
                                         VALUES 
                                         (
@@ -301,9 +305,14 @@ def insert_data_from_cbf_datasets(conn, cur):
                                             '{penalidade['tipo']}',
                                             '{penalidade['resultado']}',
                                             '{penalidade['tempo_jogo']}', 
-                                            '0001-01-01 00:{penalidade['minutos'][0:4]}'
+                                            '0001-01-01 00:{penalidade['minutos'][0:4]}',
+                                            '{jogo['id_jogo']}', 
+                                            '{penalidade['clube_id']}', 
+                                            '{penalidade['atleta_id']}'
                                         )
                                         ON CONFLICT (id_penalidade) DO NOTHING
-                                        """)
+                                        """)                             
+                            except Exception as e: 
+                                print(e)
                         
                     conn.commit()

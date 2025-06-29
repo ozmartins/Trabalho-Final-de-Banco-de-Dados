@@ -90,5 +90,5 @@ def generate_graphic(conn, context):
         for item in df.values:
                 jogos_por_estado.append({'uf': item[0], 'qtd': item[1]})
 
-        with open("./main/static/jogos-por-estado.json", "w", encoding="utf-8") as f:
+        with open("./main/static/jogos-por-estados.json", "w", encoding="utf-8") as f:
                 json.dump(jogos_por_estado, f, ensure_ascii=False, indent=4)

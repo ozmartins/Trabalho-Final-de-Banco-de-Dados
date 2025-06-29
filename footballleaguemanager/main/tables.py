@@ -1,7 +1,7 @@
 def create_all_tables(cur):
     cur.execute("""
                 CREATE TABLE jogo (
-                    id_jogo int,
+                    id_jogo serial,
                     num_jogo int,
                     rodada int,
                     grupo varchar(100),
@@ -17,7 +17,7 @@ def create_all_tables(cur):
                 ALTER TABLE jogo ADD CONSTRAINT pk_jogo PRIMARY KEY (id_jogo);
 
                 CREATE TABLE clube (
-                    id_clube int,
+                    id_clube serial,
                     nome varchar(100),
                     url_escudo varchar(500)
                 );
@@ -25,7 +25,7 @@ def create_all_tables(cur):
                 ALTER TABLE clube ADD CONSTRAINT pk_clube PRIMARY KEY (id_clube);
 
                 CREATE TABLE atleta (
-                    id_atleta int,
+                    id_atleta serial,
                     nome varchar(100),
                     apelido varchar(100),
                     foto varchar(500)
@@ -47,6 +47,7 @@ def create_all_tables(cur):
                 ALTER TABLE alteracao ADD CONSTRAINT pk_alteracao PRIMARY KEY (id_alteracao);
 
                 CREATE TABLE evento (
+                    id_evento serial,
                     id_jogo int,
                     id_clube int,
                     gols int,
@@ -56,7 +57,7 @@ def create_all_tables(cur):
                 ALTER TABLE evento ADD CONSTRAINT pk_evento PRIMARY KEY (id_clube, id_jogo);
 
                 CREATE TABLE campeonato (
-                    id_campeonato int,
+                    id_campeonato serial,
                     nome varchar(100) UNIQUE
                 );
                 
@@ -72,7 +73,7 @@ def create_all_tables(cur):
                 ALTER TABLE documento ADD CONSTRAINT pk_documento PRIMARY KEY (id_documento);
 
                 CREATE TABLE arbitro (
-                    id_arbitro int,
+                    id_arbitro serial,
                     nome varchar(100),
                     uf varchar(2),
                     categoria varchar(100)
@@ -81,6 +82,7 @@ def create_all_tables(cur):
                 ALTER TABLE arbitro ADD CONSTRAINT pk_arbitro PRIMARY KEY (id_arbitro);
 
                 CREATE TABLE equipe_arbitragem (
+                    id_equipe_arbitragem serial,
                     id_arbitro int,
                     id_jogo int,
                     funcao varchar(100)
@@ -89,7 +91,7 @@ def create_all_tables(cur):
                 ALTER TABLE equipe_arbitragem ADD CONSTRAINT pk_equipe_arbitragem PRIMARY KEY (id_jogo, id_arbitro);
 
                 CREATE TABLE penalidade (
-                    id_penalidade int,
+                    id_penalidade serial,
                     tipo varchar(100),
                     resultado varchar(100),
                     tempo_jogo varchar(3),

@@ -48,15 +48,9 @@ def index(request):
             else:
                 lineup_players_graphic.generate_graphic(conn, context)                
 
-            if os.path.exists('./main/static/evolucao-clubes-2018.json') and os.path.exists('./main/static/evolucao-clubes-2018.jpg') and os.path.exists('./main/static/evolucao-clubes-2022.json') and os.path.exists('./main/static/evolucao-clubes-2022.jpg') and os.path.exists('./main/static/evolucao-clubes-2023.json') and os.path.exists('./main/static/evolucao-clubes-2023.jpg')and os.path.exists('./main/static/evolucao-clubes-2024.json') and os.path.exists('./main/static/evolucao-clubes-2024.jpg'):
-                with open("./main/static/evolucao-clubes-2018.json", "r", encoding="utf-8") as file:
-                    context['dados']['evolucao-clubes-2018'] = json.load(file)
-                with open("./main/static/evolucao-clubes-2022.json", "r", encoding="utf-8") as file:
-                    context['dados']['evolucao-clubes-2022'] = json.load(file)
-                with open("./main/static/evolucao-clubes-2023.json", "r", encoding="utf-8") as file:
-                    context['dados']['evolucao-clubes-2023'] = json.load(file)
-                with open("./main/static/evolucao-clubes-2024.json", "r", encoding="utf-8") as file:
-                    context['dados']['evolucao-clubes-2024'] = json.load(file)
+            if os.path.exists('./main/static/evolucao-clubes.json') and os.path.exists('./main/static/evolucao-clubes-2018.jpg') and os.path.exists('./main/static/evolucao-clubes-2022.jpg') and os.path.exists('./main/static/evolucao-clubes-2023.jpg')and os.path.exists('./main/static/evolucao-clubes-2024.jpg'):
+                with open("./main/static/evolucao-clubes.json", "r", encoding="utf-8") as file:
+                    context['dados']['evolucao_clubes'] = json.load(file)                
             else:
                 teams_evolution.generate_graphic(conn, context)                
 
@@ -65,10 +59,10 @@ def index(request):
                     context['dados']['gols_por_rodada'] = json.load(file)
             else:
                 goals_per_round.generate_graphic(conn, context)
-                
+
             if os.path.exists('./main/static/jogos-por-estados.json') and os.path.exists('./main/static/jogos-por-estados.jpg'):
-                with open("./main/static/gols-por-rodada.json", "r", encoding="utf-8") as file:
-                    context['dados']['gols_por_rodada'] = json.load(file)
+                with open("./main/static/jogos-por-estados.json", "r", encoding="utf-8") as file:
+                    context['dados']['jogos_por_estado'] = json.load(file)
             else:
                 games_per_state.generate_graphic(conn, context)                
         else:

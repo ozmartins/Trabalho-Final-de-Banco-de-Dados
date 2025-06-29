@@ -9,7 +9,7 @@ admin.site.index_title = "Bem-vindo ao módulo de cadastros"
 class ArbitroAdmin(admin.ModelAdmin):
     list_display = ('id_arbitro', 'nome', 'uf', 'categoria')
     search_fields = ('nome',)
-    list_filter = ('categoria',)    
+    list_filter = ('uf','categoria')    
 
 @admin.register(Campeonato)
 class CampeonatoAdmin(admin.ModelAdmin):
@@ -24,7 +24,7 @@ class CidadeAdmin(admin.ModelAdmin):
 
 @admin.register(EquipeArbitragem)
 class EquipeArbitragemAdmin(admin.ModelAdmin):
-    list_display = ('id_jogo', 'id_arbitro', 'funcao')    
+    list_display = ('id_equipe_arbitragem', 'id_jogo', 'id_arbitro', 'funcao')    
     list_filter = ('funcao',)
 
 @admin.register(Escalacao)
@@ -71,5 +71,5 @@ class DocumentoAdmin(admin.ModelAdmin):
 
 @admin.register(Penalidade)
 class PenalidadeAdmin(admin.ModelAdmin):
-    list_display = ('id_penalidade', 'id_jogo', 'id_clube', 'id_atleta', 'id_penalidade', 'tipo', 'resultado', 'tempo_jogo', 'minutos')
+    list_display = ('id_penalidade', 'id_jogo', 'id_clube', 'id_atleta', 'tipo', 'resultado', 'tempo_jogo', 'minutos')
     list_filter = ('id_jogo', 'id_clube', 'id_atleta', 'id_penalidade', 'tipo', 'resultado')

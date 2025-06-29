@@ -92,9 +92,8 @@ def generate_graphic(conn, context):
                         plt.savefig(f'./main/static/evolucao-clubes-{ano}.jpg')
 
                         evolucao_clubes = []
-                        for item in df.values:
-                                if item[0] == str(ano):
-                                        evolucao_clubes.append({'ano': item[0], 'rodada': item[1], 'clube': item[2], 'posicao': item[3]})
+                        for item in df.values:                                
+                                evolucao_clubes.append({'ano': item[0], 'rodada': item[1], 'clube': item[2], 'posicao': item[3]})
 
-                        with open(f"./main/static/evolucao-clubes-{ano}.json", "w", encoding="utf-8") as f:
+                        with open(f"./main/static/evolucao-clubes.json", "w", encoding="utf-8") as f:
                                 json.dump(evolucao_clubes, f, ensure_ascii=False, indent=4)
